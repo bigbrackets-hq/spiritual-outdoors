@@ -1,0 +1,570 @@
+:root {
+  /* Semantic colors */
+  --color-info-50: #ecf4fe;
+  --color-info-100: #c4ddfc;
+  --color-info-200: #a8cdfa;
+  --color-info-300: #80b6f8;
+  --color-info-400: #68a8f6;
+  --color-info-500: #4292f4;
+  --color-info-600: #3c85de;
+  --color-info-700: #2f68ad;
+  --color-info-800: #245086;
+  --color-info-900: #1c3d66;
+  --color-warning-50: #fef7e8;
+  --color-warning-100: #fde7b9;
+  --color-warning-200: #fbdc97;
+  --color-warning-300: #facb68;
+  --color-warning-400: #f9c14a;
+  --color-warning-500: #f7b21d;
+  --color-warning-600: #e1a21a;
+  --color-warning-700: #af7e15;
+  --color-warning-800: #886210;
+  --color-warning-900: #684b0c;
+  --color-danger-50: #fdecec;
+  --color-danger-100: #f9c5c5;
+  --color-danger-200: #f6a9a9;
+  --color-danger-300: #f28182;
+  --color-danger-400: #ef6969;
+  --color-danger-500: #eb4344;
+  --color-danger-600: #d63d3e;
+  --color-danger-700: #a73030;
+  --color-danger-800: #812525;
+  --color-danger-900: #631c1d;
+  --color-success-50: #e9f4ee;
+  --color-success-100: #bbdec9;
+  --color-success-200: #9bceaf;
+  --color-success-300: #6db88b;
+  --color-success-400: #51aa75;
+  --color-success-500: #259552;
+  --color-success-600: #22884b;
+  --color-success-700: #1a6a3a;
+  --color-success-800: #14522d;
+  --color-success-900: #103f22;
+
+  /* Primary colors */
+  --color-blue-50: #fafeff;
+  --color-blue-100: #eefbff;
+  --color-blue-200: #e6f9ff;
+  --color-blue-300: #dbf7ff;
+  --color-blue-400: #d4f5ff;
+  --color-blue-500: #c9f3ff;
+  --color-blue-600: #b7dde8;
+  --color-blue-700: #8fadb5;
+  --color-blue-800: #6f868c;
+  --color-blue-900: #54666b;
+  --color-darkblue-50: #e6f2f5;
+  --color-darkblue-100: #b0d6e1;
+  --color-darkblue-200: #8ac3d2;
+  --color-darkblue-300: #54a7bd;
+  --color-darkblue-400: #3396b1;
+  --color-darkblue-500: #007c9d;
+  --color-darkblue-600: #00718f;
+  --color-darkblue-700: #00586f;
+  --color-darkblue-800: #004456;
+  --color-darkblue-900: #003442;
+  --color-green-50: #f8fae9;
+  --color-green-100: #e9f1ba;
+  --color-green-200: #deea98;
+  --color-green-300: #cfe069;
+  --color-green-400: #c6da4c;
+  --color-green-500: #b8d11f;
+  --color-green-600: #a7be1c;
+  --color-green-700: #839416;
+  --color-green-800: #657311;
+  --color-green-900: #4d580d;
+  --color-darkgreen-50: #e6eaea;
+  --color-darkgreen-100: #b0bfbd;
+  --color-darkgreen-200: #8aa09d;
+  --color-darkgreen-300: #557571;
+  --color-darkgreen-400: #345a55;
+  --color-darkgreen-500: #01312b;
+  --color-darkgreen-600: #012d27;
+  --color-darkgreen-700: #01231f;
+  --color-darkgreen-800: #011b18;
+  --color-darkgreen-900: #001512;
+  --color-orange-50: #fdf6e8;
+  --color-orange-100: #f8e4b6;
+  --color-orange-200: #f5d793;
+  --color-orange-300: #f0c462;
+  --color-orange-400: #edb943;
+  --color-orange-500: #e9a714;
+  --color-orange-600: #d49812;
+  --color-orange-700: #a5770e;
+  --color-orange-800: #805c0b;
+  --color-orange-900: #624608;
+
+  /* Neutral colors */
+  --color-heading-text-color-dark: #01312b;
+  --color-heading-text-color-light: #ffffff;
+  --color-passage-text-color-dark: #557571;
+  --color-passage-text-color-light: #ffffff;
+}
+
+@font-face {
+  font-family: 'Antonio';
+  src: url('/public/fonts/antonio/Antonio-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/public/fonts/instrument-serif/InstrumentSerif-Italic.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/public/fonts/instrument-sans/InstrumentSans-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/public/fonts/instrument-sans/InstrumentSans-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  color: #00312b;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+  padding: 14px 16px;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.primary-btn {
+  height: 48px;
+  padding: 0 16px;
+  background-color: var(--color-darkgreen-500);
+  color: var(--color-passage-text-color-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primary-btn:hover {
+  background-color: var(--color-darkgreen-700);
+}
+
+.secondary-btn {
+  height: 48px;
+  padding: 0 16px;
+  border: 1.5px solid var(--color-darkblue-500);
+  color: var(--color-darkblue-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-darkblue-500);
+  color: var(--color-passage-text-color-light);
+}
+
+.tertiary-btn {
+  height: 48px;
+  padding: 0 16px;
+  background-color: var(--color-darkblue-500);
+  color: var(--color-passage-text-color-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tertiary-btn:hover {
+  background-color: var(--color-darkblue-700);
+}
+
+.whatsapp-btn {
+  background-color: var(--color-blue-500);
+  color: var(--color-darkgreen-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.whatsapp-btn:hover {
+  background-color: var(--color-darkgreen-500);
+  color: var(--color-passage-text-color-light);
+}
+
+/* Filter type-1 */
+
+.filter-type-1 {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-type-1:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-type-1.active {
+  background-color: var(--color-blue-600);
+  color: var(--color-darkgreen-500);
+}
+
+/* Filter type-2 */
+
+/* Input field */
+
+input::placeholder {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  /* Antonio */
+  .h1-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .h2-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .h3-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .passage-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  /* Instrument Serif */
+  .h1-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .h2-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  .p1-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
+  .p2-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
+  .p3-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  /* Instrument Sans */
+  .p1-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p2-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p3-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p3-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p4-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+  }
+
+  .p5-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+  }
+
+  .p5-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+  }
+
+  .p6-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p6-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p7-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  /* Layouts */
+
+  .layout-wrapper {
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+
+/* Laptop & Desktops */
+
+@media (min-width: 1440px) {
+  /* Typography */
+
+  /* Antonio */
+  .h1-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 112px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  .h2-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .h3-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .passage-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  /* Instrument Serif */
+  .h1-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 112px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  .h2-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  .p1-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  .p2-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
+  /* Instrument Sans */
+  .p1-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p2-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p3-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p3-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p4-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+  }
+
+  .p5-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+  }
+
+  .p5-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+  }
+
+  .p6-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p6-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p7-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  /* Layouts */
+
+  .layout-wrapper {
+    max-width: 1280px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
