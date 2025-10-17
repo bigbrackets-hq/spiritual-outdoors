@@ -100,6 +100,15 @@
   --color-passage-text-color-light: #ffffff;
 }
 
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* For Internet Explorer 10+ */
+  scrollbar-width: none; /* For Firefox */
+}
+
 @font-face {
   font-family: 'Antonio';
   src: url('/public/fonts/antonio/Antonio-Bold.ttf');
@@ -228,6 +237,28 @@ button {
 
 /* Filter type-2 */
 
+.filter-type-2 {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  color: var(--color-darkgreen-400);
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-type-2:hover {
+  background-color: var(--color-blue-600);
+}
+
+.filter-type-2.active {
+  background-color: var(--color-blue-600);
+  font-weight: 500;
+}
+
 /* Input field */
 
 input::placeholder {
@@ -235,6 +266,236 @@ input::placeholder {
   font-weight: 400;
   color: #fff;
   font-size: 14px;
+}
+
+/* Instrument Sans Label */
+
+.h1-sans {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.l1-sans-strong {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.l1-sans {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.l2-sans-strong {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.l2-sans {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+.l3-sans-strong {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.l3-sans {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* Mobile */
+
+@media (min-width: 320px) {
+  /* Antonio*/
+  .h1-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .h2-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .h3-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p1-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p2-antonio {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  /* Instrument Serif - Italic */
+  .h1-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .h2-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+  }
+
+  .p1-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p2-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .p3-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  .p4-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
+  /* Instrument Sans */
+
+  .p1-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .p1-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .p2-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+
+  .p2-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+
+  .p3-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+    letter-spacing: 0;
+  }
+
+  .p3-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+  }
+
+  .p4-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  .p4-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  .layout-wrapper {
+    width: 100%;
+    padding: 0 16px;
+  }
 }
 
 /* Tablet */
@@ -265,7 +526,7 @@ input::placeholder {
     letter-spacing: -0.02em;
   }
 
-  .passage-antonio {
+  .p1-antonio {
     font-family: 'Antonio', sans-serif;
     font-weight: 700;
     font-size: 32px;
@@ -319,84 +580,79 @@ input::placeholder {
     letter-spacing: 0;
   }
 
+  .p4-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+
   /* Instrument Sans */
-  .p1-sans {
+
+  .p1-sans-strong {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .p1-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .p2-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
   }
 
   .p2-sans {
     font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
   }
 
   .p3-sans-strong {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+    letter-spacing: 0;
   }
 
   .p3-sans {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  .p4-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
   }
 
   .p4-sans {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-  }
-
-  .p5-sans-strong {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    letter-spacing: -0.02em;
-  }
-
-  .p5-sans {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-  }
-
-  .p6-sans-strong {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-  }
-
-  .p6-sans {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-  }
-
-  .p7-sans {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 100%;
     letter-spacing: 0;
   }
 
@@ -438,7 +694,7 @@ input::placeholder {
     letter-spacing: -0.02em;
   }
 
-  .passage-antonio {
+  .passage-1-antonio {
     font-family: 'Antonio', sans-serif;
     font-weight: 700;
     font-size: 40px;
@@ -479,84 +735,88 @@ input::placeholder {
     letter-spacing: 0;
   }
 
+  .p3-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
+  .p4-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0;
+  }
+
   /* Instrument Sans */
-  .p1-sans {
+
+  .p1-sans-strong {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .p1-sans {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .p2-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0;
   }
 
   .p2-sans {
     font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0;
   }
 
   .p3-sans-strong {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0;
+    letter-spacing: 0;
   }
 
   .p3-sans {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  .p4-sans-strong {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
     font-size: 20px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
+    line-height: 125%;
+    letter-spacing: 0;
   }
 
   .p4-sans {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-  }
-
-  .p5-sans-strong {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-  }
-
-  .p5-sans {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-  }
-
-  .p6-sans-strong {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-  }
-
-  .p6-sans {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-  }
-
-  .p7-sans {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 100%;
+    font-size: 20px;
+    line-height: 125%;
     letter-spacing: 0;
   }
 
