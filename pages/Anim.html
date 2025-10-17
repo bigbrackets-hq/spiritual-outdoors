@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scroll Animation</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="../styles/common/global.css" />
+
+</head>
+
+<body class="bg-white ">
+
+  <!-- Top spacer -->
+  <div class="page1 w-full h-screen "></div>
+
+  <!-- Animation Section -->
+<section class="  Anim w-full  h-screen  ">
+  <div class=" w-full h-full  layout-wrapper   relative flex items-center justify-center">
+  <div class="relative w-full h-screen     ">
+   <img src="../public/Animation-Imgs/img1Anim.png" class="img1 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px]  lg:h-[347px] lg:top-[147px] lg:left-[217px] md:top-[76px] md:left-[80px]" alt="">
+   <img src="../public/Animation-Imgs/img2Anim.png" class="img2 rounded-[16px] absolute md:w-[362px] md:h-[242px]   lg:w-[520px] md:top-[197px] md:left-[330px]  lg:h-[347px] lg:top-[197px] lg:left-[573px] " alt="">
+   <img src="../public/Animation-Imgs/img3Anim.png" class="img3 rounded-[16px] absolute md:w-[362px] md:h-[242px]   lg:w-[520px]  lg:h-[347px] md:top-[288px] md:left-[41px] lg:top-[400px] lg:left-[249px]" alt="">
+   <img src="../public/Animation-Imgs/img4Anim.png" class="img4 rounded-[16px] absolute   md:w-[362px] md:h-[242px] md:top-[377px] md:left-[363px]  lg:w-[520px] lg:h-[347px]  lg:top-[444px] lg:left-[703px]" alt=""> 
+  </div> 
+   <p class="pdummy-serif  absolute text-[#fff]  text-nowrap top-[103px] left-[66px]  opacity-0 ">
+        <span>Trekking</span>
+      </p>
+   <p class="pdummy-serif AnimPara1 absolute text-[#fff]  text-nowrap top-[192px] left-[1048px]  opacity-0 ">
+        <span>Cultural tours</span>
+      </p>
+      <p class="pdummy-serif AnimPara1 absolute text-[#fff]  text-nowrap top-[640px] left-[176px] opacity-0 ">
+        <span>Expedition</span>
+      </p>
+      <p class="pdummy-serif AnimPara1 absolute text-[#fff]  text-nowrap top-[599px] left-[1080px] opacity-0 ">
+        <span>Hiking</span>
+      </p> 
+
+    <div class="absolute top-1/2 left-1/2 hidden flex-col gap-[16px] -translate-x-1/2 -translate-y-1/2 text-center ">
+  <h1
+    class="h2-antonio AnimH1 text-[clamp(100px,5vw,1000px)] text-[var(--color-darkgreen-500)] whitespace-nowrap"
+  >
+    Adventure in Every Step
+  </h1>
+  <p
+    class="p3-sans-strong AnimP text-[clamp(14px,1.2vw,20px)] text-[var(--color-darkgreen-300)] leading-snug"
+  >
+    Adventure comes in many moods. <br />
+    Pick yours and we’ll take care of the rest.
+  </p>
+</div>
+
+  </div>
+</section>
+
+   <section class="w-full h-screen">
+    
+   </section>
+  
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    
+  gsap.registerPlugin(ScrollTrigger);
+
+  function ScrollAnim() {
+    const mm = gsap.matchMedia();
+
+    // ✅ For large screens (>=1024px)
+    mm.add("(min-width: 1024px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".Anim",
+          start: "top top",
+          scrub: 0.5,
+          pin: true,
+          markers: true,
+        },
+      });
+
+      const w = "380px";
+      const h = "254px";
+
+      tl.to(".img1", { top: "110px", left: "128px", width: w, height: h }, "0")
+        .to(".img2", { top: "96px", left: "980px", width: w, height: h }, "0")
+        .to(".img3", { top: "544px", left: "81px", width: w, height: h }, "0")
+        .to(".img4", { top: "504px", left: "949px", width: w, height: h }, "0")
+
+        .fromTo(".AnimH1",
+          { opacity: 0, scale: 0, y: 50 },
+          { opacity: 1, scale: 1, y: 0, ease: "linear" },
+          "0"
+        )
+        .fromTo(".AnimP",
+          { opacity: 0, y: 40, scale: 0 },
+          { opacity: 1, y: 0, scale: 1, ease: "linear" },
+          "0"
+        )
+        .fromTo(".AnimPara1",
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0 },
+          "1"
+        );
+    });
+
+    // ✅ For medium screens (>=768px)
+    mm.add("(min-width: 768px) and (max-width: 1023px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".Anim",
+          start: "top top",
+          scrub: 0.5,
+          pin: true,
+          markers: true,
+        },
+      });
+
+      const w = "300px";
+      const h = "200px";
+
+      tl.to(".img1", { top: "64px", left: "32px", width: w, height: h }, "0")
+        .to(".img2", { top: "64px", left: "436px", width: w, height: h }, "0")
+        .to(".img3", { top: "536px", left: "32px", width: w, height: h }, "0")
+        .to(".img4", { top: "536px", left: "436px", width: w, height: h }, "0")
+
+        .fromTo(".AnimH1",
+          { opacity: 0, scale: 0, y: 50 },
+          { opacity: 1, scale: 1, y: 0, ease: "linear" },
+          "0"
+        )
+        .fromTo(".AnimP",
+          { opacity: 0, y: 40, scale: 0 },
+          { opacity: 1, y: 0, scale: 1, ease: "linear" },
+          "0"
+        )
+        .fromTo(".AnimPara1",
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0 },
+          "1"
+        );
+    });
+  }
+
+  // Call the function
+  ScrollAnim();
+
+
+
+  </script>
+</body>
+</html>

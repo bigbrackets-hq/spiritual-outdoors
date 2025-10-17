@@ -131,6 +131,7 @@
 body {
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
   color: #00312b;
 }
 
@@ -318,6 +319,14 @@ input::placeholder {
     line-height: 100%;
     letter-spacing: 0;
   }
+  .pdummy-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
 
   /* Instrument Sans */
   .p1-sans {
@@ -423,12 +432,12 @@ input::placeholder {
   }
 
   .h2-antonio {
-    font-family: 'Antonio', sans-serif;
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 110%;
-    letter-spacing: -0.02em;
-  }
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 6vw, 72px);
+  line-height: 110%;
+  letter-spacing: -0.02em;
+}
 
   .h3-antonio {
     font-family: 'Antonio', sans-serif;
