@@ -15,69 +15,116 @@
   </head>
   <body>
     <!-- Navbar -->
-    <header class="py-4 sticky top-0 z-50 backdrop-blur-[10px]">
-      <nav class="layout-wrapper flex justify-between items-center">
-        <div>
-          <img
-            src="/public/images/icons/main-logo.svg"
-            alt="Spiritual outdoors logo"
-          />
-        </div>
-        <ul
-          class="l1-sans-strong max-xl:hidden text-[var(--color-blue-500)] flex items-center gap-6"
-        >
-          <li class="cursor-pointer flex items-center gap-3 px-4">
-            Destinations
-            <img
-              src="/public/images/icons/dropdown-menu.svg"
-              alt="Dropdown icon"
-            />
-          </li>
-          <li class="cursor-pointer flex items-center gap-3 px-4">
-            Trekking in Nepal
-            <img
-              src="/public/images/icons/dropdown-menu.svg"
-              alt="Dropdown icon"
-            />
-          </li>
-          <li class="cursor-pointer flex items-center gap-3 px-4">
-            Travel guides
-            <img
-              src="/public/images/icons/dropdown-menu.svg"
-              alt="Dropdown icon"
-            />
-          </li>
-          <li class="cursor-pointer flex items-center gap-3 px-4">
-            About
-            <img
-              src="/public/images/icons/dropdown-menu.svg"
-              alt="Dropdown icon"
-            />
-          </li>
-          <a href="">
-            <button class="whatsapp-btn">
-              <img
-                src="/public/images/icons/social-media/whatsapp-icon.svg"
-                alt="Whatsapp"
-              />
-              +977 9851202196
-            </button>
-          </a>
-        </ul>
-        <div class="xl:hidden">
-          <img
-            src="/public/images/icons/hamburger-icon.svg"
-            alt="Hamburger menu icon"
-            class="cursor-pointer"
-          />
-        </div>
+    <header
+      class="py-4 h-[84px] fixed flex flex-col gap-8 inset-x-0 top-0 z-[1000] transition-all duration-300 ease-in-out js-header"
+    >
+      <nav
+        class="layout-wrapper js-nav flex justify-between items-center relative"
+      >
+        <!-- Generated via js -->
       </nav>
+
+      <!-- Navigation panel -->
+      <div class="layout-wrapper h-full hidden js-destinations-dropdown-panel">
+        <div class="flex gap-[77px] h-full pb-16">
+          <div class="flex flex-col gap-10 max-w-[863px] w-full">
+            <div class="flex gap-[124px]">
+              <h2
+                class="h2-antonio text-[var(--color-darkgreen-500)] cursor-pointer"
+              >
+                Nepal
+              </h2>
+              <h2
+                class="h2-antonio text-[var(--color-darkgreen-500)] opacity-10 cursor-pointer"
+              >
+                Tibet
+              </h2>
+              <h2
+                class="h2-antonio text-[var(--color-darkgreen-500)] opacity-10 cursor-pointer"
+              >
+                Bhutan
+              </h2>
+            </div>
+            <div class="flex gap-24">
+              <div class="flex-1">
+                <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                  Trekking in Nepal
+                </p>
+                <ul class="flex flex-col gap-[14px]">
+                  <li
+                    class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    Everest Trekking
+                  </li>
+                </ul>
+              </div>
+              <div class="flex-1">
+                <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                  Tours in Nepal
+                </p>
+                <ul class="flex flex-col gap-[14px]">
+                  <li
+                    class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    Helicopter Tour
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-[40px] flex-2">
+                <div>
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Adventures in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      Bungee Jumping
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Peak Climbing
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      Everest Base Camp Trek with Lobuche Peak Expedition - 18
+                      days
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[340px] h-[309px] self-end relative rounded-2xl overflow-hidden"
+          >
+            <img
+              src="/public/images/common/location/langtang-gosaikunda.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div
+              class="h-[70px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+            ></div>
+            <div
+              class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
+            >
+              <p class="p1-sans-strong text-white">Explore more in Nepal</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
       <!-- Hero section -->
       <section
-        class="relative overflow-hidden pt-48 bg-[url('/public/images/landing-page/hero-image.png')] bg-cover bg-no-repeat h-[1246px] -mt-24"
+        class="relative overflow-hidden pt-48 bg-[url('/public/images/landing-page/hero-image.png')] bg-cover bg-no-repeat h-[1246px]"
       >
         <div class="layout-wrapper flex flex-col items-center justify-center">
           <div class="max-w-[600px] xl:max-w-[865px] mx-auto w-full">
@@ -133,7 +180,9 @@
       </section>
 
       <!-- Curated for the way you travel section -->
-      <section class="bg-[var(--color-blue-100)] py-16 xl:py-[120px]">
+      <section
+        class="bg-[var(--color-blue-100)] py-16 xl:py-[120px] js-curated-travels-section"
+      >
         <div class="layout-wrapper flex flex-col gap-12">
           <div class="flex justify-between items-center">
             <div class="flex flex-col gap-4">
@@ -162,12 +211,12 @@
               class="flex items-center gap-6 scrollbar-hidden overflow-x-auto"
             >
               <div
-                class="relative cursor-pointer w-[302px] h-[418px] rounded-2xl overflow-hidden flex-shrink-0"
+                class="relative cursor-none w-[302px] h-[418px] rounded-2xl overflow-hidden flex-shrink-0 group js-image-card-container"
               >
                 <img
                   src="/public/images/common/location/langtang-gosaikunda.png"
                   alt="Langtang gosaikunda"
-                  class="h-full w-full object-cover"
+                  class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
                 />
                 <div class="absolute inset-0 bg-black/20"></div>
                 <div class="absolute top-6 left-6 flex items-center gap-3">
@@ -368,99 +417,232 @@
       </section>
 
       <!-- Testimonial section -->
+
+      <!-- TODO: remove overflow of review containers in tablet and smaller screens -->
       <section>
         <div
           class="layout-wrapper w-full h-[790px] flex flex-col xl:flex-row items-center justify-between"
         >
           <div class="flex-2 flex flex-col gap-4 relative">
-            <div class="flex gap-6 cursor-pointer relative w-fit group">
+            <div class="flex gap-6">
               <h3 class="h3-antonio text-[var(--color-darkgreen-500)]">
                 Trusted by adventurers
               </h3>
-              <div class="w-[108px] h-[72px] rounded-[68px] overflow-hidden">
+              <div
+                class="w-[108px] h-[72px] group relative cursor-pointer js-reviewer-avatar-container"
+              >
                 <img
                   src="/public/images/common/testimonial/avatar-1.png"
                   alt="Reviewer avatar"
-                  class="w-full h-full object-cover grayscale-100 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                  class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
                 />
-              </div>
-              <div
-                class="w-[500px] absolute z-10 -top-60 -right-20 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
-              >
-                <div class="flex flex-col gap-4">
-                  <div class="flex items-center gap-[6px]">
-                    <img
-                      src="/public/images/common/testimonial/star-icon.svg"
-                      alt="Review star"
-                      class="w-[20px] h-[20px] object-cover aspect-square"
-                    />
-                    <img
-                      src="/public/images/common/testimonial/star-icon.svg"
-                      alt="Review star"
-                      class="w-[20px] h-[20px] object-cover aspect-square"
-                    />
-                    <img
-                      src="/public/images/common/testimonial/star-icon.svg"
-                      alt="Review star"
-                      class="w-[20px] h-[20px] object-cover aspect-square"
-                    />
-                    <img
-                      src="/public/images/common/testimonial/star-icon.svg"
-                      alt="Review star"
-                      class="w-[20px] h-[20px] object-cover aspect-square"
-                    />
+                <div
+                  class="w-[500px] absolute z-10 xl:-top-60 xl:-right-20 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                >
+                  <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-[6px]">
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                    </div>
+                    <p
+                      class="p4-sans text-[var(--color-heading-text-color-dark)]"
+                    >
+                      An experience that blended culture, nature, and reflection
+                      in a way no other journey has ever offered me before.
+                    </p>
                   </div>
                   <p
-                    class="p4-sans text-[var(--color-heading-text-color-dark)]"
+                    class="p4-serif text-[var(--color-passage-text-color-dark)]"
                   >
-                    An experience that blended culture, nature, and reflection
-                    in a way no other journey has ever offered me before.
+                    Robert Pattinson during his Everest trek on 2024
                   </p>
                 </div>
-                <p class="p4-serif text-[var(--color-passage-text-color-dark)]">
-                  Robert Pattinson during his Everest trek on 2024
-                </p>
               </div>
             </div>
             <div class="flex gap-6">
-              <div class="flex gap-6 cursor-pointer group">
+              <div class="flex gap-6">
                 <h3 class="h3-antonio text-[var(--color-darkgreen-500)]">
                   and seekers
                 </h3>
-                <div class="w-[108px] h-[72px] rounded-[68px] overflow-hidden">
+                <div
+                  class="w-[108px] h-[72px] group relative cursor-pointer js-reviewer-avatar-container"
+                >
                   <img
                     src="/public/images/common/testimonial/avatar-2.png"
                     alt="Reviewer avatar"
-                    class="w-full h-full object-cover grayscale-100 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                    class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
                   />
+                  <div
+                    class="w-[500px] absolute z-10 xl:-top-55 xl:-right-55 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div class="flex items-center gap-[6px]">
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                      </div>
+                      <p
+                        class="p4-sans text-[var(--color-heading-text-color-dark)]"
+                      >
+                        An experience that blended culture, nature, and
+                        reflection in a way no other journey has ever offered me
+                        before.
+                      </p>
+                    </div>
+                    <p
+                      class="p4-serif text-[var(--color-passage-text-color-dark)]"
+                    >
+                      Robert Pattinson during his Everest trek on 2024
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="flex gap-6 cursor-pointer group">
+              <div class="flex gap-6">
                 <h3 class="h3-antonio text-[var(--color-darkgreen-500)]">
                   who care
                 </h3>
-                <div class="w-[108px] h-[72px] rounded-[68px] overflow-hidden">
+                <div
+                  class="w-[108px] h-[72px] group relative cursor-pointer js-reviewer-avatar-container"
+                >
                   <img
                     src="/public/images/common/testimonial/avatar-1.png"
                     alt="Reviewer avatar"
-                    class="w-full h-full object-cover grayscale-100 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                    class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
                   />
+                  <div
+                    class="w-[500px] absolute z-10 xl:-top-55 xl:-right-35 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                  >
+                    <div class="flex flex-col gap-4">
+                      <div class="flex items-center gap-[6px]">
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                        <img
+                          src="/public/images/common/testimonial/star-icon.svg"
+                          alt="Review star"
+                          class="w-[20px] h-[20px] object-cover aspect-square"
+                        />
+                      </div>
+                      <p
+                        class="p4-sans text-[var(--color-heading-text-color-dark)]"
+                      >
+                        An experience that blended culture, nature, and
+                        reflection in a way no other journey has ever offered me
+                        before.
+                      </p>
+                    </div>
+                    <p
+                      class="p4-serif text-[var(--color-passage-text-color-dark)]"
+                    >
+                      Robert Pattinson during his Everest trek on 2024
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="flex gap-6 cursor-pointer group">
+            <div class="flex gap-6">
               <h3 class="h3-antonio text-[var(--color-darkgreen-500)]">
                 about meaningful experiences
               </h3>
-              <div class="w-[108px] h-[72px] rounded-[68px] overflow-hidden">
+              <div
+                class="w-[108px] h-[72px] relative group cursor-pointer js-reviewer-avatar-container"
+              >
                 <img
                   src="/public/images/common/testimonial/avatar-3.png"
                   alt="Reviewer avatar"
-                  class="w-full h-full object-cover grayscale-100 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
+                  class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
                 />
+                <div
+                  class="w-[500px] absolute z-10 xl:-top-55 xl:-right-35 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                >
+                  <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-[6px]">
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                      <img
+                        src="/public/images/common/testimonial/star-icon.svg"
+                        alt="Review star"
+                        class="w-[20px] h-[20px] object-cover aspect-square"
+                      />
+                    </div>
+                    <p
+                      class="p4-sans text-[var(--color-heading-text-color-dark)]"
+                    >
+                      An experience that blended culture, nature, and reflection
+                      in a way no other journey has ever offered me before.
+                    </p>
+                  </div>
+                  <p
+                    class="p4-serif text-[var(--color-passage-text-color-dark)]"
+                  >
+                    Robert Pattinson during his Everest trek on 2024
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="w-[167px] absolute -bottom-35 right-35">
+            <div
+              class="w-[167px] absolute -bottom-35 right-35 js-hover-to-read-container"
+            >
               <div class="relative left-18 bottom-2">
                 <img
                   src="/public/images/icons/right-top-bended-arrow.svg"
@@ -468,9 +650,14 @@
                 />
               </div>
               <p
-                class="p2-serif w-[113px] text-[var(--color-passage-text-color-dark)]"
+                class="max-lg:hidden p2-serif w-[113px] text-[var(--color-passage-text-color-dark)]"
               >
                 hover to read their words
+              </p>
+              <p
+                class="lg:hidden p2-serif w-[113px] text-[var(--color-passage-text-color-dark)]"
+              >
+                click to read their words
               </p>
             </div>
           </div>
@@ -536,11 +723,13 @@
             <div
               class="flex flex-col gap-3 md:gap-6 w-[411px] flex-shrink-0 relative"
             >
-              <div class="rounded-2xl overflow-hidden h-[200px] md:h-[274px]">
+              <div
+                class="rounded-2xl cursor-none overflow-hidden h-[200px] md:h-[274px] js-image-card-container"
+              >
                 <img
                   src="/public/images/common/location/location-1.png"
                   alt="Travel location 1"
-                  class="object-cover w-full h-full"
+                  class="object-cover w-full h-full hover:scale-125 transition-transform duration-500 ease-in-out"
                 />
               </div>
               <div class="flex flex-col gap-3 md:gap-4">
@@ -676,115 +865,8 @@
             </div>
           </div>
           <div class="max-w-[737px] w-full flex flex-col gap-12">
-            <div class="flex justify-between">
-              <div class="flex flex-col gap-4 js-footer-links">
-                <p class="h1-sans">Explore</p>
-                <ul class="flex flex-col gap-3">
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Destinations </a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Packages </a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Gallery </a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Reviews </a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Blogs </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="flex flex-col gap-4 js-footer-links">
-                <p class="h1-sans">Company</p>
-                <ul class="flex flex-col gap-3">
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href="">About</a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Legal documents </a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Terms & Conditions </a>
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href=""> Privacy policy </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="flex flex-col gap-4 js-footer-links">
-                <p class="h1-sans">Spiritual Outdoors Pvt. Ltd.</p>
-                <ul class="flex flex-col gap-3">
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href="" class="inline-flex items-center gap-2"
-                      ><img
-                        src="/public/images/common/footer/location-icon.svg"
-                        alt="Location icon"
-                      />
-                      Amrit Marg, Thamel, Nepal</a
-                    >
-                  </li>
-                  <li
-                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                  >
-                    <a href="" class="inline-flex items-center gap-2">
-                      <img
-                        src="/public/images/common/footer/email-icon.svg"
-                        alt="Mail icon"
-                      />
-                      info@spiritualexcursion.com
-                    </a>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <img
-                      src="/public/images/common/footer/phone-icon.svg"
-                      alt="Phone icon"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <a
-                        href=""
-                        class="inline-flex items-center gap-2 text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                      >
-                        +977 14418817 (Office)
-                      </a>
-                      <a
-                        href=""
-                        class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                      >
-                        +977 9851202196 (Kabin)
-                      </a>
-                      <a
-                        href=""
-                        class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
-                      >
-                        +977 9851231090 (Badri)
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+            <div class="flex justify-between js-footer-links-container">
+              <!-- Generated via js -->
             </div>
             <div class="max-w-[737px] w-full flex flex-col gap-4">
               <p class="h1-sans">We accept</p>
@@ -831,7 +913,7 @@
           <a href="" target="_blank" rel="noopener noreferrer">
             <p>Privacy Policy | Terms and Conditions</p>
           </a>
-          <p>© 2025 Spiritual outdoors</p>
+          <p class="js-copyright-text"></p>
           <p>
             Website by
             <a
@@ -846,7 +928,33 @@
       </section>
     </footer>
 
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Custom arrow cursor -->
+    <div id="custom-arrow-cursor"></div>
+
     <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
-    <script src="/scripts/common/lenis.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/scripts/common/lenis.js" defer></script>
+    <script type="module" src="/scripts/common/navbar/navbar-menu.js"></script>
+    <script
+      src="/scripts/common/navbar/animation/dekstop-navbar.js"
+      defer
+    ></script>
+    <script type="module" src="/scripts/common/custom-cursor.js"></script>
+    <script src="/scripts/landing-page/testimonial.js"></script>
+    <script type="module" src="/scripts/common/footer/footer.js"></script>
   </body>
 </html>
