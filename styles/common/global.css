@@ -143,6 +143,20 @@ body {
   color: #00312b;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
 /* Buttons */
 
 button {
@@ -257,6 +271,26 @@ button {
 .filter-type-2.active {
   background-color: var(--color-blue-600);
   font-weight: 500;
+}
+
+#custom-arrow-cursor {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40;
+  transition: transform 0.1s ease-out, opacity 0.3s ease;
+  background-image: url('/public/images/icons/arrow-up-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Input field */
