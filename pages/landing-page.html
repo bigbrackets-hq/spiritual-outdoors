@@ -124,7 +124,7 @@
     <main>
       <!-- Hero section -->
       <section
-        class="relative overflow-hidden pt-48 bg-[url('/public/images/landing-page/hero-image.png')] bg-cover bg-no-repeat h-[1246px]"
+        class="relative overflow-hidden h-[1246px] pt-40 bg-[url('/public/images/landing-page/hero-image.png')] bg-cover bg-center bg-no-repeat"
       >
         <div class="layout-wrapper flex flex-col items-center justify-center">
           <div class="max-w-[600px] xl:max-w-[865px] mx-auto w-full">
@@ -135,7 +135,9 @@
               heart of nature
             </h1>
             <div class="flex flex-col gap-4">
-              <div class="flex gap-4 justify-center p5-sans">
+              <div
+                class="flex gap-4 justify-center scrollbar-hidden overflow-x-auto"
+              >
                 <div class="filter-type-1 active">All</div>
                 <div class="filter-type-1">Trekkings</div>
                 <div class="filter-type-1">Tours</div>
@@ -156,10 +158,12 @@
                       class="w-full h-full outline-none text-[#FFF]"
                       type="text"
                       placeholder="What are you looking for?"
+                      name="search"
+                      autocomplete="off"
                       required
                     />
                   </div>
-                  <button class="p5-sans primary-btn min-w-max">
+                  <button type="submit" class="p5-sans primary-btn min-w-max">
                     Search Now
                   </button>
                 </div>
@@ -192,7 +196,7 @@
                 Curated for the way you travel
               </h2>
               <p
-                class="p2-sans text-[var(--color-passage-text-color-dark)] max-w-[367px] w-full"
+                class="p2-sans text-[var(--color-passage-text-color-dark)] max-w-[292px] xl:max-w-[367px] w-full"
               >
                 Adventure comes in many moods. Pick yours and we’ll take care of
                 the rest.
@@ -276,7 +280,7 @@
       <section class="py-16 xl:py-24 bg-[var(--color-blue-100)]">
         <div class="layout-wrapper">
           <div
-            class="relative w-full h-[201px] md:h-[396px] xl:h-[640px] rounded-2xl overflow-hidden"
+            class="relative w-full h-[201px] md:h-[396px] lg:h-[550px] xl:h-[640px] rounded-2xl overflow-hidden"
           >
             <video
               src="/public/videos/everest.mp4"
@@ -289,7 +293,7 @@
 
             <div class="absolute inset-0 bg-black/20 z-10"></div>
             <div
-              class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 xl:max-w-[461px] w-full flex flex-col items-center justify-center gap-6"
+              class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:max-w-[400px] xl:max-w-[461px] w-full flex flex-col items-center justify-center gap-6"
             >
               <h2 class="h2-antonio text-white text-center">
                 Where <span class="h2-serif">serenity</span> meets
@@ -305,7 +309,7 @@
       <section class="py-16 xl:py-24 bg-white">
         <div class="layout-wrapper">
           <div class="flex items-center justify-between flex-wrap mb-12">
-            <div class="max-w-[514px] w-full">
+            <div class="max-w-[300px] xl:max-w-[514px] w-full">
               <h2 class="h3-antonio">Experiences beyond ordinary travel</h2>
             </div>
             <a href="">
@@ -419,27 +423,25 @@
       </section>
 
       <!-- Testimonial section -->
-
-      <!-- TODO: remove overflow of review containers in tablet and smaller screens -->
-      <section>
+      <section class="max-xl:py-16 js-testimonial-section">
         <div
-          class="layout-wrapper w-full h-[790px] flex flex-col xl:flex-row items-center justify-between"
+          class="layout-wrapper w-full xl:h-[790px] flex flex-col max-xl:gap-[150px] xl:flex-row items-start xl:items-center xl:justify-between"
         >
-          <div class="flex-2 flex flex-col gap-4 relative">
+          <div class="xl:flex-2 flex flex-col gap-4 relative">
             <div class="flex gap-6">
               <h3 class="h3-antonio text-[var(--color-darkgreen-500)]">
                 Trusted by adventurers
               </h3>
               <div
-                class="w-[108px] h-[72px] group relative cursor-pointer js-reviewer-avatar-container"
+                class="w-[72px] h-[48px] xl:w-[108px] xl:h-[72px] group relative cursor-pointer"
               >
                 <img
                   src="/public/images/common/testimonial/avatar-1.png"
                   alt="Reviewer avatar"
-                  class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+                  class="w-full h-full object-cover rounded-[68px] grayscale-100 transition-all duration-300 ease-in-out js-reviewer-avatar"
                 />
                 <div
-                  class="w-[500px] absolute z-10 xl:-top-60 xl:-right-20 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                  class="w-[400px] xl:w-[500px] absolute z-10 md:top-15 md:-right-25 xl:-top-60 xl:-right-20 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 lg:pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out js-review-card"
                 >
                   <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-[6px]">
@@ -485,15 +487,15 @@
                   and seekers
                 </h3>
                 <div
-                  class="w-[108px] h-[72px] group relative cursor-pointer js-reviewer-avatar-container"
+                  class="w-[72px] h-[48px] xl:w-[108px] xl:h-[72px] group relative cursor-pointer"
                 >
                   <img
                     src="/public/images/common/testimonial/avatar-2.png"
                     alt="Reviewer avatar"
-                    class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+                    class="w-full h-full object-cover rounded-[68px] grayscale-100 transition-all duration-300 ease-in-out js-reviewer-avatar"
                   />
                   <div
-                    class="w-[500px] absolute z-10 xl:-top-55 xl:-right-55 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                    class="w-[400px] xl:w-[500px] absolute z-10 md:top-15 md:-right-25 xl:-top-55 xl:-right-55 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 lg:pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out js-review-card"
                   >
                     <div class="flex flex-col gap-4">
                       <div class="flex items-center gap-[6px]">
@@ -539,15 +541,15 @@
                   who care
                 </h3>
                 <div
-                  class="w-[108px] h-[72px] group relative cursor-pointer js-reviewer-avatar-container"
+                  class="w-[72px] h-[48px] xl:w-[108px] xl:h-[72px] group relative cursor-pointer"
                 >
                   <img
                     src="/public/images/common/testimonial/avatar-1.png"
                     alt="Reviewer avatar"
-                    class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+                    class="w-full h-full object-cover rounded-[68px] grayscale-100 transition-all duration-300 ease-in-out js-reviewer-avatar"
                   />
                   <div
-                    class="w-[500px] absolute z-10 xl:-top-55 xl:-right-35 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                    class="w-[400px] xl:w-[500px] absolute z-10 md:top-15 md:-right-25 xl:-top-55 xl:-right-35 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 lg:pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out js-review-card"
                   >
                     <div class="flex flex-col gap-4">
                       <div class="flex items-center gap-[6px]">
@@ -594,15 +596,15 @@
                 about meaningful experiences
               </h3>
               <div
-                class="w-[108px] h-[72px] relative group cursor-pointer js-reviewer-avatar-container"
+                class="w-[72px] h-[48px] xl:w-[108px] xl:h-[72px] group relative cursor-pointer"
               >
                 <img
                   src="/public/images/common/testimonial/avatar-3.png"
                   alt="Reviewer avatar"
-                  class="w-full h-full object-cover rounded-[68px] grayscale-100 hover:grayscale-0 transition-all duration-300 ease-in-out"
+                  class="w-full h-full object-cover rounded-[68px] grayscale-100 transition-all duration-300 ease-in-out js-reviewer-avatar"
                 />
                 <div
-                  class="w-[500px] absolute z-10 xl:-top-55 xl:-right-35 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out"
+                  class="w-[400px] xl:w-[500px] absolute z-10 md:top-15 md:-right-25 xl:-top-55 xl:-right-35 bg-[var(--color-blue-100)] p-6 rounded-2xl shadow-[0_0_23.1px_2px_rgba(0,0,0,0.04)] flex flex-col gap-6 opacity-0 lg:pointer-events-none group-hover:pointer-events-auto transition-opacity duration-400 ease-in-out js-review-card"
                 >
                   <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-[6px]">
@@ -643,28 +645,30 @@
               </div>
             </div>
             <div
-              class="w-[167px] absolute -bottom-35 right-35 js-hover-to-read-container"
+              class="w-[167px] absolute -bottom-16 -right-11 xl:-bottom-20 xl:right-16 js-hover-to-read-container"
             >
-              <div class="relative left-18 bottom-2">
+              <div class="relative">
                 <img
                   src="/public/images/icons/right-top-bended-arrow.svg"
                   alt="Right top bended arrow"
                 />
+                <p
+                  class="max-lg:hidden p2-serif w-[113px] text-[var(--color-passage-text-color-dark)] absolute -left-18"
+                >
+                  hover to read their words
+                </p>
+                <p
+                  class="lg:hidden p2-serif w-[113px] text-[var(--color-passage-text-color-dark)] absolute -left-18"
+                >
+                  click to read their words
+                </p>
               </div>
-              <p
-                class="max-lg:hidden p2-serif w-[113px] text-[var(--color-passage-text-color-dark)]"
-              >
-                hover to read their words
-              </p>
-              <p
-                class="lg:hidden p2-serif w-[113px] text-[var(--color-passage-text-color-dark)]"
-              >
-                click to read their words
-              </p>
             </div>
           </div>
-          <div class="flex gap-8 flex-wrap flex-1">
-            <div class="flex flex-col gap-3 w-[112px] md:w-[180px]">
+          <div class="flex gap-8 flex-wrap xl:flex-1">
+            <div
+              class="flex flex-col gap-[6px] xl:gap-3 w-[112px] md:w-[180px]"
+            >
               <p class="p1-antonio text-[var(-color-heading-text-color-dark)]">
                 18+ Years
               </p>
@@ -672,7 +676,9 @@
                 >of experience</span
               >
             </div>
-            <div class="flex flex-col gap-3 w-[112px] md:w-[180px]">
+            <div
+              class="flex flex-col gap-[6px] xl:gap-3 w-[112px] md:w-[180px]"
+            >
               <p class="p1-antonio text-[var(-color-heading-text-color-dark)]">
                 95%
               </p>
@@ -680,7 +686,9 @@
                 >satisfied tourists</span
               >
             </div>
-            <div class="flex flex-col gap-3 w-[112px] md:w-[180px]">
+            <div
+              class="flex flex-col gap-[6px] xl:gap-3 w-[112px] md:w-[180px]"
+            >
               <p class="p1-antonio text-[var(-color-heading-text-color-dark)]">
                 2950
               </p>
@@ -688,7 +696,9 @@
                 >trip-advisor reviews</span
               >
             </div>
-            <div class="flex flex-col gap-3 w-[112px] md:w-[180px]">
+            <div
+              class="flex flex-col gap-[6px] xl:gap-3 w-[112px] md:w-[180px]"
+            >
               <p class="p1-antonio text-[var(-color-heading-text-color-dark)]">
                 2950
               </p>
@@ -727,13 +737,15 @@
                 class="flex flex-col gap-3 md:gap-6 w-[411px] flex-shrink-0 relative"
               >
                 <div
-                  class="rounded-2xl cursor-none overflow-hidden h-[200px] md:h-[274px] js-image-card-container"
+                  class="relative rounded-2xl cursor-none overflow-hidden h-[200px] md:h-[274px] js-image-card-container"
                 >
                   <img
                     src="/public/images/common/location/location-1.png"
                     alt="Travel location 1"
                     class="object-cover w-full h-full hover:scale-125 transition-transform duration-500 ease-in-out"
                   />
+                  <!-- An overlay to fix custom cursor disappearing -->
+                  <div class="absolute inset-0 z-10 bg-transparent"></div>
                 </div>
                 <div class="flex flex-col gap-3 md:gap-4">
                   <h3
@@ -772,7 +784,7 @@
     <!-- Footer -->
     <footer>
       <section
-        class="relative overflow-hidden bg-[url('/public/images/common/footer/footer-banner.png')] bg-cover h-[682px] xl:h-[985px] pt-24 bg-[var(--color-blue-100)] flex flex-col justify-between"
+        class="relative overflow-hidden pt-10 h-[1081px] bg-[var(--color-blue-100)] bg-[url('/public/images/common/footer/footer-banner.png')] bg-cover bg-center flex flex-col justify-between"
       >
         <div class="layout-wrapper">
           <div
@@ -820,14 +832,16 @@
           </div>
         </div>
         <div
-          class="bg-[#FFF] blur-[40px] h-[311px] absolute -bottom-40 -inset-x-14"
+          class="bg-[#FFF] blur-[40px] h-[311px] absolute -bottom-20 xl:-bottom-40 -inset-x-14"
         ></div>
       </section>
       <section class="bg-white pt-24 pb-[60px]">
         <div
           class="layout-wrapper flex flex-col max-xl:gap-[80px] xl:flex-row xl:justify-between"
         >
-          <div class="flex flex-row xl:flex-col gap-[109px] items-start">
+          <div
+            class="flex flex-row xl:flex-col gap-[109px] items-center xl:items-start"
+          >
             <img
               src="/public/images/common/footer/footer-main-logo.svg"
               alt="Spiritual outdoors"
