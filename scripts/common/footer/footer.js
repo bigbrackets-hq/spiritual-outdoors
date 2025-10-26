@@ -1,4 +1,4 @@
-import { footerLinks } from '../../../data/common/footer/footer-links.js';
+import { footerLinks } from '../../../data/common/footer-links.js';
 
 const footerLinksContainerElement = document.querySelector(
   '.js-footer-links-container'

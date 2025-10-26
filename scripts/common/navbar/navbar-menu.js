@@ -1,4 +1,4 @@
-import { menu } from '../../../data/common/navbar/menu.js';
+import { menu } from '../../../data/common/menu.js';
 
 const navElement = document.querySelector('.js-nav');
 

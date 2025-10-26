@@ -36,6 +36,19 @@ export const menu = [
               { name: 'Rock Climbing', link: '#' },
             ],
           },
+          {
+            name: 'Peak Climbing',
+            sub: [
+              {
+                name: 'Everest Base Camp Trek with Lobuche Peak Expedition - 18 days',
+                link: '#',
+              },
+              {
+                name: 'Everest Base Camp Trek with Island Peak Expedition - 18 days',
+                link: '#',
+              },
+            ],
+          },
         ],
       },
       {
