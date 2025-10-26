@@ -10,8 +10,6 @@ const overlayElement = document.getElementById('overlay');
 //   '.js-curated-travels-section'
 // );
 
-// Hover effects for navbar header
-
 let isNavbarActive = false;
 let isNavbarPanelOpen = false;
 
@@ -87,7 +85,7 @@ ScrollTrigger.create({
   },
 });
 
-// Show and hide navbar on scroll
+//* Show and hide navbar on scroll
 // ScrollTrigger.create({
 //   start: 0,
 //   end: 'max',
@@ -100,8 +98,7 @@ ScrollTrigger.create({
 //   },
 // });
 
-// Expand navbar on item hover
-
+//* Expand navbar on item hover
 navItemElements.forEach((item) => {
   const dropdownPanelElement = document.querySelector(
     `.js-${item.textContent.trim().toLowerCase()}-dropdown-panel`
@@ -112,13 +109,12 @@ navItemElements.forEach((item) => {
 
     gsap.to(headerElement, {
       height: 614,
-      duration: 0.1,
+      duration: 0,
       ease: 'power2.inOut',
       onComplete: () => {
         gsap.to(dropdownPanelElement, {
           display: 'block',
           duration: 0,
-          delay: 0.3,
           ease: 'power2.inOut',
           onComplete: () => {
             isNavbarPanelOpen = true;
@@ -134,7 +130,6 @@ navItemElements.forEach((item) => {
     gsap.to(headerElement, {
       height: 84,
       duration: 0,
-      delay: 0.2,
       ease: 'power2.inOut',
     });
 
