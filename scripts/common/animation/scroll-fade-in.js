@@ -2,8 +2,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const elements = document.querySelectorAll(`.js-scroll-fade-in`);
 
-console.log(elements);
-
 elements.forEach((element) => {
   gsap.fromTo(
     element,
