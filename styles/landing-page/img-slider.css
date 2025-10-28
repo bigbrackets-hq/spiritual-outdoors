@@ -72,13 +72,3 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 1439px) {
-  .csss {
-    top: 4vw;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .csss {
-    top: 0vw;
-  }
-}

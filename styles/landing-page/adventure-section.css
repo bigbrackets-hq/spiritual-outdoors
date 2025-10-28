@@ -1,0 +1,36 @@
+@media (min-width: 0px) and (max-width: 1439px) {
+  .csss {
+    top: 4vw;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .csss {
+    top: 0vw;
+  }
+}
+@media (max-width: 1024px) {
+  .csss {
+    top: 0vw;
+  }
+ .imgContainer{
+
+   width: 50%;
+  /* transform: translateX(-10%); */
+  overflow: hidden;
+  border-radius: 16px;
+
+ } 
+ .desktopAnim .img1{
+  left: 10%;
+ }
+ .desktopAnim .img3{
+  left: 5%;
+ }
+ .desktopAnim .img2{
+  left: 50%;
+ }
+ .desktopAnim .img4{
+  left: 40%;
+ }
+ 
+}
