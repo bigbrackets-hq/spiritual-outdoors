@@ -1,0 +1,15 @@
+.dropdown-panel {
+  opacity: 10%;
+}
+
+.dropdown-panel.active {
+  opacity: 100%;
+}
+
+.dropdown-content {
+  opacity: 0;
+}
+
+.dropdown-content.active {
+  opacity: 100%;
+}

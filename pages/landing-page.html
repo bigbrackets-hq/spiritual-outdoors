@@ -13,7 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="stylesheet" href="../styles/common/global.css" />
-    <link rel="stylesheet" href="../styles/landing-page/adventure-section.css" />
+    <link rel="stylesheet" href="../styles/common/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="../styles/landing-page/adventure-section.css"
+    />
     <link rel="stylesheet" href="../styles/landing-page/img-slider.css" />
   </head>
   <body>
@@ -128,22 +132,24 @@
             <div class="flex flex-col gap-10 max-w-[863px] w-full">
               <div class="flex gap-[124px]">
                 <h2
-                  class="h2-antonio text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-heading"
+                  class="h2-antonio dropdown-panel active text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
                 >
                   Nepal
                 </h2>
                 <h2
-                  class="h2-antonio text-[var(--color-darkgreen-500)] opacity-10 cursor-pointer js-destinations-heading"
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
                 >
                   Tibet
                 </h2>
                 <h2
-                  class="h2-antonio text-[var(--color-darkgreen-500)] opacity-10 cursor-pointer js-destinations-heading"
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
                 >
                   Bhutan
                 </h2>
               </div>
-              <div class="flex gap-24">
+              <div
+                class="flex gap-24 dropdown-content active js-destinations-nepal-dropdown-content"
+              >
                 <div class="flex-1">
                   <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
                     Trekking in Nepal
@@ -393,7 +399,7 @@
           class="w-full h-full layout-wrapper relative flex items-center justify-center"
         >
           <div
-            class="relative desktopAnim  w-full h-full hidden md:flex items-center justify-center"
+            class="relative desktopAnim w-full h-full hidden md:flex items-center justify-center"
           >
             <div
               class="text-center flex flex-col items-center justify-center gap-[8px] lg:gap-[16px] relative csss"
@@ -1455,6 +1461,10 @@
     <script type="module" src="/scripts/landing-page/img-slider.js"></script>
     <script
       src="/scripts/common/navbar/animation/dekstop-navbar.js"
+      defer
+    ></script>
+    <script
+      src="/scripts/common/navbar/navbar-dropdown-panel.js"
       defer
     ></script>
     <script src="/scripts/landing-page/testimonial.js" defer></script>
