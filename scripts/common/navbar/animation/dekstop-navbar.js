@@ -1,14 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let scrollPosition = 0;
+
 const headerElement = document.querySelector('.js-header');
 const mainLogoElement = document.querySelector('.js-main-logo');
 const navItemElements = document.querySelectorAll('.js-nav-item');
 const buttonElement = document.querySelector('.js-whatsapp-btn');
 const dropDownIcons = document.querySelectorAll('.js-dropdown-icon');
 const overlayElement = document.getElementById('overlay');
-// const curatedTravelsSection = document.querySelector(
-//   '.js-curated-travels-section'
-// );
 
 let isNavbarActive = false;
 let isNavbarPanelOpen = false;
@@ -86,17 +85,17 @@ ScrollTrigger.create({
 });
 
 //* Show and hide navbar on scroll
-// ScrollTrigger.create({
-//   start: 0,
-//   end: 'max',
-//   onUpdate: (self) => {
-//     if (self.direction === 1) {
-//       gsap.to(headerElement, { y: -100, duration: 0 });
-//     } else {
-//       gsap.to(headerElement, { y: 0, duration: 0 });
-//     }
-//   },
-// });
+ScrollTrigger.create({
+  start: 0,
+  end: 'max',
+  onUpdate: (self) => {
+    if (self.direction === 1) {
+      gsap.to(headerElement, { y: -100, duration: 0 });
+    } else {
+      gsap.to(headerElement, { y: 0, duration: 0 });
+    }
+  },
+});
 
 //* Expand navbar on item hover
 navItemElements.forEach((item) => {
@@ -106,6 +105,14 @@ navItemElements.forEach((item) => {
 
   item.addEventListener('mouseenter', () => {
     overlayElement.style.opacity = '1';
+
+    scrollPosition = window.scrollY;
+
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.overflow = 'hidden';
 
     gsap.to(headerElement, {
       height: 614,
@@ -126,6 +133,14 @@ navItemElements.forEach((item) => {
 
   headerElement.addEventListener('mouseleave', () => {
     overlayElement.style.opacity = '0';
+
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+
+    window.scrollTo(0, scrollPosition);
 
     gsap.to(headerElement, {
       height: 84,
