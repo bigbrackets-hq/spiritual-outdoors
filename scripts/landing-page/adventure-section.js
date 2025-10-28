@@ -1,5 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const adventureCardContainers = document.querySelectorAll(
+  '.js-adventure-card-container'
+);
+const adventureCardText = document.querySelectorAll('.AnimPara1');
+const overlayElements = document.querySelectorAll('.js-adventure-bg-overlay');
+
 function ScrollAnim() {
   const mm = gsap.matchMedia();
 
@@ -58,6 +64,51 @@ function ScrollAnim() {
         { opacity: 1, y: 0, ease: 'power2.out' },
         'start'
       );
+
+    // Animate overlay
+    overlayElements.forEach((overlayElement) => {
+      tl.fromTo(
+        overlayElement,
+        { opacity: 0 },
+        { opacity: 1, ease: 'power2.out' },
+        'start'
+      );
+    });
+
+    adventureCardContainers.forEach((cardContainer, index) => {
+      const overlay = overlayElements[index];
+      const text = adventureCardText[index];
+
+      if (!overlay || !text) return;
+
+      cardContainer.addEventListener('mouseenter', () => {
+        gsap.to(overlay, {
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+
+        gsap.to(text, {
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      });
+
+      cardContainer.addEventListener('mouseleave', () => {
+        gsap.to(overlay, {
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+
+        gsap.to(text, {
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      });
+    });
   }
 
   // ✅ 4K / Large screens (≥1024px)
@@ -91,5 +142,3 @@ function ScrollAnim() {
 
 // ✅ Run function
 ScrollAnim();
-
-//Mobile text Anim
