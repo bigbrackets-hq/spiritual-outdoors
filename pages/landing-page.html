@@ -227,7 +227,7 @@
         class="relative overflow-hidden h-[982px] md:h-[1246px] pt-40 bg-[url('/public/images/landing-page/hero-image.png')] bg-cover bg-center bg-no-repeat"
       >
         <div class="layout-wrapper flex flex-col items-center justify-center">
-          <div class="max-w-[600px] xl:max-w-[865px] mx-auto w-full">
+          <div class="max-w-[600px] xl:max-w-[865px] mx-auto w-full js-fade-in">
             <h1
               class="h1-antonio text-center text-[var(--color-blue-500)] mb-[52px]"
             >
@@ -274,7 +274,9 @@
             </div>
           </div>
         </div>
-        <div class="absolute left-1/2 -translate-x-1/2 bottom-20 z-10">
+        <div
+          class="absolute left-1/2 -translate-x-1/2 bottom-20 z-10 js-scroll-fade-in"
+        >
           <img
             src="/public/images/landing-page/total-reviews.png"
             alt="Total reviews"
@@ -290,7 +292,9 @@
       <section
         class="bg-[var(--color-blue-100)] py-[46px] md:py-16 xl:py-[120px] js-curated-travels-section"
       >
-        <div class="layout-wrapper flex flex-col gap-[40px] md:gap-12">
+        <div
+          class="layout-wrapper flex flex-col gap-[40px] md:gap-12 js-scroll-fade-in"
+        >
           <div class="flex justify-between items-center flex-wrap gap-6">
             <div class="flex flex-col gap-2 lg:gap-4">
               <h2
@@ -406,131 +410,175 @@
               </p>
               <button class="secondary-btn btnnn">Browse All</button>
             </div>
-            <div
-              class="img1 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px] lg:h-[347px] lg:top-[147px] lg:left-[217px] md:top-[76px] md:left-[80px] overflow-hidden flex items-center justify-center"
-            >
-              <img
-                src="../public/images/common/location/trekking.png"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-              <p class="p1-serif absolute AnimPara1 text-[#fff] text-nowrap">
-                <span>Trekking</span>
-              </p>
-            </div>
-            <div
-              class="img2 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px] md:top-[197px] md:left-[330px] lg:h-[347px] lg:top-[197px] lg:left-[573px] flex items-center justify-center overflow-hidden"
-            >
-              <img
-                src="../public/images/common/location/cultural-tours.png"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-              <p class="p1-serif absolute AnimPara1 text-[#fff] text-nowrap">
-                <span>Cultural tours</span>
-              </p>
-            </div>
-            <div
-              class="img3 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px] lg:h-[347px] md:top-[288px] md:left-[41px] lg:top-[400px] lg:left-[249px] flex items-center justify-center overflow-hidden"
-            >
-              <img
-                src="../public/images/common/location/expedition.png"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-              <p class="p1-serif AnimPara1 absolute text-[#fff] text-nowrap">
-                <span>Expedition</span>
-              </p>
-            </div>
-            <div
-              class="img4 rounded-[16px] absolute md:w-[362px] md:h-[242px] md:top-[377px] md:left-[363px] lg:w-[520px] lg:h-[347px] lg:top-[444px] lg:left-[703px] flex items-center justify-center overflow-hidden"
-            >
-              <img
-                src="../public/images/common/location/hiking.png"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-              <p class="p1-serif absolute AnimPara1 text-[#fff] text-nowrap">
-                <span>Hiking</span>
-              </p>
-            </div>
+            <a href="" class="js-adventure-card-container">
+              <div
+                class="img1 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px] lg:h-[347px] lg:top-[147px] lg:left-[217px] md:top-[76px] md:left-[80px] overflow-hidden flex items-center justify-center"
+              >
+                <img
+                  src="../public/images/common/location/trekking.png"
+                  class="w-full h-full object-cover relative"
+                  alt=""
+                />
+                <p
+                  class="p1-serif absolute AnimPara1 text-[#fff] text-nowrap z-10"
+                >
+                  <span>Trekking</span>
+                </p>
+                <div
+                  class="bg-black/50 absolute inset-0 js-adventure-bg-overlay"
+                ></div>
+              </div>
+            </a>
+            <a href="" class="js-adventure-card-container">
+              <div
+                class="img2 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px] md:top-[197px] md:left-[330px] lg:h-[347px] lg:top-[197px] lg:left-[573px] flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="../public/images/common/location/cultural-tours.png"
+                  class="w-full h-full object-cover relative"
+                  alt=""
+                />
+                <p
+                  class="p1-serif absolute AnimPara1 text-[#fff] text-nowrap z-10"
+                >
+                  <span>Cultural tours</span>
+                </p>
+                <div
+                  class="bg-black/50 absolute inset-0 js-adventure-bg-overlay"
+                ></div>
+              </div>
+            </a>
+            <a href="" class="js-adventure-card-container">
+              <div
+                class="img3 rounded-[16px] absolute md:w-[362px] md:h-[242px] lg:w-[520px] lg:h-[347px] md:top-[288px] md:left-[41px] lg:top-[400px] lg:left-[249px] flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="../public/images/common/location/expedition.png"
+                  class="w-full h-full object-cover relative"
+                  alt=""
+                />
+                <p
+                  class="p1-serif AnimPara1 absolute text-[#fff] text-nowrap z-10"
+                >
+                  <span>Expedition</span>
+                </p>
+                <div
+                  class="bg-black/50 absolute inset-0 js-adventure-bg-overlay"
+                ></div>
+              </div>
+            </a>
+            <a href="" class="js-adventure-card-container">
+              <div
+                class="img4 rounded-[16px] absolute md:w-[362px] md:h-[242px] md:top-[377px] md:left-[363px] lg:w-[520px] lg:h-[347px] lg:top-[444px] lg:left-[703px] flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="../public/images/common/location/hiking.png"
+                  class="w-full h-full object-cover relative"
+                  alt=""
+                />
+                <p
+                  class="p1-serif absolute AnimPara1 text-[#fff] text-nowrap z-10"
+                >
+                  <span>Hiking</span>
+                </p>
+                <div
+                  class="bg-black/50 absolute inset-0 js-adventure-bg-overlay"
+                ></div>
+              </div>
+            </a>
           </div>
           <!-- mobile view -->
           <div class="flex flex-col gap-[40px] md:hidden">
             <div
-              class="text-center flex flex-col items-center justify-center gap-[8px] relative"
+              class="text-center flex flex-col items-center justify-center gap-6 relative"
             >
-              <h1
-                class="h3-antonio text-[var(--color-darkgreen-500)] whitespace-nowrap"
-              >
-                Adventure in Every Step
-              </h1>
-              <p class="p3-sans text-[var(--color-darkgreen-300)] leading-snug">
-                Adventure comes in many moods. <br />
-                Pick yours and we’ll take care of the rest.
-              </p>
+              <div>
+                <h1
+                  class="h3-antonio text-[var(--color-darkgreen-500)] whitespace-nowrap mb-2"
+                >
+                  Adventure in Every Step
+                </h1>
+                <p
+                  class="p3-sans text-[var(--color-darkgreen-300)] leading-snug"
+                >
+                  Adventure comes in many moods. <br />
+                  Pick yours and we’ll take care of the rest.
+                </p>
+              </div>
               <button class="secondary-btn">Browse All</button>
             </div>
             <div class="flex flex-col gap-[16px] w-full">
               <div class="flex w-full justify-center gap-[16px]">
-                <div
-                  class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center"
-                >
-                  <img
-                    src="../public/images/common/location/trekking.png"
-                    class="w-full h-full object-cover"
-                    alt=""
-                  />
-                  <p
-                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap"
+                <a href="">
+                  <div
+                    class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
                   >
-                    <span>Trekking</span>
-                  </p>
-                </div>
-                <div
-                  class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center"
-                >
-                  <img
-                    src="../public/images/common/location/cultural-tours.png"
-                    class="w-full h-full object-cover"
-                    alt=""
-                  />
-                  <p
-                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap"
+                    <img
+                      src="../public/images/common/location/trekking.png"
+                      class="w-full h-full object-cover"
+                      alt=""
+                    />
+                    <p
+                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
+                    >
+                      <span>Trekking</span>
+                    </p>
+                    <div class="bg-black/50 absolute inset-0"></div>
+                  </div>
+                </a>
+                <a href="">
+                  <div
+                    class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
                   >
-                    <span>Cultural tours</span>
-                  </p>
-                </div>
+                    <img
+                      src="../public/images/common/location/cultural-tours.png"
+                      class="w-full h-full object-cover"
+                      alt=""
+                    />
+                    <p
+                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
+                    >
+                      <span>Cultural tours</span>
+                    </p>
+                    <div class="bg-black/50 absolute inset-0"></div>
+                  </div>
+                </a>
               </div>
               <div class="flex w-full justify-center gap-[16px]">
-                <div
-                  class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center"
-                >
-                  <img
-                    src="../public/images/common/location/expedition.png"
-                    class="w-full h-full object-cover"
-                    alt=""
-                  />
-                  <p
-                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap"
+                <a href="">
+                  <div
+                    class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
                   >
-                    <span>Expedition</span>
-                  </p>
-                </div>
-                <div
-                  class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center"
-                >
-                  <img
-                    src="../public/images/common/location/cultural-tours.png"
-                    class="w-full h-full object-cover"
-                    alt=""
-                  />
-                  <p
-                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap"
+                    <img
+                      src="../public/images/common/location/expedition.png"
+                      class="w-full h-full object-cover"
+                      alt=""
+                    />
+                    <p
+                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
+                    >
+                      <span>Expedition</span>
+                    </p>
+                    <div class="bg-black/50 absolute inset-0"></div>
+                  </div>
+                </a>
+                <a href="">
+                  <div
+                    class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
                   >
-                    <span>Cultural tours</span>
-                  </p>
-                </div>
+                    <img
+                      src="../public/images/common/location/cultural-tours.png"
+                      class="w-full h-full object-cover"
+                      alt=""
+                    />
+                    <p
+                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
+                    >
+                      <span>Cultural tours</span>
+                    </p>
+                    <div class="bg-black/50 absolute inset-0"></div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -568,7 +616,7 @@
 
       <!-- USP section -->
       <section class="py-[56px] md:py-16 xl:py-24 bg-white">
-        <div class="layout-wrapper">
+        <div class="layout-wrapper js-scroll-fade-in">
           <div
             class="flex items-center justify-between flex-wrap mb-[40px] md:mb-12"
           >
@@ -1038,7 +1086,7 @@
       <section
         class="py-[56px] md:py-16 xl:py-[120px] bg-[var(--color-blue-100)]"
       >
-        <div class="layout-wrapper">
+        <div class="layout-wrapper js-scroll-fade-in">
           <div
             class="flex items-center justify-between flex-wrap max-md:gap-6 mb-[40px] md:mb-12"
           >
@@ -1112,7 +1160,7 @@
       <section
         class="relative overflow-hidden pt-10 h-[705px] md:h-[1081px] bg-[var(--color-blue-100)] bg-[url('/public/images/common/footer/footer-banner.png')] bg-cover bg-center flex flex-col justify-between"
       >
-        <div class="layout-wrapper">
+        <div class="layout-wrapper js-scroll-fade-in">
           <div
             class="text-[var(--color-heading-text-color-dark)] max-w-[491px] xl:max-w-[629px] w-full mx-auto text-center flex flex-col items-center justify-center gap-6"
           >
@@ -1126,7 +1174,7 @@
           </div>
         </div>
         <div
-          class="max-w-[589px] relative z-10 mx-auto flex flex-col gap-4 items-center justify-center"
+          class="max-w-[589px] relative z-10 mx-auto flex flex-col gap-4 items-center justify-center js-scroll-fade-in"
         >
           <p class="h1-sans">We are associated with:</p>
           <div class="flex items-center gap-8 md:gap-16">
@@ -1392,11 +1440,17 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="/scripts/common/lenis.js" defer></script>
-    <script type="module" src="/scripts/common/custom-cursor.js"></script>
     <script
       type="module"
       src="/scripts/landing-page/adventure-section.js"
     ></script>
+    <script type="module" src="/scripts/common/animation/fade-in.js"></script>
+    <script
+      type="module"
+      src="/scripts/common/animation/scroll-fade-in.js"
+    ></script>
+    <script type="module" src="/scripts/common/custom-cursor.js"></script>
+
     <script type="module" src="/scripts/landing-page/img-slider.js"></script>
     <script
       src="/scripts/common/navbar/animation/dekstop-navbar.js"
