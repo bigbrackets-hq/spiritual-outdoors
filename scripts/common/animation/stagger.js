@@ -8,6 +8,7 @@ cardContainerElements.forEach((element) => {
   gsap.from(cards, {
     opacity: 0,
     duration: 1,
+    delay: 0.2,
     stagger: 0.2,
     ease: 'power2.out',
     scrollTrigger: {
