@@ -8,6 +8,9 @@ const navItemElements = document.querySelectorAll('.js-nav-item');
 const buttonElement = document.querySelector('.js-whatsapp-btn');
 const dropDownIcons = document.querySelectorAll('.js-dropdown-icon');
 const overlayElement = document.getElementById('overlay');
+const hamburgerIconContainer = document.querySelector(
+  '.js-hamburger-icon-container'
+);
 
 let isNavbarActive = false;
 let isNavbarPanelOpen = false;
@@ -30,6 +33,9 @@ function toggleActiveNavbar() {
 
   buttonElement.style.color = '#FFF';
 
+  hamburgerIconContainer.innerHTML =
+    '<img src="/public/images/icons/hamburger-icon-dark.svg" alt="Hamburger menu icon" />';
+
   toggleButton();
 }
 
@@ -49,6 +55,9 @@ function toggleInactiveNavbar() {
 
   buttonElement.style.backgroundColor = 'var(--color-blue-500)';
   buttonElement.style.color = 'var(--color-darkgreen-500)';
+
+  hamburgerIconContainer.innerHTML =
+    '<img src="/public/images/icons/hamburger-icon.svg" alt="Hamburger menu icon" />';
 }
 
 headerElement.addEventListener('mouseenter', () => {
