@@ -24,6 +24,6 @@ tl.to(
 );
 
 tl.to(videoElement, {
-  scale: 1.4,
+  scale: 1.5,
   ease: 'none',
 });
