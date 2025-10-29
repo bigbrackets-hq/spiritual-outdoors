@@ -762,20 +762,22 @@
 
       <!-- Video section -->
       <section class="py-[56px] md:py-16 xl:py-24 bg-[var(--color-blue-100)]">
-        <div class="layout-wrapper">
+        <div class="layout-wrapper relative">
           <div
-            class="relative w-full h-[448px] md:h-[396px] lg:h-[550px] xl:h-[640px] rounded-2xl overflow-hidden"
+            class="relative w-full h-[448px] md:h-[396px] lg:h-[550px] xl:h-[640px] js-video-container"
           >
             <video
               src="/public/videos/everest.mp4"
-              class="w-full h-full object-cover"
+              class="w-full h-full rounded-2xl object-cover js-video"
               autoplay
               muted
               loop
               playsinline
             ></video>
+            <div
+              class="absolute inset-0 bg-black/20 z-10 rounded-2xl js-video-overlay"
+            ></div>
 
-            <div class="absolute inset-0 bg-black/20 z-10"></div>
             <div
               class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-md:max-w-[194px] lg:max-w-[400px] xl:max-w-[461px] w-full flex flex-col items-center justify-center gap-6"
             >
@@ -1724,7 +1726,7 @@
     ></script>
     <script type="module" src="/scripts/common/animation/stagger.js"></script>
     <script type="module" src="/scripts/common/custom-cursor.js"></script>
-
+    <script type="module" src="/scripts/landing-page/video-section.js"></script>
     <script type="module" src="/scripts/landing-page/img-slider.js"></script>
     <script
       src="/scripts/common/navbar/animation/dekstop-navbar.js"
