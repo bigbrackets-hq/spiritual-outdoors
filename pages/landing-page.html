@@ -253,7 +253,7 @@
                 <div class="filter-type-1">Adventures</div>
                 <div class="filter-type-1">Expeditions</div>
               </div>
-              <form class="max-w-[537px] mx-auto w-full">
+              <form class="max-w-[537px] mx-auto w-full relative">
                 <div
                   class="w-full h-[60px] pl-4 pr-[6px] border border-white/30 backdrop-blur-[10px] rounded-full bg-black/20 flex items-center gap-1"
                 >
@@ -264,7 +264,7 @@
                       class="w-4"
                     />
                     <input
-                      class="w-full h-full outline-none text-[#FFF]"
+                      class="w-full h-full outline-none text-[#FFF] js-search-input"
                       type="text"
                       placeholder="What are you looking for?"
                       name="search"
@@ -278,6 +278,56 @@
                   >
                     Search Now
                   </button>
+                </div>
+                <!-- Search and Package -->
+                <div
+                  class="hidden flex-col gap-3 absolute bg-[var(--color-blue-100)] max-w-[634px] w-full p-6 rounded-2xl z-20 top-20 js-search-listing"
+                >
+                  <div class="flex items-center justify-between flex-wrap">
+                    <div class="flex items-center gap-3">
+                      <img
+                        src="/public/images/icons/search-icon-black.svg"
+                        alt="Search icon"
+                      />
+                      <div class="flex flex-col gap-1">
+                        <p class="text-[var(--color-heading-text-color-dark)]">
+                          Annapurna Circuit
+                        </p>
+                        <span
+                          class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                          >Trekkings</span
+                        >
+                      </div>
+                    </div>
+                    <span
+                      class="l2-sans text-[var(--color-heading-text-color-dark)] py-1 px-2 rounded-full bg-[var(--color-blue-300)]"
+                    >
+                      5 packages found
+                    </span>
+                  </div>
+                  <div class="h-[1px] bg-[var(--color-blue-600)]"></div>
+                  <div class="flex items-center justify-between flex-wrap">
+                    <div class="flex items-center gap-3">
+                      <img
+                        src="/public/images/icons/search-icon-black.svg"
+                        alt="Search icon"
+                      />
+                      <div class="flex flex-col gap-1">
+                        <p class="text-[var(--color-heading-text-color-dark)]">
+                          Annapurna Circuit
+                        </p>
+                        <span
+                          class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                          >Trekkings</span
+                        >
+                      </div>
+                    </div>
+                    <span
+                      class="l2-sans text-[var(--color-heading-text-color-dark)] py-1 px-2 rounded-full bg-[var(--color-blue-300)]"
+                    >
+                      5 packages found
+                    </span>
+                  </div>
                 </div>
               </form>
             </div>
@@ -1729,6 +1779,7 @@
       src="/scripts/common/animation/scroll-fade-in.js"
     ></script>
     <script type="module" src="/scripts/common/animation/stagger.js"></script>
+    <script type="module" src="/scripts/common/search.js"></script>
     <script type="module" src="/scripts/common/custom-cursor.js"></script>
     <script type="module" src="/scripts/landing-page/video-section.js"></script>
     <script type="module" src="/scripts/landing-page/img-slider.js"></script>
