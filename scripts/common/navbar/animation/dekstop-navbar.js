@@ -15,6 +15,9 @@ const hamburgerIconContainer = document.querySelector(
 let isNavbarActive = false;
 let isNavbarPanelOpen = false;
 
+const originalLogoHTML = mainLogoElement.innerHTML;
+const originalHamburgerHTML = hamburgerIconContainer.innerHTML;
+
 function toggleActiveNavbar() {
   headerElement.style.backgroundColor = 'var(--color-blue-100)';
 
@@ -40,24 +43,16 @@ function toggleActiveNavbar() {
 }
 
 function toggleInactiveNavbar() {
-  headerElement.style.backgroundColor = 'transparent';
+  headerElement.removeAttribute('style');
+  mainLogoElement.innerHTML = originalLogoHTML;
 
-  mainLogoElement.innerHTML =
-    '<img src="/public/images/icons/main-logo.svg" alt="Spiritual outdoors logo"/>';
+  navItemElements.forEach((item) => item.removeAttribute('style'));
+  dropDownIcons.forEach((icon) =>
+    icon.querySelector('path')?.removeAttribute('style')
+  );
+  buttonElement.removeAttribute('style');
 
-  navItemElements.forEach((item) => {
-    item.style.color = 'var(--color-blue-500)';
-  });
-
-  dropDownIcons.forEach((icon) => {
-    icon.querySelector('path').style.fill = 'var(--color-blue-500)';
-  });
-
-  buttonElement.style.backgroundColor = 'var(--color-blue-500)';
-  buttonElement.style.color = 'var(--color-darkgreen-500)';
-
-  hamburgerIconContainer.innerHTML =
-    '<img src="/public/images/icons/hamburger-icon.svg" alt="Hamburger menu icon" />';
+  hamburgerIconContainer.innerHTML = originalHamburgerHTML;
 }
 
 headerElement.addEventListener('mouseenter', () => {
