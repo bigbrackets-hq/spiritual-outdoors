@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../styles/common/global.css" />
     <link rel="stylesheet" href="../styles/common/navbar.css" />
     <link rel="stylesheet" href="../styles/contact-page/contact-page.css" />
+    <link rel="stylesheet" href="../styles/common/faq.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -116,7 +117,7 @@
           class="js-hamburger-menu cursor-pointer xl:hidden js-hamburger-icon-container"
         >
           <img
-            src="/public/images/icons/hamburger-icon.svg"
+            src="/public/images/icons/hamburger-icon-dark.svg"
             alt="Hamburger menu icon"
           />
         </div>
@@ -290,12 +291,13 @@
         <h1 class="h3-antonio mb-4">Contact Us</h1>
       </div>
       <!-- Contact form section -->
-      <section class="pb-24">
-        <div class="layout-wrapper flex items-start gap-6">
-          <!-- General enquiry -->
-          <div class="w-full p-6">
+      <section class="pb-16 md:pb-24">
+        <div class="layout-wrapper flex flex-col lg:flex-row items-start gap-6">
+          <div
+            class="w-full p-4 md:p-6 border border-[var(--color-blue-100)] rounded-2xl"
+          >
             <p class="p3-sans text-[#505050]">Type of enquiry?</p>
-            <div class="flex gap-6">
+            <div class="flex gap-6 mb-6">
               <div class="flex gap-6">
                 <!-- Option 1 -->
                 <label class="py-4 flex items-center gap-2 cursor-pointer">
@@ -303,7 +305,7 @@
                     type="radio"
                     name="inquiry-type"
                     value="general"
-                    class="hidden peer"
+                    class="hidden peer js-general-enquiry-radio"
                     checked
                   />
                   <!-- SVG changes when checked -->
@@ -338,7 +340,7 @@
                     type="radio"
                     name="inquiry-type"
                     value="planning"
-                    class="hidden peer"
+                    class="hidden peer js-planning-trip-radio"
                   />
 
                   <svg
@@ -369,8 +371,11 @@
                 </label>
               </div>
             </div>
-            <form class="max-w-[845px] w-full flex flex-col gap-6">
-              <div class="flex items-center gap-6">
+            <!-- General enquiry Form -->
+            <form
+              class="max-w-[845px] w-full flex flex-col gap-6 js-general-enquiry-form"
+            >
+              <div class="flex flex-col lg:flex-row gap-6">
                 <div class="flex flex-col gap-2 w-full">
                   <label for="fullName" class="l2-sans-strong text-[#505050]">
                     Full Name
@@ -385,7 +390,7 @@
                     required
                   />
                 </div>
-                <div class="flex flex-col gap-2 w-full">
+                <div class="flex flex-col gap-2 w-full relative">
                   <label for="email" class="l2-sans-strong text-[#505050]">
                     Email Address
                   </label>
@@ -394,15 +399,20 @@
                     id="email"
                     name="email"
                     placeholder="example@gmail.com"
-                    class="input"
+                    class="input error"
                     autocomplete="off"
                     required
                   />
+                  <span class="l3-sans text-[var(--color-danger-500)]"
+                    >This is an error message.</span
+                  >
                 </div>
               </div>
-              <div class="flex items-center gap-6">
+              <div class="flex flex-col lg:flex-row gap-6">
                 <div class="flex flex-col gap-2 w-full">
-                  <label for="country">Select Country</label>
+                  <label for="country" class="l2-sans-strong text-[#505050]">
+                    Select Country</label
+                  >
                   <select
                     name="country"
                     id="country"
@@ -446,8 +456,11 @@
               </div>
               <div>
                 <div class="flex flex-col gap-2 w-full">
-                  <label for="spiritual-outdoors"
-                    >How do you find Spiritual Outdoors?</label
+                  <label
+                    for="spiritual-outdoors"
+                    class="l2-sans-strong text-[#505050]"
+                  >
+                    How do you find Spiritual Outdoors?</label
                   >
                   <select
                     name="spiritual-outdoors"
@@ -474,13 +487,258 @@
                   ></textarea>
                 </div>
               </div>
-              <button class="primary-btn">Send Message</button>
+              <button class="primary-btn mt-4 md:mt-8">Send Message</button>
+            </form>
+
+            <!-- Planning a trip form -->
+            <form
+              class="max-w-[845px] w-full flex-col gap-6 js-planning-trip-form hidden"
+            >
+              <!-- Personal information -->
+              <div>
+                <h1 class="p3-sans mb-4 text-[#505050]">
+                  Personal Information
+                </h1>
+                <div class="flex flex-col gap-6">
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="fullName"
+                        class="l2-sans-strong text-[#505050]"
+                      >
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Full Name"
+                        class="input"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label for="email" class="l2-sans-strong text-[#505050]">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        class="input"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-col gap-2 w-full">
+                      <label for="country">Select Country</label>
+                      <select
+                        name="country"
+                        id="country"
+                        class="select-input"
+                        required
+                      >
+                        <option value="nepal">Nepal</option>
+                        <option value="tibet">Tibet</option>
+                        <option value="bhutan">Bhutan</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="contactNumber"
+                        class="l2-sans-strong text-[#505050]"
+                      >
+                        Contact Number
+                      </label>
+                      <div class="relative">
+                        <input
+                          type="text"
+                          id="contactNumber"
+                          name="contactNumber"
+                          placeholder="000-0000000"
+                          class="input !pl-20"
+                          autocomplete="off"
+                          required
+                        />
+                        <div
+                          class="absolute top-1/2 left-4 -translate-y-1/2 flex items-center gap-1"
+                        >
+                          <img
+                            src="/public/images/common/country-flag/nepal-flag.png"
+                            alt="Nepal flag"
+                            class="w-[9px]"
+                          />
+                          <span class="l2-sans text-[#505050]">+977</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trip details -->
+              <div>
+                <h1 class="p3-sans mb-4 text-[#505050]">Trip Details</h1>
+                <div class="flex flex-col gap-6">
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="tripType"
+                        class="l2-sans-strong text-[#505050]"
+                        >Trip Type</label
+                      >
+                      <select
+                        name="tripType"
+                        id="tripType"
+                        class="select-input"
+                        required
+                      >
+                        <option value="">Select a trip type</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="dateOfTravel"
+                        class="l2-sans-strong text-[#505050]"
+                        >Approx. Date of Travel</label
+                      >
+                      <input
+                        type="date"
+                        class="input"
+                        name="dateOfTravel"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="tripOfDuration"
+                        class="l2-sans-strong text-[#505050]"
+                        >Trip Duration</label
+                      >
+                      <select
+                        name="tripDuration"
+                        id="tripDuration"
+                        class="select-input"
+                        required
+                      >
+                        <option value="">Select duration</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="noOfTravellers"
+                        class="l2-sans-strong text-[#505050]"
+                      >
+                        No. of travellers
+                      </label>
+                      <input
+                        type="text"
+                        id="noOfTravelers"
+                        name="noOfTravelers"
+                        placeholder="No. of travellers"
+                        class="input"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="hotelType"
+                        class="l2-sans-strong text-[#505050]"
+                        >Hotel Type</label
+                      >
+                      <select
+                        name="tripDuration"
+                        id="tripDuration"
+                        class="select-input"
+                        required
+                      >
+                        <option value="">Select one option</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="estimatedBudget"
+                        class="l2-sans-strong text-[#505050]"
+                        >Estimated Budget</label
+                      >
+                      <select
+                        name="estimatedBudget"
+                        id="estimatedBudget"
+                        class="select-input"
+                        required
+                      >
+                        <option value="">Select one option</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="preferredguideLanguage"
+                        class="l2-sans-strong text-[#505050]"
+                        >Preferred Guide Language</label
+                      >
+                      <select
+                        name="preferredguideLanguage"
+                        id="preferredguideLanguage"
+                        class="select-input"
+                        required
+                      >
+                        <option value="">Select one option</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="estimatedBudget"
+                        class="l2-sans-strong text-[#505050]"
+                        >How do you find Spiritual Outdoors?
+                      </label>
+                      <select
+                        name="estimatedBudget"
+                        id="estimatedBudget"
+                        class="select-input"
+                        required
+                      >
+                        <option value="google-search">Google Search</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex flex-col gap-2 w-full">
+                      <label
+                        for="moreInformations"
+                        class="l2-sans-strong text-[#505050]"
+                      >
+                        More Informations
+                      </label>
+                      <textarea
+                        name="moreInformations"
+                        id="quemoreInformationsries"
+                        placeholder="Your queries here"
+                        class="textarea"
+                        rows="4"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="primary-btn mt-4 md:mt-8">Send Message</button>
             </form>
           </div>
           <div
-            class="max-w-[411px] w-full min-h-[635px] bg-[var(--color-blue-100)] p-6 rounded-2xl"
+            class="lg:max-w-[411px] w-full min-h-[635px] bg-[var(--color-blue-100)] p-6 rounded-2xl"
           >
-            <div class="flex flex-col gap-3 max-w-[332px] w-full mb-6">
+            <div class="flex flex-col gap-3 lg:max-w-[332px] w-full mb-6">
               <p
                 class="p1-sans-strong text-[var(--color-heading-text-color-dark)]"
               >
@@ -500,7 +758,26 @@
                   src="/public/images/common/footer/location-icon.svg"
                   alt="Location icon"
                 />
-                <p class="l1-sans text-[var(--color-passage-text-color-dark)]">
+                <p
+                  class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
+                >
+                  +977 1 4418817 (Office)
+                </p>
+                <span class="hidden md:inline lg:hidden">|</span>
+                <p
+                  class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
+                >
+                  +977 9851202196 (Kabin)
+                </p>
+                <span class="hidden md:inline lg:hidden"> |</span>
+                <p
+                  class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
+                >
+                  +977 985123190 (Badri)
+                </p>
+                <p
+                  class="md:hidden lg:block l1-sans text-[var(--color-passage-text-color-dark)]"
+                >
                   +977 1 4418817 (Office) <br />
                   +977 9851202196 (Kabin) <br />
                   +977 985123190 (Badri)
@@ -536,19 +813,152 @@
       </section>
 
       <!-- Trusted by travellers section -->
-      <section class="py-24">
-        <div class="layout-wrapper flex flex-col gap-16">
+      <section class="py-[56px] md:py-16 xl:py-24">
+        <div class="layout-wrapper flex flex-col gap-[40px] md:gap-16">
           <h2
-            class="h3-antonio max-w-[519px] w-full mx-auto text-center text-[var( --color-heading-text-color-dark)]"
+            class="h3-antonio max-w-[282px] md:max-w-[834px] w-full mx-auto text-center text-[var(--color-heading-text-color-dark)]"
           >
             Trusted by travellers around the world
           </h2>
+          <div
+            class="flex justify-center lg:justify-between flex-wrap gap-4 max-lg:gap-[28px]"
+          >
+            <div
+              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] max-lg:w-[296px]"
+            >
+              <h3 class="p1-antonio">4.98</h3>
+              <p class="p3-serif">Based on 28,940 Reviews</p>
+            </div>
+            <div
+              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] max-lg:w-[296px]"
+            >
+              <h3 class="p1-antonio">95%</h3>
+              <p class="p3-serif">satisfied tourists</p>
+            </div>
+            <div
+              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
+            >
+              <h3 class="p1-antonio">2950+</h3>
+              <p class="p3-serif">trip-advisor reviews</p>
+            </div>
+            <div
+              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
+            >
+              <h3 class="p1-antonio">2950+</h3>
+              <p class="p3-serif">trip-advisor reviews</p>
+            </div>
+            <div
+              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
+            >
+              <h3 class="p1-antonio">18+ Years</h3>
+              <p class="p3-serif">of experience</p>
+            </div>
+          </div>
+          <div
+            class="flex gap-6 text-[var(--color-darkgreen-500)] overflow-x-scroll scrollbar-hidden"
+          >
+            <div
+              class="w-[317px] md:w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 shrink-0"
+            >
+              <div class="flex items-start gap-6">
+                <div class="flex items-center gap-3 flex-1">
+                  <div class="w-[50px] h-[50px]">
+                    <img
+                      src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                      alt="Reviewer avatar"
+                      class="rounded-full w-full h-full"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p
+                      class="p2-sans text-[var(--color-heading-text-color-dark)]"
+                    >
+                      Andrew K.
+                    </p>
+                    <span
+                      class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                      >Zwolle, Netherlands</span
+                    >
+                  </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <p class="p2-sans">5.0</p>
+                  <div class="w-[20px] h-[20px]">
+                    <img
+                      src="/public/images/icons/star-icon.svg"
+                      alt="Star icon"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p class="l1-sans text-[var(--color-darkgreen-400)]">
+                Felt like a true home away from home! The apartment was
+                spotless, beautifully decorated, and just steps from Central
+                Park. The host was super responsive – I’d definitely stay again.
+              </p>
+              <span class="l2-sans text-[var(--color-darkgreen-300)]"
+                >Aug 20, 2025</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex gap-2 md:gap-6 justify-center items-center flex-wrap"
+          >
+            <p class="p3-sans-strong text-center max-md:w-full">
+              Read more reviews on:
+            </p>
+            <img src="/public/images/icons/google-icon.svg" alt="Google icon" />
+            <img
+              src="/public/images/icons/tripadvisor-icon.svg"
+              alt="Tripadvisor icon"
+            />
+          </div>
         </div>
       </section>
 
       <!-- FAQ section -->
-      <section>
-        <div class="layout-wrapper"></div>
+      <section class="py-[56px] md:py-16 xl:py-24">
+        <div class="layout-wrapper flex flex-col gap-16">
+          <h2
+            class="h3-antonio max-w-[834px] w-full mx-auto text-center text-[var(--color-heading-text-color-dark)]"
+          >
+            Frequently asked questions
+          </h2>
+          <div
+            class="flex flex-col gap-4 max-w-[846px] w-full mx-auto select-none"
+          >
+            <div
+              class="px-6 py-5 rounded-2xl flex items-start justify-between bg-white hover:bg-[var(--color-blue-100)] border border-[var(--color-darkgreen-500)]/30 hover:border-[var(--color-blue-100)] cursor-pointer transition-all duration-300 ease-in-out js-faq"
+            >
+              <div class="flex flex-col gap-[18px] max-w-[600px] w-full">
+                <p
+                  class="p3-sans text-[var(--color-passage-text-color-dark)] js-faq-question"
+                >
+                  What makes Spiritual Outdoors different from other travel
+                  companies?
+                </p>
+                <p class="text-[#787878] hidden js-faq-answer">
+                  At Spiritual Outdoors, we believe travel should touch the
+                  soul, not just the map. Our journeys combine adventure,
+                  culture, and mindfulness — led by local experts who share the
+                  deeper stories of their land. We focus on meaningful
+                  experiences that connect travelers with nature, tradition, and
+                  the local way of life across Nepal, Tibet, and Bhutan.
+                </p>
+              </div>
+              <img
+                src="/public/images/icons/plus-icon.svg"
+                alt="Plus icon"
+                class="js-plus-icon"
+              />
+              <img
+                src="/public/images/icons/minus-icon.svg"
+                alt="minus icon"
+                class="js-minus-icon hidden"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -838,14 +1248,6 @@
     ></script>
     <script src="/scripts/common/lenis.js" defer></script>
     <script
-      type="module"
-      src="/scripts/landing-page/adventure-section.js"
-    ></script>
-    <script
-      type="module"
-      src="/scripts/common/animation/scroll-fade-in.js"
-    ></script>
-    <script
       src="/scripts/common/navbar/animation/dekstop-navbar.js"
       defer
     ></script>
@@ -853,5 +1255,8 @@
       src="/scripts/common/navbar/navbar-dropdown-panel.js"
       defer
     ></script>
+    <script src="/scripts/common/animation/scroll-fade-in.js"></script>
+    <script type="module" src="/scripts/contact-us/contact-us.js"></script>
+    <script type="module" src="/scripts/common/faq/faq.js"></script>
   </body>
 </html>
