@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
       ease: 'power2.out',
       scrollTrigger: {
         trigger: element,
-        start: 'top 80%',
+        start: 'top 90%',
       },
     });
   });
