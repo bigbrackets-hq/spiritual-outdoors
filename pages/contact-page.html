@@ -813,7 +813,7 @@
       </section>
 
       <!-- Trusted by travellers section -->
-      <section class="py-[56px] md:py-16 xl:py-24">
+      <section class="py-[56px] md:py-16 xl:py-24 overflow-hidden">
         <div class="layout-wrapper flex flex-col gap-[40px] md:gap-16">
           <h2
             class="h3-antonio max-w-[282px] md:max-w-[834px] w-full mx-auto text-center text-[var(--color-heading-text-color-dark)]"
@@ -821,42 +821,228 @@
             Trusted by travellers around the world
           </h2>
           <div
-            class="flex justify-center lg:justify-between flex-wrap gap-4 max-lg:gap-[28px]"
+            class="flex flex-col md:flex-row items-center justify-center md:justify-between flex-wrap gap-4 max-lg:gap-6 md:px-[80px] lg:px-0"
           >
             <div
-              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] max-lg:w-[296px]"
+              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] max-lg:w-[200px]"
             >
-              <h3 class="p1-antonio">4.98</h3>
+              <h3 class="p1-antonio flex items-center gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="40"
+                  viewBox="0 0 16 40"
+                  fill="none"
+                >
+                  <path
+                    d="M0.936646 27.2218L0.940753 27.2259C0.846839 28.5408 3.62251 34.2074 7.75751 32.3876C8.15515 33.0514 8.58705 33.694 9.05149 34.3132C8.83105 34.2156 8.61069 34.1219 8.38613 34.0486C6.39416 33.3808 4.72875 34.2562 4.39407 34.529C4.27162 34.6265 4.18994 34.7854 4.18592 34.9401V34.9563C4.18592 34.9686 4.19003 34.9848 4.19003 34.9971H4.19414C4.33699 35.6199 6.49226 38.2212 8.65161 38.6038C8.88484 38.6441 9.12109 38.6646 9.3578 38.6649C10.3334 38.6649 11.2559 38.2944 12.0356 37.5861C13.0356 38.4776 14.101 39.2714 15.2317 39.9309C15.3133 39.9756 15.3991 40 15.4889 40C15.578 39.9996 15.6654 39.9761 15.7427 39.9318C15.8199 39.8876 15.8844 39.8241 15.9297 39.7477C16.0726 39.5034 15.991 39.19 15.746 39.0515C14.652 38.4165 13.6234 37.6471 12.6642 36.78C13.0397 36.0718 13.5418 34.7487 13.4724 33.328C13.4234 32.5262 13.1949 31.2194 12.3458 29.5341L12.3213 29.4853C12.2437 29.298 12.06 29.1637 11.8478 29.1637C11.7172 29.1637 11.6029 29.2084 11.5131 29.2857C10.9457 29.7132 9.69249 30.8732 9.65172 32.807C9.64764 33.0308 9.66806 33.2507 9.69659 33.4704C9.31287 32.9414 8.94553 32.3917 8.60674 31.8218C10.5579 29.9126 10.8314 27.4253 10.3374 24.7304L10.3252 24.6695C10.3048 24.5066 10.211 24.36 10.0639 24.2786C9.92106 24.2012 9.75376 24.1932 9.60678 24.2583C8.21899 24.7753 7.24339 25.7726 6.83111 27.0711C6.76173 27.291 6.71688 27.5149 6.68415 27.7389C6.45149 27.0834 6.25556 26.42 6.08817 25.7442C6.77807 25.3981 7.92909 24.6248 8.64348 23.3586C9.03944 22.6585 9.54562 21.4251 9.74153 19.5077L9.74975 19.4305H9.74564C9.75785 19.3815 9.75785 19.3489 9.75785 19.345C9.75774 19.2467 9.72918 19.1507 9.67558 19.0685C9.622 18.986 9.54567 18.9209 9.45581 18.8808C9.366 18.8402 9.26809 18.8279 9.17419 18.8402C7.7047 18.9134 6.49242 19.5565 5.72905 20.6598C5.60662 20.8389 5.5046 21.0301 5.41069 21.2216C5.37805 20.5255 5.37394 19.8211 5.40249 19.1212C6.14945 19.0193 7.44341 18.6734 8.49661 17.6679C9.32115 16.8739 10.0314 15.7545 10.611 14.3298L10.6396 14.2647C10.7212 14.11 10.7171 13.9146 10.6191 13.7558C10.5793 13.6947 10.5271 13.6425 10.466 13.6026C10.4049 13.5626 10.3361 13.5358 10.264 13.5237C8.8354 13.1533 7.50467 13.3854 6.48011 14.1791C6.31273 14.3053 6.16175 14.4559 6.01888 14.6106C6.17741 13.9298 6.36536 13.2562 6.58222 12.5915C6.87205 12.6525 7.24757 12.7015 7.68027 12.7015C8.34972 12.7015 9.14564 12.5834 9.92533 12.1967C10.9336 11.6959 11.9214 10.8452 12.8684 9.66466L12.9092 9.61174C12.9687 9.55084 13.0121 9.47622 13.0356 9.39454C13.0591 9.31287 13.062 9.22665 13.044 9.14359C13.0113 8.98892 12.9052 8.86272 12.7664 8.79352C11.5051 8.02005 10.1784 7.83284 9.00286 8.248C8.78241 8.32537 8.57428 8.4353 8.37426 8.55332C8.75134 7.88922 9.16707 7.24765 9.61927 6.63194C10.5173 6.29 12.0276 5.61017 13.2847 4.45409C13.946 3.83537 14.9297 2.70776 15.889 0.855498L15.9217 0.794406C15.9748 0.707727 16.0009 0.60723 15.9965 0.505719C15.9921 0.404218 15.9575 0.306315 15.8971 0.224498C15.7584 0.0412935 15.5706 0.0250171 15.4808 0.0169208C15.2277 -0.0115402 12.9419 -0.17438 11.0111 1.56378C9.36198 3.05773 8.87623 5.16239 8.80276 6.01723C8.36081 6.62108 7.9507 7.24747 7.57406 7.89386C7.58629 7.66591 7.59859 7.43798 7.59448 7.21403V7.20994C7.56997 5.32113 6.75771 3.78645 6.27197 3.19619C6.17396 2.99671 5.9495 2.87869 5.71684 2.92342C5.11677 3.03736 3.42691 6.40392 3.68812 8.79352C3.88406 10.7027 4.95356 11.7286 5.64335 12.2007C5.40249 12.9172 5.19845 13.6499 5.02294 14.3909C4.96988 14.1588 4.90862 13.9227 4.83924 13.6948C4.25147 11.8303 2.95748 10.6824 2.3534 10.3323C2.27432 10.2676 2.17764 10.228 2.0758 10.2186C1.97395 10.2091 1.87161 10.2303 1.78193 10.2794C1.24312 10.5725 0.614464 14.3787 1.54107 16.5076C2.10031 17.8103 3.12487 18.7141 4.38622 19.0519C4.35356 19.8295 4.35767 20.6112 4.39843 21.3845C4.28009 21.1851 4.16577 20.9815 4.03511 20.7901C2.69627 18.8607 0.785867 18.4657 0.504302 18.4657H0.496088C0.463414 18.4657 0.43074 18.4698 0.398246 18.4778C0.296118 18.5024 0.198097 18.5553 0.124715 18.6408C0.116502 18.6449 0.112397 18.6529 0.108291 18.6611C0.0961494 18.6774 0.0797224 18.6977 0.0675821 18.718L0.0756168 18.7221C-0.193628 19.4102 0.234878 22.9233 1.70435 24.5883C2.533 25.5325 3.60653 26.0293 4.77805 26.0293C4.88418 26.0293 4.99441 26.0252 5.10462 26.017C5.29235 26.7661 5.5169 27.511 5.7822 28.2356C5.61482 28.085 5.44341 27.9385 5.2679 27.804C3.48819 26.4487 1.56969 26.7376 1.26765 26.8475C1.2391 26.8596 1.21459 26.8719 1.19007 26.884C1.08395 26.9451 0.998245 27.0387 0.953306 27.1609C0.9492 27.165 0.949199 27.173 0.949199 27.1812C0.940736 27.1933 0.936646 27.2097 0.936646 27.2218Z"
+                    fill="#00312B"
+                  />
+                </svg>
+                4.98
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="40"
+                  viewBox="0 0 16 40"
+                  fill="none"
+                >
+                  <path
+                    d="M15.0634 27.2218L15.0592 27.2259C15.1532 28.5408 12.3775 34.2074 8.24249 32.3876C7.84485 33.0514 7.41295 33.694 6.94851 34.3132C7.16895 34.2156 7.38931 34.1219 7.61387 34.0486C9.60584 33.3808 11.2712 34.2562 11.6059 34.529C11.7284 34.6265 11.8101 34.7854 11.8141 34.9401V34.9563C11.8141 34.9686 11.81 34.9848 11.81 34.9971H11.8059C11.663 35.6199 9.50774 38.2212 7.34839 38.6038C7.11516 38.6441 6.87891 38.6646 6.6422 38.6649C5.66659 38.6649 4.74412 38.2944 3.96444 37.5861C2.96441 38.4776 1.899 39.2714 0.768296 39.9309C0.686701 39.9756 0.60091 40 0.51112 40C0.422026 39.9996 0.334593 39.9761 0.257337 39.9318C0.180081 39.8876 0.115644 39.8241 0.0703115 39.7477C-0.0725598 39.5034 0.00903505 39.19 0.254016 39.0515C1.34796 38.4165 2.37662 37.6471 3.33584 36.78C2.9603 36.0718 2.45824 34.7487 2.5276 33.328C2.57658 32.5262 2.80513 31.2194 3.6542 29.5341L3.67871 29.4853C3.75631 29.298 3.94001 29.1637 4.15225 29.1637C4.28282 29.1637 4.39714 29.2084 4.48693 29.2857C5.05429 29.7132 6.30751 30.8732 6.34828 32.807C6.35236 33.0308 6.33194 33.2507 6.30341 33.4704C6.68713 32.9414 7.05447 32.3917 7.39326 31.8218C5.44213 29.9126 5.16861 27.4253 5.66258 24.7304L5.67479 24.6695C5.69521 24.5066 5.78904 24.36 5.93609 24.2786C6.07894 24.2012 6.24624 24.1932 6.39322 24.2583C7.78101 24.7753 8.75661 25.7726 9.16889 27.0711C9.23827 27.291 9.28312 27.5149 9.31585 27.7389C9.54851 27.0834 9.74444 26.42 9.91183 25.7442C9.22193 25.3981 8.07091 24.6248 7.35652 23.3586C6.96056 22.6585 6.45438 21.4251 6.25847 19.5077L6.25025 19.4305H6.25436C6.24215 19.3815 6.24215 19.3489 6.24215 19.345C6.24226 19.2467 6.27082 19.1507 6.32442 19.0685C6.378 18.986 6.45433 18.9209 6.54419 18.8808C6.634 18.8402 6.73191 18.8279 6.82581 18.8402C8.2953 18.9134 9.50758 19.5565 10.271 20.6598C10.3934 20.8389 10.4954 21.0301 10.5893 21.2216C10.622 20.5255 10.6261 19.8211 10.5975 19.1212C9.85055 19.0193 8.55659 18.6734 7.50339 17.6679C6.67885 16.8739 5.96864 15.7545 5.38897 14.3298L5.36044 14.2647C5.27876 14.11 5.28287 13.9146 5.38087 13.7558C5.4207 13.6947 5.47285 13.6425 5.53397 13.6026C5.5951 13.5626 5.6639 13.5358 5.73597 13.5237C7.1646 13.1533 8.49533 13.3854 9.51989 14.1791C9.68727 14.3053 9.83825 14.4559 9.98112 14.6106C9.82259 13.9298 9.63464 13.2562 9.41778 12.5915C9.12795 12.6525 8.75243 12.7015 8.31973 12.7015C7.65028 12.7015 6.85436 12.5834 6.07467 12.1967C5.06643 11.6959 4.0786 10.8452 3.13162 9.66466L3.09078 9.61174C3.03135 9.55084 2.98793 9.47622 2.96443 9.39454C2.94091 9.31287 2.93802 9.22665 2.95604 9.14359C2.98868 8.98892 3.0948 8.86272 3.23364 8.79352C4.49489 8.02005 5.82159 7.83284 6.99714 8.248C7.21759 8.32537 7.42572 8.4353 7.62574 8.55332C7.24866 7.88922 6.83293 7.24765 6.38073 6.63194C5.48271 6.29 3.9724 5.61017 2.71525 4.45409C2.05399 3.83537 1.07027 2.70776 0.110984 0.855498L0.078346 0.794406C0.0251933 0.707727 -0.000856206 0.60723 0.00350028 0.505719C0.00787462 0.404218 0.0424587 0.306315 0.10286 0.224498C0.241625 0.0412935 0.429436 0.0250171 0.519226 0.0169208C0.772313 -0.0115402 3.05815 -0.17438 4.98893 1.56378C6.63802 3.05773 7.12377 5.16239 7.19724 6.01723C7.63919 6.62108 8.0493 7.24747 8.42594 7.89386C8.41371 7.66591 8.40141 7.43798 8.40552 7.21403V7.20994C8.43003 5.32113 9.24229 3.78645 9.72803 3.19619C9.82604 2.99671 10.0505 2.87869 10.2832 2.92342C10.8832 3.03736 12.5731 6.40392 12.3119 8.79352C12.1159 10.7027 11.0464 11.7286 10.3567 12.2007C10.5975 12.9172 10.8015 13.6499 10.9771 14.3909C11.0301 14.1588 11.0914 13.9227 11.1608 13.6948C11.7485 11.8303 13.0425 10.6824 13.6466 10.3323C13.7257 10.2676 13.8224 10.228 13.9242 10.2186C14.026 10.2091 14.1284 10.2303 14.2181 10.2794C14.7569 10.5725 15.3855 14.3787 14.4589 16.5076C13.8997 17.8103 12.8751 18.7141 11.6138 19.0519C11.6464 19.8295 11.6423 20.6112 11.6016 21.3845C11.7199 21.1851 11.8342 20.9815 11.9649 20.7901C13.3037 18.8607 15.2141 18.4657 15.4957 18.4657H15.5039C15.5366 18.4657 15.5693 18.4698 15.6018 18.4778C15.7039 18.5024 15.8019 18.5553 15.8753 18.6408C15.8835 18.6449 15.8876 18.6529 15.8917 18.6611C15.9039 18.6774 15.9203 18.6977 15.9324 18.718L15.9244 18.7221C16.1936 19.4102 15.7651 22.9233 14.2956 24.5883C13.467 25.5325 12.3935 26.0293 11.222 26.0293C11.1158 26.0293 11.0056 26.0252 10.8954 26.017C10.7077 26.7661 10.4831 27.511 10.2178 28.2356C10.3852 28.085 10.5566 27.9385 10.7321 27.804C12.5118 26.4487 14.4303 26.7376 14.7323 26.8475C14.7609 26.8596 14.7854 26.8719 14.8099 26.884C14.9161 26.9451 15.0018 27.0387 15.0467 27.1609C15.0508 27.165 15.0508 27.173 15.0508 27.1812C15.0593 27.1933 15.0634 27.2097 15.0634 27.2218Z"
+                    fill="#00312B"
+                  />
+                </svg>
+              </h3>
               <p class="p3-serif">Based on 28,940 Reviews</p>
             </div>
+            <!-- Mobile view -->
             <div
-              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] max-lg:w-[296px]"
+              class="md:hidden flex items-center justify-center gap-[28px] flex-wrap"
+            >
+              <div
+                class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] w-[163px]"
+              >
+                <h3 class="p1-antonio">95%</h3>
+                <p class="p3-serif">satisfied tourists</p>
+              </div>
+              <div
+                class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] w-[163px]"
+              >
+                <h3 class="p1-antonio">2950+</h3>
+                <p class="p3-serif">trip-advisor reviews</p>
+              </div>
+              <div
+                class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] w-[163px]"
+              >
+                <h3 class="p1-antonio">2950+</h3>
+                <p class="p3-serif">trip-advisor reviews</p>
+              </div>
+              <div
+                class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] w-[163px]"
+              >
+                <h3 class="p1-antonio">18+ Years</h3>
+                <p class="p3-serif">of experience</p>
+              </div>
+            </div>
+
+            <!-- Tablet and larger view -->
+            <div
+              class="max-md:hidden flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)] max-lg:w-[200px]"
             >
               <h3 class="p1-antonio">95%</h3>
               <p class="p3-serif">satisfied tourists</p>
             </div>
             <div
-              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
+              class="max-md:hidden flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
             >
               <h3 class="p1-antonio">2950+</h3>
               <p class="p3-serif">trip-advisor reviews</p>
             </div>
             <div
-              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
+              class="max-md:hidden flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
             >
               <h3 class="p1-antonio">2950+</h3>
               <p class="p3-serif">trip-advisor reviews</p>
             </div>
             <div
-              class="flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
+              class="max-md:hidden flex flex-col gap-4 items-center text-[var(--color-heading-text-color-dark)]"
             >
               <h3 class="p1-antonio">18+ Years</h3>
               <p class="p3-serif">of experience</p>
             </div>
           </div>
           <div
-            class="flex gap-6 text-[var(--color-darkgreen-500)] overflow-x-scroll scrollbar-hidden"
+            class="flex gap-6 text-[var(--color-darkgreen-500)] js-card-container"
           >
+            <div
+              class="w-[317px] md:w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 shrink-0"
+            >
+              <div class="flex items-start gap-6">
+                <div class="flex items-center gap-3 flex-1">
+                  <div class="w-[50px] h-[50px]">
+                    <img
+                      src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                      alt="Reviewer avatar"
+                      class="rounded-full w-full h-full"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p
+                      class="p2-sans text-[var(--color-heading-text-color-dark)]"
+                    >
+                      Andrew K.
+                    </p>
+                    <span
+                      class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                      >Zwolle, Netherlands</span
+                    >
+                  </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <p class="p2-sans">5.0</p>
+                  <div class="w-[20px] h-[20px]">
+                    <img
+                      src="/public/images/icons/star-icon.svg"
+                      alt="Star icon"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p class="l1-sans text-[var(--color-darkgreen-400)]">
+                Felt like a true home away from home! The apartment was
+                spotless, beautifully decorated, and just steps from Central
+                Park. The host was super responsive – I’d definitely stay again.
+              </p>
+              <span class="l2-sans text-[var(--color-darkgreen-300)]"
+                >Aug 20, 2025</span
+              >
+            </div>
+            <div
+              class="w-[317px] md:w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 shrink-0"
+            >
+              <div class="flex items-start gap-6">
+                <div class="flex items-center gap-3 flex-1">
+                  <div class="w-[50px] h-[50px]">
+                    <img
+                      src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                      alt="Reviewer avatar"
+                      class="rounded-full w-full h-full"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p
+                      class="p2-sans text-[var(--color-heading-text-color-dark)]"
+                    >
+                      Andrew K.
+                    </p>
+                    <span
+                      class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                      >Zwolle, Netherlands</span
+                    >
+                  </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <p class="p2-sans">5.0</p>
+                  <div class="w-[20px] h-[20px]">
+                    <img
+                      src="/public/images/icons/star-icon.svg"
+                      alt="Star icon"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p class="l1-sans text-[var(--color-darkgreen-400)]">
+                Felt like a true home away from home! The apartment was
+                spotless, beautifully decorated, and just steps from Central
+                Park. The host was super responsive – I’d definitely stay again.
+              </p>
+              <span class="l2-sans text-[var(--color-darkgreen-300)]"
+                >Aug 20, 2025</span
+              >
+            </div>
+            <div
+              class="w-[317px] md:w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 shrink-0"
+            >
+              <div class="flex items-start gap-6">
+                <div class="flex items-center gap-3 flex-1">
+                  <div class="w-[50px] h-[50px]">
+                    <img
+                      src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                      alt="Reviewer avatar"
+                      class="rounded-full w-full h-full"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <p
+                      class="p2-sans text-[var(--color-heading-text-color-dark)]"
+                    >
+                      Andrew K.
+                    </p>
+                    <span
+                      class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                      >Zwolle, Netherlands</span
+                    >
+                  </div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <p class="p2-sans">5.0</p>
+                  <div class="w-[20px] h-[20px]">
+                    <img
+                      src="/public/images/icons/star-icon.svg"
+                      alt="Star icon"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p class="l1-sans text-[var(--color-darkgreen-400)]">
+                Felt like a true home away from home! The apartment was
+                spotless, beautifully decorated, and just steps from Central
+                Park. The host was super responsive – I’d definitely stay again.
+              </p>
+              <span class="l2-sans text-[var(--color-darkgreen-300)]"
+                >Aug 20, 2025</span
+              >
+            </div>
             <div
               class="w-[317px] md:w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 shrink-0"
             >
@@ -1257,6 +1443,10 @@
     ></script>
     <script src="/scripts/common/animation/scroll-fade-in.js"></script>
     <script type="module" src="/scripts/contact-us/contact-us.js"></script>
+    <script
+      type="module"
+      src="/scripts/contact-us/animation/review-card-scroll.js"
+    ></script>
     <script type="module" src="/scripts/common/faq/faq.js"></script>
   </body>
 </html>
