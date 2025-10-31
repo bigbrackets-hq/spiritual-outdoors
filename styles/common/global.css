@@ -166,6 +166,9 @@ button {
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
   font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 500;
 }
 
@@ -174,9 +177,6 @@ button {
   padding: 0 16px;
   background-color: var(--color-darkgreen-500);
   color: var(--color-passage-text-color-light);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
 }
 
@@ -189,8 +189,6 @@ button {
   padding: 0 16px;
   border: 1.5px solid var(--color-darkblue-500);
   color: var(--color-darkblue-500);
-  display: inline-flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -204,8 +202,6 @@ button {
   padding: 0 16px;
   background-color: var(--color-darkblue-500);
   color: var(--color-passage-text-color-light);
-  display: inline-flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -859,6 +855,7 @@ input::placeholder {
 
   .layout-wrapper {
     max-width: 1280px;
+    width: 100%;
     padding: 0;
     margin: 0 auto;
   }
