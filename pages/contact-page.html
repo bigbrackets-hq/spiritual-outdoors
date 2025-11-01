@@ -302,533 +302,546 @@
     </nav>
 
     <main>
-      <div class="layout-wrapper">
-        <h1 class="h3-antonio mb-4">Contact Us</h1>
-      </div>
       <!-- Contact form section -->
-      <section class="pb-16 md:pb-24">
-        <div class="layout-wrapper flex flex-col lg:flex-row items-start gap-6">
-          <div
-            class="w-full p-4 md:p-6 border border-[var(--color-blue-100)] rounded-2xl"
-          >
-            <p class="p3-sans text-[#505050]">Type of enquiry?</p>
-            <div class="flex gap-6 mb-6">
-              <div class="flex gap-6">
-                <!-- Option 1 -->
-                <label class="py-4 flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="inquiry-type"
-                    value="general"
-                    class="hidden peer js-general-enquiry-radio"
-                    checked
-                  />
-                  <!-- SVG changes when checked -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    class="peer-checked:[&>rect]:stroke-[#E9A714] peer-checked:[&>rect:first-child]:fill-[#FDF6E8] peer-checked:[&>circle]:fill-[#E9A714]"
-                  >
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="19"
-                      height="19"
-                      rx="9.5"
-                      fill="transparent"
-                      stroke="#ccc"
-                    />
-                    <circle cx="10" cy="10" r="3.75" fill="transparent" />
-                  </svg>
-                  <span
-                    class="p3-sans text-[var(--color-passage-text-color-dark)] peer-checked:text-[var(--color-heading-text-color-dark)]"
-                  >
-                    General enquiry
-                  </span>
-                </label>
-                <!-- Option 2 -->
-                <label class="py-4 flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="inquiry-type"
-                    value="planning"
-                    class="hidden peer js-planning-trip-radio"
-                  />
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    class="peer-checked:[&>rect]:stroke-[#E9A714] peer-checked:[&>rect:first-child]:fill-[#FDF6E8] peer-checked:[&>circle]:fill-[#E9A714]"
-                  >
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="19"
-                      height="19"
-                      rx="9.5"
-                      fill="transparent"
-                      stroke="#ccc"
-                    />
-                    <circle cx="10" cy="10" r="3.75" fill="transparent" />
-                  </svg>
-
-                  <span
-                    class="p3-sans text-[var(--color-passage-text-color-dark)] peer-checked:text-[var(--color-heading-text-color-dark)]"
-                  >
-                    Planning a trip
-                  </span>
-                </label>
-              </div>
-            </div>
-            <!-- General enquiry Form -->
-            <form
-              class="max-w-[845px] w-full flex flex-col gap-6 js-general-enquiry-form"
+      <section class="pb-16 md:pb-24 js-fade-in">
+        <div class="layout-wrapper">
+          <h1 class="h3-antonio mb-4">Contact Us</h1>
+          <div class="flex flex-col lg:flex-row items-start gap-6">
+            <div
+              class="w-full p-4 md:p-6 border border-[var(--color-blue-100)] rounded-2xl"
             >
-              <div class="flex flex-col lg:flex-row gap-6">
-                <div class="flex flex-col gap-2 w-full">
-                  <label for="fullName" class="l2-sans-strong text-[#505050]">
-                    Full Name
+              <p class="p3-sans text-[#505050]">Type of enquiry?</p>
+              <div class="flex gap-6 mb-6">
+                <div class="flex gap-6">
+                  <!-- Option 1 -->
+                  <label class="py-4 flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="inquiry-type"
+                      value="general"
+                      class="hidden peer js-general-enquiry-radio"
+                      checked
+                    />
+                    <!-- SVG changes when checked -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      class="peer-checked:[&>rect]:stroke-[#E9A714] peer-checked:[&>rect:first-child]:fill-[#FDF6E8] peer-checked:[&>circle]:fill-[#E9A714]"
+                    >
+                      <rect
+                        x="0.5"
+                        y="0.5"
+                        width="19"
+                        height="19"
+                        rx="9.5"
+                        fill="transparent"
+                        stroke="#ccc"
+                      />
+                      <circle cx="10" cy="10" r="3.75" fill="transparent" />
+                    </svg>
+                    <span
+                      class="p3-sans text-[var(--color-passage-text-color-dark)] peer-checked:text-[var(--color-heading-text-color-dark)]"
+                    >
+                      General enquiry
+                    </span>
                   </label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Full Name"
-                    class="input"
-                    autocomplete="off"
-                    required
-                  />
-                </div>
-                <div class="flex flex-col gap-2 w-full relative">
-                  <label for="email" class="l2-sans-strong text-[#505050]">
-                    Email Address
+                  <!-- Option 2 -->
+                  <label class="py-4 flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="inquiry-type"
+                      value="planning"
+                      class="hidden peer js-planning-trip-radio"
+                    />
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      class="peer-checked:[&>rect]:stroke-[#E9A714] peer-checked:[&>rect:first-child]:fill-[#FDF6E8] peer-checked:[&>circle]:fill-[#E9A714]"
+                    >
+                      <rect
+                        x="0.5"
+                        y="0.5"
+                        width="19"
+                        height="19"
+                        rx="9.5"
+                        fill="transparent"
+                        stroke="#ccc"
+                      />
+                      <circle cx="10" cy="10" r="3.75" fill="transparent" />
+                    </svg>
+
+                    <span
+                      class="p3-sans text-[var(--color-passage-text-color-dark)] peer-checked:text-[var(--color-heading-text-color-dark)]"
+                    >
+                      Planning a trip
+                    </span>
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="example@gmail.com"
-                    class="input error"
-                    autocomplete="off"
-                    required
-                  />
-                  <span class="l3-sans text-[var(--color-danger-500)]"
-                    >This is an error message.</span
-                  >
                 </div>
               </div>
-              <div class="flex flex-col lg:flex-row gap-6">
-                <div class="flex flex-col gap-2 w-full">
-                  <label for="country" class="l2-sans-strong text-[#505050]">
-                    Select Country</label
-                  >
-                  <select
-                    name="country"
-                    id="country"
-                    class="select-input"
-                    required
-                  >
-                    <option value="nepal">Nepal</option>
-                    <option value="tibet">Tibet</option>
-                    <option value="bhutan">Bhutan</option>
-                  </select>
-                </div>
-                <div class="flex flex-col gap-2 w-full">
-                  <label
-                    for="contactNumber"
-                    class="l2-sans-strong text-[#505050]"
-                  >
-                    Contact Number
-                  </label>
-                  <div class="relative">
+              <!-- General enquiry Form -->
+              <form
+                class="max-w-[845px] w-full flex flex-col gap-6 js-general-enquiry-form"
+              >
+                <div class="flex flex-col lg:flex-row gap-6">
+                  <div class="flex flex-col gap-2 w-full">
+                    <label for="fullName" class="l2-sans-strong text-[#505050]">
+                      Full Name
+                    </label>
                     <input
                       type="text"
-                      id="contactNumber"
-                      name="contactNumber"
-                      placeholder="000-0000000"
-                      class="input !pl-20"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Full Name"
+                      class="input"
                       autocomplete="off"
                       required
                     />
-                    <div
-                      class="absolute top-1/2 left-4 -translate-y-1/2 flex items-center gap-1"
+                  </div>
+                  <div class="flex flex-col gap-2 w-full relative">
+                    <label for="email" class="l2-sans-strong text-[#505050]">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="example@gmail.com"
+                      class="input error"
+                      autocomplete="off"
+                      required
+                    />
+                    <span class="l3-sans text-[var(--color-danger-500)]"
+                      >This is an error message.</span
                     >
-                      <img
-                        src="/public/images/common/country-flag/nepal-flag.png"
-                        alt="Nepal flag"
-                        class="w-[9px]"
-                      />
-                      <span class="l2-sans text-[#505050]">+977</span>
-                    </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div class="flex flex-col gap-2 w-full">
-                  <label
-                    for="spiritual-outdoors"
-                    class="l2-sans-strong text-[#505050]"
-                  >
-                    How do you find Spiritual Outdoors?</label
-                  >
-                  <select
-                    name="spiritual-outdoors"
-                    id="spiritual-outdoors"
-                    class="select-input"
-                    required
-                  >
-                    <option value="google-search">Google Search</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <div class="flex flex-col gap-2 w-full">
-                  <label for="queries" class="l2-sans-strong text-[#505050]">
-                    Any Queries?
-                  </label>
-                  <textarea
-                    name="queries"
-                    id="queries"
-                    placeholder="Your queries here"
-                    class="textarea"
-                    rows="4"
-                    required
-                  ></textarea>
-                </div>
-              </div>
-              <button class="primary-btn mt-4 md:mt-8">Send Message</button>
-            </form>
-
-            <!-- Planning a trip form -->
-            <form
-              class="max-w-[845px] w-full flex-col gap-6 js-planning-trip-form hidden"
-            >
-              <!-- Personal information -->
-              <div>
-                <h1 class="p3-sans mb-4 text-[#505050]">
-                  Personal Information
-                </h1>
-                <div class="flex flex-col gap-6">
-                  <div class="flex flex-col lg:flex-row gap-6">
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="fullName"
-                        class="l2-sans-strong text-[#505050]"
-                      >
-                        Full Name
-                      </label>
+                <div class="flex flex-col lg:flex-row gap-6">
+                  <div class="flex flex-col gap-2 w-full">
+                    <label for="country" class="l2-sans-strong text-[#505050]">
+                      Select Country</label
+                    >
+                    <select
+                      name="country"
+                      id="country"
+                      class="select-input"
+                      required
+                    >
+                      <option value="nepal">Nepal</option>
+                      <option value="tibet">Tibet</option>
+                      <option value="bhutan">Bhutan</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col gap-2 w-full">
+                    <label
+                      for="contactNumber"
+                      class="l2-sans-strong text-[#505050]"
+                    >
+                      Contact Number
+                    </label>
+                    <div class="relative">
                       <input
                         type="text"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Full Name"
-                        class="input"
+                        id="contactNumber"
+                        name="contactNumber"
+                        placeholder="000-0000000"
+                        class="input !pl-20"
                         autocomplete="off"
                         required
                       />
-                    </div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label for="email" class="l2-sans-strong text-[#505050]">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="example@gmail.com"
-                        class="input"
-                        autocomplete="off"
-                        required
-                      />
+                      <div
+                        class="absolute top-1/2 left-4 -translate-y-1/2 flex items-center gap-1"
+                      >
+                        <img
+                          src="/public/images/common/country-flag/nepal-flag.png"
+                          alt="Nepal flag"
+                          class="w-[9px]"
+                        />
+                        <span class="l2-sans text-[#505050]">+977</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="flex flex-col lg:flex-row gap-6">
-                    <div class="flex flex-col gap-2 w-full">
-                      <label for="country">Select Country</label>
-                      <select
-                        name="country"
-                        id="country"
-                        class="select-input"
-                        required
-                      >
-                        <option value="nepal">Nepal</option>
-                        <option value="tibet">Tibet</option>
-                        <option value="bhutan">Bhutan</option>
-                      </select>
-                    </div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="contactNumber"
-                        class="l2-sans-strong text-[#505050]"
-                      >
-                        Contact Number
-                      </label>
-                      <div class="relative">
+                </div>
+                <div>
+                  <div class="flex flex-col gap-2 w-full">
+                    <label
+                      for="spiritual-outdoors"
+                      class="l2-sans-strong text-[#505050]"
+                    >
+                      How do you find Spiritual Outdoors?</label
+                    >
+                    <select
+                      name="spiritual-outdoors"
+                      id="spiritual-outdoors"
+                      class="select-input"
+                      required
+                    >
+                      <option value="google-search">Google Search</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex flex-col gap-2 w-full">
+                    <label for="queries" class="l2-sans-strong text-[#505050]">
+                      Any Queries?
+                    </label>
+                    <textarea
+                      name="queries"
+                      id="queries"
+                      placeholder="Your queries here"
+                      class="textarea"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <button class="primary-btn mt-4 md:mt-8">Send Message</button>
+              </form>
+
+              <!-- Planning a trip form -->
+              <form
+                class="max-w-[845px] w-full flex-col gap-6 js-planning-trip-form hidden"
+              >
+                <!-- Personal information -->
+                <div>
+                  <h1 class="p3-sans mb-4 text-[#505050]">
+                    Personal Information
+                  </h1>
+                  <div class="flex flex-col gap-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="fullName"
+                          class="l2-sans-strong text-[#505050]"
+                        >
+                          Full Name
+                        </label>
                         <input
                           type="text"
-                          id="contactNumber"
-                          name="contactNumber"
-                          placeholder="000-0000000"
-                          class="input !pl-20"
+                          id="fullName"
+                          name="fullName"
+                          placeholder="Full Name"
+                          class="input"
                           autocomplete="off"
                           required
                         />
-                        <div
-                          class="absolute top-1/2 left-4 -translate-y-1/2 flex items-center gap-1"
+                      </div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="email"
+                          class="l2-sans-strong text-[#505050]"
                         >
-                          <img
-                            src="/public/images/common/country-flag/nepal-flag.png"
-                            alt="Nepal flag"
-                            class="w-[9px]"
+                          Email Address
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="example@gmail.com"
+                          class="input"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row gap-6">
+                      <div class="flex flex-col gap-2 w-full">
+                        <label for="country">Select Country</label>
+                        <select
+                          name="country"
+                          id="country"
+                          class="select-input"
+                          required
+                        >
+                          <option value="nepal">Nepal</option>
+                          <option value="tibet">Tibet</option>
+                          <option value="bhutan">Bhutan</option>
+                        </select>
+                      </div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="contactNumber"
+                          class="l2-sans-strong text-[#505050]"
+                        >
+                          Contact Number
+                        </label>
+                        <div class="relative">
+                          <input
+                            type="text"
+                            id="contactNumber"
+                            name="contactNumber"
+                            placeholder="000-0000000"
+                            class="input !pl-20"
+                            autocomplete="off"
+                            required
                           />
-                          <span class="l2-sans text-[#505050]">+977</span>
+                          <div
+                            class="absolute top-1/2 left-4 -translate-y-1/2 flex items-center gap-1"
+                          >
+                            <img
+                              src="/public/images/common/country-flag/nepal-flag.png"
+                              alt="Nepal flag"
+                              class="w-[9px]"
+                            />
+                            <span class="l2-sans text-[#505050]">+977</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Trip details -->
-              <div>
-                <h1 class="p3-sans mb-4 text-[#505050]">Trip Details</h1>
-                <div class="flex flex-col gap-6">
-                  <div class="flex flex-col lg:flex-row gap-6">
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="tripType"
-                        class="l2-sans-strong text-[#505050]"
-                        >Trip Type</label
-                      >
-                      <select
-                        name="tripType"
-                        id="tripType"
-                        class="select-input"
-                        required
-                      >
-                        <option value="">Select a trip type</option>
-                      </select>
+                <!-- Trip details -->
+                <div>
+                  <h1 class="p3-sans mb-4 text-[#505050]">Trip Details</h1>
+                  <div class="flex flex-col gap-6">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="tripType"
+                          class="l2-sans-strong text-[#505050]"
+                          >Trip Type</label
+                        >
+                        <select
+                          name="tripType"
+                          id="tripType"
+                          class="select-input"
+                          required
+                        >
+                          <option value="">Select a trip type</option>
+                        </select>
+                      </div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="dateOfTravel"
+                          class="l2-sans-strong text-[#505050]"
+                          >Approx. Date of Travel</label
+                        >
+                        <input
+                          type="date"
+                          class="input"
+                          name="dateOfTravel"
+                          required
+                        />
+                      </div>
                     </div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="dateOfTravel"
-                        class="l2-sans-strong text-[#505050]"
-                        >Approx. Date of Travel</label
-                      >
-                      <input
-                        type="date"
-                        class="input"
-                        name="dateOfTravel"
-                        required
-                      />
+                    <div class="flex flex-col lg:flex-row gap-6">
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="tripOfDuration"
+                          class="l2-sans-strong text-[#505050]"
+                          >Trip Duration</label
+                        >
+                        <select
+                          name="tripDuration"
+                          id="tripDuration"
+                          class="select-input"
+                          required
+                        >
+                          <option value="">Select duration</option>
+                        </select>
+                      </div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="noOfTravellers"
+                          class="l2-sans-strong text-[#505050]"
+                        >
+                          No. of travellers
+                        </label>
+                        <input
+                          type="text"
+                          id="noOfTravelers"
+                          name="noOfTravelers"
+                          placeholder="No. of travellers"
+                          class="input"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div class="flex flex-col lg:flex-row gap-6">
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="tripOfDuration"
-                        class="l2-sans-strong text-[#505050]"
-                        >Trip Duration</label
-                      >
-                      <select
-                        name="tripDuration"
-                        id="tripDuration"
-                        class="select-input"
-                        required
-                      >
-                        <option value="">Select duration</option>
-                      </select>
+                    <div class="flex flex-col lg:flex-row gap-6">
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="hotelType"
+                          class="l2-sans-strong text-[#505050]"
+                          >Hotel Type</label
+                        >
+                        <select
+                          name="tripDuration"
+                          id="tripDuration"
+                          class="select-input"
+                          required
+                        >
+                          <option value="">Select one option</option>
+                        </select>
+                      </div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="estimatedBudget"
+                          class="l2-sans-strong text-[#505050]"
+                          >Estimated Budget</label
+                        >
+                        <select
+                          name="estimatedBudget"
+                          id="estimatedBudget"
+                          class="select-input"
+                          required
+                        >
+                          <option value="">Select one option</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="noOfTravellers"
-                        class="l2-sans-strong text-[#505050]"
-                      >
-                        No. of travellers
-                      </label>
-                      <input
-                        type="text"
-                        id="noOfTravelers"
-                        name="noOfTravelers"
-                        placeholder="No. of travellers"
-                        class="input"
-                        autocomplete="off"
-                        required
-                      />
+                    <div class="flex flex-col lg:flex-row gap-6">
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="preferredguideLanguage"
+                          class="l2-sans-strong text-[#505050]"
+                          >Preferred Guide Language</label
+                        >
+                        <select
+                          name="preferredguideLanguage"
+                          id="preferredguideLanguage"
+                          class="select-input"
+                          required
+                        >
+                          <option value="">Select one option</option>
+                        </select>
+                      </div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="estimatedBudget"
+                          class="l2-sans-strong text-[#505050]"
+                          >How do you find Spiritual Outdoors?
+                        </label>
+                        <select
+                          name="estimatedBudget"
+                          id="estimatedBudget"
+                          class="select-input"
+                          required
+                        >
+                          <option value="google-search">Google Search</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="flex flex-col lg:flex-row gap-6">
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="hotelType"
-                        class="l2-sans-strong text-[#505050]"
-                        >Hotel Type</label
-                      >
-                      <select
-                        name="tripDuration"
-                        id="tripDuration"
-                        class="select-input"
-                        required
-                      >
-                        <option value="">Select one option</option>
-                      </select>
-                    </div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="estimatedBudget"
-                        class="l2-sans-strong text-[#505050]"
-                        >Estimated Budget</label
-                      >
-                      <select
-                        name="estimatedBudget"
-                        id="estimatedBudget"
-                        class="select-input"
-                        required
-                      >
-                        <option value="">Select one option</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="flex flex-col lg:flex-row gap-6">
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="preferredguideLanguage"
-                        class="l2-sans-strong text-[#505050]"
-                        >Preferred Guide Language</label
-                      >
-                      <select
-                        name="preferredguideLanguage"
-                        id="preferredguideLanguage"
-                        class="select-input"
-                        required
-                      >
-                        <option value="">Select one option</option>
-                      </select>
-                    </div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="estimatedBudget"
-                        class="l2-sans-strong text-[#505050]"
-                        >How do you find Spiritual Outdoors?
-                      </label>
-                      <select
-                        name="estimatedBudget"
-                        id="estimatedBudget"
-                        class="select-input"
-                        required
-                      >
-                        <option value="google-search">Google Search</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="flex flex-col gap-2 w-full">
-                      <label
-                        for="moreInformations"
-                        class="l2-sans-strong text-[#505050]"
-                      >
-                        More Informations
-                      </label>
-                      <textarea
-                        name="moreInformations"
-                        id="quemoreInformationsries"
-                        placeholder="Your queries here"
-                        class="textarea"
-                        rows="4"
-                        required
-                      ></textarea>
+                    <div>
+                      <div class="flex flex-col gap-2 w-full">
+                        <label
+                          for="moreInformations"
+                          class="l2-sans-strong text-[#505050]"
+                        >
+                          More Informations
+                        </label>
+                        <textarea
+                          name="moreInformations"
+                          id="quemoreInformationsries"
+                          placeholder="Your queries here"
+                          class="textarea"
+                          rows="4"
+                          required
+                        ></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <button class="primary-btn mt-4 md:mt-8">Send Message</button>
-            </form>
-          </div>
-          <div
-            class="lg:max-w-[411px] w-full min-h-[635px] bg-[var(--color-blue-100)] p-6 rounded-2xl"
-          >
-            <div class="flex flex-col gap-3 lg:max-w-[332px] w-full mb-6">
-              <p
-                class="p1-sans-strong text-[var(--color-heading-text-color-dark)]"
-              >
-                Spiritual Outdoors Pvt. Ltd.
-              </p>
-              <div class="py-4 flex items-start gap-3 border-b border-black/20">
-                <img
-                  src="/public/images/common/footer/location-icon.svg"
-                  alt="Location icon"
-                />
-                <p class="l1-sans text-[var(--color-passage-text-color-dark)]">
-                  Amrit Marg, Thamel, Kathmandu
-                </p>
-              </div>
-              <div class="pb-4 flex items-start gap-3 border-b border-black/20">
-                <img
-                  src="/public/images/common/footer/location-icon.svg"
-                  alt="Location icon"
-                />
-                <p
-                  class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
-                >
-                  +977 1 4418817 (Office)
-                </p>
-                <span class="hidden md:inline lg:hidden">|</span>
-                <p
-                  class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
-                >
-                  +977 9851202196 (Kabin)
-                </p>
-                <span class="hidden md:inline lg:hidden"> |</span>
-                <p
-                  class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
-                >
-                  +977 985123190 (Badri)
-                </p>
-                <p
-                  class="md:hidden lg:block l1-sans text-[var(--color-passage-text-color-dark)]"
-                >
-                  +977 1 4418817 (Office) <br />
-                  +977 9851202196 (Kabin) <br />
-                  +977 985123190 (Badri)
-                </p>
-              </div>
-              <div class="py-1 flex items-start gap-3">
-                <img
-                  src="/public/images/common/footer/location-icon.svg"
-                  alt="Location icon"
-                />
-                <p class="l1-sans text-[var(--color-passage-text-color-dark)]">
-                  info@spritiualexcursion.com
-                </p>
-              </div>
+                <button class="primary-btn mt-4 md:mt-8">Send Message</button>
+              </form>
             </div>
-            <div class="flex flex-col gap-4">
-              <p
-                class="p1-sans-strong text-[var(--color-heading-text-color-dark)]"
-              >
-                Visit us
-              </p>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.780676108023!2d-93.26620808447864!3d44.97775307909298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a5651c6c5%3A0x17d2a5d2a2a2a2a2!2sMinneapolis%2C%20MN%2C%20USA!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="w-full h-[269px] rounded-[8px]"
-              ></iframe>
+            <div
+              class="lg:max-w-[411px] w-full min-h-[635px] bg-[var(--color-blue-100)] p-6 rounded-2xl"
+            >
+              <div class="flex flex-col gap-3 lg:max-w-[332px] w-full mb-6">
+                <p
+                  class="p1-sans-strong text-[var(--color-heading-text-color-dark)]"
+                >
+                  Spiritual Outdoors Pvt. Ltd.
+                </p>
+                <div
+                  class="py-4 flex items-start gap-3 border-b border-black/20"
+                >
+                  <img
+                    src="/public/images/common/footer/location-icon.svg"
+                    alt="Location icon"
+                  />
+                  <p
+                    class="l1-sans text-[var(--color-passage-text-color-dark)]"
+                  >
+                    Amrit Marg, Thamel, Kathmandu
+                  </p>
+                </div>
+                <div
+                  class="pb-4 flex items-start gap-3 border-b border-black/20"
+                >
+                  <img
+                    src="/public/images/common/footer/location-icon.svg"
+                    alt="Location icon"
+                  />
+                  <p
+                    class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
+                  >
+                    +977 1 4418817 (Office)
+                  </p>
+                  <span class="hidden md:inline lg:hidden">|</span>
+                  <p
+                    class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
+                  >
+                    +977 9851202196 (Kabin)
+                  </p>
+                  <span class="hidden md:inline lg:hidden"> |</span>
+                  <p
+                    class="hidden md:block lg:hidden l1-sans text-[var(--color-passage-text-color-dark)]"
+                  >
+                    +977 985123190 (Badri)
+                  </p>
+                  <p
+                    class="md:hidden lg:block l1-sans text-[var(--color-passage-text-color-dark)]"
+                  >
+                    +977 1 4418817 (Office) <br />
+                    +977 9851202196 (Kabin) <br />
+                    +977 985123190 (Badri)
+                  </p>
+                </div>
+                <div class="py-1 flex items-start gap-3">
+                  <img
+                    src="/public/images/common/footer/location-icon.svg"
+                    alt="Location icon"
+                  />
+                  <p
+                    class="l1-sans text-[var(--color-passage-text-color-dark)]"
+                  >
+                    info@spritiualexcursion.com
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <p
+                  class="p1-sans-strong text-[var(--color-heading-text-color-dark)]"
+                >
+                  Visit us
+                </p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.780676108023!2d-93.26620808447864!3d44.97775307909298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a5651c6c5%3A0x17d2a5d2a2a2a2a2!2sMinneapolis%2C%20MN%2C%20USA!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full h-[269px] rounded-[8px]"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Trusted by travellers section -->
-      <section class="py-[56px] md:py-16 xl:py-24 overflow-hidden">
+      <section
+        class="py-[56px] md:py-16 xl:py-24 overflow-hidden js-scroll-fade-in"
+      >
         <div class="layout-wrapper flex flex-col gap-[40px] md:gap-16">
           <h2
             class="h3-antonio max-w-[282px] md:max-w-[834px] w-full mx-auto text-center text-[var(--color-heading-text-color-dark)]"
@@ -1118,7 +1131,7 @@
       </section>
 
       <!-- FAQ section -->
-      <section class="py-[56px] md:py-16 xl:py-24">
+      <section class="py-[56px] md:py-16 xl:py-24 js-scroll-fade-in">
         <div class="layout-wrapper flex flex-col gap-16">
           <h2
             class="h3-antonio max-w-[834px] w-full mx-auto text-center text-[var(--color-heading-text-color-dark)]"
@@ -1456,6 +1469,7 @@
       src="/scripts/common/navbar/navbar-dropdown-panel.js"
       defer
     ></script>
+    <script src="/scripts/common/animation/fade-in.js"></script>
     <script src="/scripts/common/animation/scroll-fade-in.js"></script>
     <script type="module" src="/scripts/contact-us/contact-us.js"></script>
     <script
