@@ -1,0 +1,4 @@
+.tab-active {
+  color: var(--color-darkgreen-500);
+  background: rgba(1, 49, 43, 0.1);
+}
