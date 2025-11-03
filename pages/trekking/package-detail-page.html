@@ -18,6 +18,8 @@
     />
     <link rel="stylesheet" href="../../styles/common/global.css" />
     <link rel="stylesheet" href="../../styles/common/navbar.css" />
+    <link rel="stylesheet" href="../../styles/package-details/tabs.css" />
+    <link rel="stylesheet" href="../../styles/common/faq.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -323,16 +325,22 @@
 
     <main>
       <!-- Hero section -->
-      <section class="pb-[54px]">
+      <section class="pb-[54px] js-fade-in">
         <div
           class="layout-wrapper flex flex-col gap-8 text-[var(--color-darkgreen-500)]"
         >
-          <div class="flex items-start justify-between">
-            <h1 class="h2-antonio max-w-[600px] w-full">
+          <div
+            class="flex flex-col max-xl:gap-12 xl:flex-row items-start justify-between"
+          >
+            <h1
+              class="h2-antonio max-w-[286px] md:max-w-[400px] lg:max-w-[600px] w-full"
+            >
               Everest Base Camp Trek - 15 Days
             </h1>
-            <div class="flex flex-col gap-8 max-w-[435px] w-full">
-              <div class="w-[255px] flex flex-col gap-2">
+            <div
+              class="flex flex-col md:flex-row xl:flex-col gap-8 xl:max-w-[435px] w-full"
+            >
+              <div class="w-[300px] lg:w-[255px] flex flex-col gap-2">
                 <span class="p2-serif text-[var(--color-darkgreen-300)]">
                   Starting from
                 </span>
@@ -343,7 +351,7 @@
                   >
                 </p>
               </div>
-              <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center w-full">
                 <div class="flex flex-col gap-1">
                   <div class="flex items-center gap-1">
                     <p class="p1-sans">4.5</p>
@@ -379,7 +387,9 @@
               </div>
             </div>
           </div>
-          <div class="flex items-center justify-between flex-wrap">
+          <div
+            class="flex items-center max-md:gap-4 justify-between overflow-x-scroll scrollbar-hidden text-nowrap md:flex-wrap"
+          >
             <div
               class="flex flex-col gap-2 p-3 text-[var(--color-darkgreen-300)]"
             >
@@ -441,38 +451,66 @@
               <p class="l1-sans-strong pl-7">March-May, September-November</p>
             </div>
           </div>
-          <div class="h-[600px] flex gap-6 flex-wrap">
-            <div class="h-full max-w-[737px] w-full flex-2 cursor-pointer">
-              <img
-                src="/public/images/packages/everest-base-camp-1.png"
-                alt=""
-                class="w-full h-full rounded-2xl object-cover"
-              />
-            </div>
-            <div class="flex flex-col gap-6 flex-1">
-              <div class="w-full h-[260px] cursor-pointer">
+          <div class="xl:h-[600px] flex gap-6 flex-wrap">
+            <div
+              class="h-full max-w-[737px] w-full flex-2 cursor-pointer max-xl:hidden"
+            >
+              <a
+                href="/public/images/packages/everest-base-camp-1.png"
+                class="glightbox js-gallery-images"
+                data-gallery="gallery1"
+              >
                 <img
-                  src="/public/images/packages/everest-base-camp-2.png"
-                  alt=""
+                  src="/public/images/packages/everest-base-camp-1.png"
+                  alt="Everest Base Camp"
                   class="w-full h-full rounded-2xl object-cover"
                 />
+              </a>
+            </div>
+            <div class="flex flex-col gap-6 flex-1">
+              <div
+                class="w-full h-[171px] md:h-[352px] xl:h-[260px] cursor-pointer"
+              >
+                <a
+                  href="/public/images/packages/everest-base-camp-2.png"
+                  class="glightbox js-gallery-images"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/images/packages/everest-base-camp-2.png"
+                    alt="Everest Base Camp"
+                    class="w-full h-full rounded-2xl object-cover"
+                  />
+                </a>
               </div>
               <div class="flex gap-6 flex-1">
                 <div class="w-full h-full cursor-pointer">
-                  <img
-                    src="/public/images/packages/everest-base-camp-3.png"
-                    alt=""
-                    class="w-full h-full rounded-2xl object-cover"
-                  />
+                  <a
+                    href="/public/images/packages/everest-base-camp-3.png"
+                    class="glightbox js-gallery-images"
+                    data-gallery="gallery1"
+                  >
+                    <img
+                      src="/public/images/packages/everest-base-camp-3.png"
+                      alt="Everest Base Camp"
+                      class="w-full h-[209px] md:h-[430px] xl:h-full rounded-2xl object-cover"
+                    />
+                  </a>
                 </div>
                 <div
-                  class="w-full h-full flex items-center justify-center relative overflow-hidden rounded-2xl cursor-pointer"
+                  class="w-full h-full flex items-center justify-center relative overflow-hidden rounded-2xl cursor-pointer js-gallery-images"
                 >
-                  <img
-                    src="/public/images/packages/everest-base-camp-1.png"
-                    alt=""
-                    class="w-full h-full object-cover"
-                  />
+                  <a
+                    href="/public/images/packages/everest-base-camp-1.png"
+                    class="glightbox w-full h-full"
+                    data-gallery="gallery1"
+                  >
+                    <img
+                      src="/public/images/packages/everest-base-camp-1.png"
+                      alt="Everest Base Camp"
+                      class="w-full h-[209px] md:h-[430px] xl:h-full rounded-2xl object-cover"
+                    />
+                  </a>
                   <p class="p2-sans text-white absolute z-20">
                     See all 5 photos
                   </p>
@@ -484,22 +522,67 @@
         </div>
       </section>
 
-      <!-- Package details section -->
-      <div class="layout-wrapper">
-        <!-- Tabs -->
-        <div class="flex gap-6 flex-wrap bg-white sticky top-0">
+      <!-- Tabs -->
+      <section
+        class="bg-white sticky top-0 py-4 z-[1001] transition-all duration-300 ease-in-out js-tab-container"
+      >
+        <div
+          class="layout-wrapper flex gap-6 overflow-x-scroll scrollbar-hidden shrink-0"
+        >
           <span
-            class="px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out"
-            >Overview</span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
           >
+            Overview
+          </span>
           <span
-            class="px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out"
-            >Itinerary</span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
           >
+            Itinerary
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            Availability
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            Trekking Route
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            Packing List
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            Cost Details
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            FAQ
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            Video
+          </span>
+          <span
+            class="shrink-0 px-4 py-[14px] text-[var(--color-darkgreen-300)] cursor-pointer rounded-[8px] hover:bg-[var(--color-darkgreen-500)]/10 hover:text-[var(--color-darkgreen-500)] transition-colors duration-300 ease-in-out js-tabs"
+          >
+            Reviews
+          </span>
         </div>
+      </section>
+
+      <!-- Package details -->
+      <div class="layout-wrapper js-package-details-container">
         <div class="flex gap-6 items-start">
           <div class="max-w-[925px] w-full">
-            <section class="py-16">
+            <!-- Overview section -->
+            <section class="py-[40px] md:py-16 js-scroll-fade-in" id="overview">
               <div class="flex flex-col gap-6">
                 <h2 class="p1-antonio">Overview</h2>
                 <p
@@ -515,7 +598,7 @@
                   the profound awe and achievement that comes with standing at
                   the foot of the world's tallest peak.
                 </p>
-                <div class="w-[519px] h-[260px]">
+                <div class="md:w-[519px] h-[172px] md:h-[260px]">
                   <img
                     src="/public/images/packages/everest-base-camp-3.png"
                     alt=""
@@ -524,10 +607,468 @@
                 </div>
               </div>
             </section>
+
+            <!-- Standard itinerary section -->
+            <section
+              class="py-[40px] md:py-16 js-scroll-fade-in"
+              id="itinerary"
+            >
+              <div class="flex flex-col gap-12">
+                <div
+                  class="flex flex-col gap-6 md:flex-row md:items-center justify-between"
+                >
+                  <h2 class="p1-antonio">Standard Itinerary</h2>
+                  <p
+                    class="p3-sans-strong underline cursor-pointer js-show-detailed-itinerary"
+                  >
+                    Show detailed itinerary
+                  </p>
+                </div>
+                <div class="flex flex-col gap-8 select-none relative">
+                  <!-- Vertical timeline bar -->
+                  <!-- <div
+                    class="absolute left-[45px] top-0 bottom-0 w-[2px] bg-[var(--color-green-800)]"
+                  ></div> -->
+
+                  <!-- Day 01 -->
+                  <div
+                    class="flex flex-col gap-2 relative z-10 cursor-pointer js-itinerary-day-list-item"
+                  >
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-4">
+                        <span
+                          class="hidden md:inline-block l1-sans-strong text-white py-[10px] px-6 bg-[var(--color-green-800)] rounded-full"
+                        >
+                          Day 01
+                        </span>
+                        <span
+                          class="md:hidden l1-sans-strong text-white py-[10px] w-[48px] h-[48px] inline-flex items-center justify-center px-6 bg-[var(--color-green-800)] rounded-full"
+                        >
+                          01
+                        </span>
+                        <p class="p1-sans-strong">Arrive in Kathmandu</p>
+                      </div>
+                      <div>
+                        <img
+                          src="/public/images/icons/chevron-down.svg"
+                          alt="Chevron down icon"
+                          class="js-chevron-down-icon"
+                        />
+                        <img
+                          src="/public/images/icons/chevron-top.svg"
+                          alt="Chevron top icon"
+                          class="hidden js-chevron-up-icon"
+                        />
+                      </div>
+                    </div>
+                    <div class="hidden opacity-0 js-itinerary-day-details">
+                      <div
+                        class="flex flex-col gap-6 pl-[65px] md:pl-[115px] max-w-[761px]"
+                      >
+                        <p class="text-[var(--color-darkgreen-300)]">
+                          Lorem ipsum dolor sit amet consectetur. Venenatis sit
+                          feugiat pellentesque maecenas lectus sed at. Nunc
+                          condimentum sed scelerisque fermentum rhoncus.
+                        </p>
+                        <div class="flex flex-col md:flex-row gap-6">
+                          <div
+                            class="md:min-h-[108px] p-4 bg-[#F6F6F6] rounded-[8px] flex flex-col gap-3 text-[var(--color-darkgreen-300)] md:max-w-[194px] w-full"
+                          >
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="/public/images/icons/packages/picture-shot-icon.svg"
+                                alt=""
+                              />
+                              <p class="l1-sans">Elevation</p>
+                            </div>
+                            <p class="p3-sans-strong max-w-[150px]">
+                              15 Days 14 Nights
+                            </p>
+                          </div>
+                          <div
+                            class="md:min-h-[108px] p-4 bg-[#F6F6F6] rounded-[8px] flex flex-col gap-3 text-[var(--color-darkgreen-300)] md:max-w-[194px] w-full"
+                          >
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="/public/images/icons/fork-spoon-icon.svg"
+                                alt=""
+                              />
+                              <p class="l1-sans">Meal</p>
+                            </div>
+                            <p class="p3-sans-strong max-w-[150px]">
+                              Breakfast, Lunch, Dinner
+                            </p>
+                          </div>
+                          <div
+                            class="md:min-h-[108px] p-4 bg-[#F6F6F6] rounded-[8px] flex flex-col gap-3 text-[var(--color-darkgreen-300)] md:max-w-[194px] w-full"
+                          >
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="/public/images/icons/home-icon.svg"
+                                alt=""
+                              />
+                              <p class="l1-sans">Accommodation</p>
+                            </div>
+                            <p class="p3-sans-strong max-w-[150px]">
+                              3-5 star hotel
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex gap-6 flex-wrap">
+                          <div
+                            class="w-[130px] md:w-[157px] xl:w-[191px] h-[130px] md:h-[159px] xl:h-[193px] rounded-2xl group overflow-hidden cursor-none"
+                          >
+                            <img
+                              src="/public/images/common/location/cultural-tours.png"
+                              alt=""
+                              class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-4">
+                  <a href="" class="w-full">
+                    <button class="primary-btn w-full">
+                      <img
+                        src="/public/images/icons/download-icon.svg"
+                        alt="Download icon"
+                      />
+                      Download Itinerary’s PDF
+                    </button>
+                  </a>
+                  <a href="" class="w-full">
+                    <button class="secondary-btn w-full">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M6.6698 6.45833V3.125H13.3365V6.45833M13.3346 6.04167V16.875M6.66797 6.04167V16.875M17.7096 16.875H2.29297V6.45833H17.7096V16.875Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="square"
+                        />
+                      </svg>
+                      Create your Customized Itinerary
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Available date section  -->
+            <section class="py-4 md:py-16 js-scroll-fade-in" id="availability">
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Choose from Available Date</h2>
+                <div
+                  class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center"
+                >
+                  <div class="flex flex-col gap-4">
+                    <p class="p2-sans-strong">
+                      Saturday, Oct 12 - Saturday Oct 26
+                    </p>
+                    <div class="flex items-center gap-8">
+                      <p class="p2-sans-strong">
+                        from USD 2300
+                        <span class="l2-sans text-[#557571]">/person</span>
+                      </p>
+                      <img
+                        src="/public/images/icons/dot-icon-gray.svg"
+                        alt="Dot icon"
+                        class="w-[6px] h-[6px]"
+                      />
+                      <p class="p3-sans text-[#557571]">Join 12 other guests</p>
+                    </div>
+                  </div>
+                  <button class="tertiary-btn">Choose Date</button>
+                </div>
+              </div>
+            </section>
+
+            <!-- Trekking route section -->
+            <section
+              class="py-4 md:py-16 js-scroll-fade-in"
+              id="trekking route"
+            >
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Trekking Route</h2>
+                <div class="max-w-[845px] w-full h-[972px] xl:h-[1167px]">
+                  <img
+                    src="/public/images/packages/everest-base-camp-route.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <!-- Packing list section -->
+            <section class="py-4 md:py-16 js-scroll-fade-in" id="packing list">
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Packing List</h2>
+                <div
+                  class="flex flex-col divide-[#EBEBEB] divide-y select-none"
+                >
+                  <div class="flex flex-col gap-4 py-4 js-packing-list-item">
+                    <div class="flex items-center gap-6 cursor-pointer">
+                      <div>
+                        <img
+                          src="/public/images/icons/tshirt-icon.svg"
+                          alt="T-shirt icon"
+                        />
+                      </div>
+                      <div class="flex items-center justify-between w-full">
+                        <p class="p1-sans-strong">Daily Wear</p>
+                        <img
+                          src="/public/images/icons/chevron-down.svg"
+                          alt="Chevron down icon"
+                          class="chevron-down-icon"
+                        />
+                        <img
+                          src="/public/images/icons/chevron-top.svg"
+                          alt="Chevron up icon"
+                          class="hidden chevron-top-icon"
+                        />
+                      </div>
+                    </div>
+                    <p
+                      class="p3-sans-strong max-w-[656px] text-[#4D6F6B] pl-[70px] hidden opacity-0 js-packing-list-item-detail"
+                    >
+                      Item number 1, Item number 2, Item number 3, Item number
+                      4, Item number 5, Item number 6, etc as per your need.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Cost details section -->
+            <section class="py-4 md:py-16 js-scroll-fade-in" id="cost details">
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Cost Details</h2>
+                <div class="bg-[#FAFAFA] rounded-2xl p-6 flex flex-col gap-12">
+                  <!-- Inclusion -->
+                  <div class="flex flex-col gap-6">
+                    <h3 class="p1-sans-strong">Inclusion</h3>
+                    <div class="flex flex-col gap-4">
+                      <div class="flex items-start gap-3">
+                        <img
+                          src="/public/images/icons/circle-tick-icon.svg"
+                          alt="Tick icon"
+                        />
+                        <p
+                          class="p3-sans-strong text-[var(--color-darkgreen-300)]"
+                        >
+                          Lorem ipsum dolor sit amet consectetur. Viverra
+                          egestas sit faucibus ipsum lectus nam semper egestas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-6">
+                    <h3 class="p1-sans-strong">Exclusion</h3>
+                    <div class="flex flex-col gap-4">
+                      <div class="flex items-start gap-3">
+                        <img
+                          src="/public/images/icons/circle-close-icon.svg"
+                          alt="Close icon"
+                        />
+                        <p
+                          class="p3-sans-strong text-[var(--color-darkgreen-300)]"
+                        >
+                          Lorem ipsum dolor sit amet consectetur. Viverra
+                          egestas sit faucibus ipsum lectus nam semper egestas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- FAQ section -->
+            <section class="py-4 md:py-16 js-scroll-fade-in" id="faq">
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Frequently Asked Questions</h2>
+                <div class="flex flex-col gap-4 w-full select-none">
+                  <div
+                    class="px-6 py-5 rounded-2xl flex items-start justify-between bg-white hover:bg-[var(--color-blue-100)] border border-[var(--color-darkgreen-500)]/30 hover:border-[var(--color-blue-100)] cursor-pointer transition-all duration-300 ease-in-out js-faq"
+                  >
+                    <div class="flex flex-col gap-[18px] max-w-[600px] w-full">
+                      <p
+                        class="p3-sans text-[var(--color-passage-text-color-dark)] js-faq-question"
+                      >
+                        What makes Spiritual Outdoors different from other
+                        travel companies?
+                      </p>
+                      <p class="text-[#787878] hidden js-faq-answer">
+                        At Spiritual Outdoors, we believe travel should touch
+                        the soul, not just the map. Our journeys combine
+                        adventure, culture, and mindfulness — led by local
+                        experts who share the deeper stories of their land. We
+                        focus on meaningful experiences that connect travelers
+                        with nature, tradition, and the local way of life across
+                        Nepal, Tibet, and Bhutan.
+                      </p>
+                    </div>
+                    <img
+                      src="/public/images/icons/plus-icon.svg"
+                      alt="Plus icon"
+                      class="js-plus-icon"
+                    />
+                    <img
+                      src="/public/images/icons/minus-icon.svg"
+                      alt="minus icon"
+                      class="js-minus-icon hidden"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Video section -->
+            <section class="py-4 md:py-16 js-scroll-fade-in" id="video">
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Video</h2>
+                <div
+                  class="w-full h-[390px] lg:h-[475px] rounded-2xl overflow-hidden"
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/8efveLZ3E24"
+                    frameborder="0"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    class="w-full h-full"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </section>
+
+            <!-- Reviews section -->
+            <section class="py-4 md:py-16 js-scroll-fade-in" id="reviews">
+              <div class="flex flex-col gap-6">
+                <h2 class="p1-antonio">Reviews</h2>
+                <div
+                  class="flex gap-6 lg:flex-wrap items-start overflow-x-scroll scrollbar-hidden"
+                >
+                  <div
+                    class="w-full max-w-[317px] md:max-w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 lg:flex-1 shrink-0"
+                  >
+                    <div class="flex items-start gap-6">
+                      <div class="flex items-center gap-3 flex-1">
+                        <div class="w-[50px] h-[50px]">
+                          <img
+                            src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                            alt="Reviewer avatar"
+                            class="rounded-full w-full h-full"
+                          />
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <p
+                            class="p2-sans text-[var(--color-heading-text-color-dark)]"
+                          >
+                            Andrew K.
+                          </p>
+                          <span
+                            class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                            >Zwolle, Netherlands</span
+                          >
+                        </div>
+                      </div>
+                      <div class="flex gap-2 items-center">
+                        <p class="p2-sans">5.0</p>
+                        <div class="w-[20px] h-[20px]">
+                          <img
+                            src="/public/images/icons/star-icon.svg"
+                            alt="Star icon"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p class="l1-sans text-[var(--color-darkgreen-400)]">
+                      Felt like a true home away from home! The apartment was
+                      spotless, beautifully decorated, and just steps from
+                      Central Park. The host was super responsive – I’d
+                      definitely stay again.
+                    </p>
+                    <span class="l2-sans text-[var(--color-darkgreen-300)]"
+                      >Aug 20, 2025</span
+                    >
+                  </div>
+                  <div
+                    class="w-full max-w-[317px] md:max-w-[411px] p-6 md:p-8 bg-[var(--color-blue-100)] rounded-2xl flex flex-col gap-8 lg:flex-1 shrink-0"
+                  >
+                    <div class="flex items-start gap-6">
+                      <div class="flex items-center gap-3 flex-1">
+                        <div class="w-[50px] h-[50px]">
+                          <img
+                            src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                            alt="Reviewer avatar"
+                            class="rounded-full w-full h-full"
+                          />
+                        </div>
+                        <div class="flex flex-col gap-1">
+                          <p
+                            class="p2-sans text-[var(--color-heading-text-color-dark)]"
+                          >
+                            Andrew K.
+                          </p>
+                          <span
+                            class="l2-sans text-[var(--color-passage-text-color-dark)]"
+                            >Zwolle, Netherlands</span
+                          >
+                        </div>
+                      </div>
+                      <div class="flex gap-2 items-center">
+                        <p class="p2-sans">5.0</p>
+                        <div class="w-[20px] h-[20px]">
+                          <img
+                            src="/public/images/icons/star-icon.svg"
+                            alt="Star icon"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p class="l1-sans text-[var(--color-darkgreen-400)]">
+                      Felt like a true home away from home! The apartment was
+                      spotless, beautifully decorated, and just steps from
+                      Central Park. The host was super responsive – I’d
+                      definitely stay again.
+                    </p>
+                    <span class="l2-sans text-[var(--color-darkgreen-300)]"
+                      >Aug 20, 2025</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex gap-2 md:gap-6 justify-center items-center flex-wrap mt-2"
+                >
+                  <p class="p3-sans-strong text-center max-md:w-full">
+                    Read more reviews on:
+                  </p>
+                  <img
+                    src="/public/images/icons/google-icon.svg"
+                    alt="Google icon"
+                  />
+                  <img
+                    src="/public/images/icons/tripadvisor-icon.svg"
+                    alt="Tripadvisor icon"
+                  />
+                </div>
+              </div>
+            </section>
           </div>
-          <!-- Sticky card -->
+          <!-- Sticky discount card section -->
           <section
-            class="flex flex-col gap-4 py-16 max-w-[411px] w-full bg-green sticky top-0"
+            class="hidden xl:flex flex-col gap-4 py-16 max-w-[411px] w-full bg-green sticky top-5 transition-all duration-300 ease-in-out js-sticky-card-container js-scroll-fade-in"
           >
             <div
               class="bg-[var(--color-blue-100)] p-6 flex flex-col gap-4 rounded-[8px]"
@@ -623,14 +1164,342 @@
               </div>
             </div>
           </section>
+
+          <!-- Discount card For tablet and mobile -->
+          <section
+            class="xl:hidden fixed bottom-0 inset-x-0 z-[1001] opacity-0 js-discount-card"
+          >
+            <div
+              class="bg-[var(--color-blue-100)] p-6 flex flex-col gap-6 rounded-[8px]"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex gap-8">
+                  <div class="flex gap-2 items-end">
+                    <p class="p1-antonio">USD 10,080</p>
+                    <span class="p2-serif text-[var(--color-darkgreen-300)]"
+                      >/ person</span
+                    >
+                  </div>
+                  <div>
+                    <div class="relative">
+                      <p class="p1-antonio text-[#4D6F6B]">USD 13,900</p>
+                      <div
+                        class="absolute inset-0 rotate-12 flex items-center justify-center"
+                      >
+                        <div class="w-full h-[3px] bg-red-500"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span
+                  class="inline-flex items-center cursor-pointer js-hide-discount-details"
+                >
+                  Hide Discount Details
+                  <img
+                    src="/public/images/icons/chevron-down.svg"
+                    alt="Chevron down icon"
+                    class="js-chevron-down-icon"
+                  />
+                  <img
+                    src="/public/images/icons/chevron-top.svg"
+                    alt="Chevron up icon"
+                    class="hidden js-chevron-top-icon"
+                  />
+                </span>
+              </div>
+              <div
+                class="p-4 border border-[#A7CDEC] rounded-[8px] hidden opacity-0 js-discount-details"
+              >
+                <p class="p2-sans-strong mb-3">Group Discount Price</p>
+                <div>
+                  <div
+                    class="flex justify-between border-b border-b-[var(--color-blue-600)] pb-2"
+                  >
+                    <p class="l1-sans-strong text-[#4D6F6B]">
+                      No. of travellers
+                    </p>
+                    <p class="l1-sans-strong text-[#4D6F6B]">
+                      Price per traveller
+                    </p>
+                  </div>
+                  <div class="py-2 flex justify-between">
+                    <p class="l2-sans text-[#4D6F6B]">1 Person</p>
+                    <p class="l2-sans text-[#4D6F6B] w-[122px]">NPR 1500</p>
+                  </div>
+                  <div class="py-2 flex justify-between">
+                    <p class="l2-sans text-[#4D6F6B]">2-3 Person</p>
+                    <p class="l2-sans text-[#4D6F6B] w-[122px]">NPR 2500</p>
+                  </div>
+                  <div class="py-2 flex justify-between">
+                    <p class="l2-sans text-[#4D6F6B]">5-8 Person</p>
+                    <p class="l2-sans text-[#4D6F6B] w-[122px]">NPR 3500</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <a href="" class="w-full">
+                  <button class="tertiary-btn w-full">Book Trip Now</button>
+                </a>
+                <a href="" class="w-full">
+                  <button class="secondary-btn w-full">Send Us Inquiry</button>
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
+
+      <!-- Similar packages section -->
+      <section
+        class="bg-[var(--color-blue-100)] py-[46px] md:py-16 xl:py-[120px]"
+      >
+        <div
+          class="layout-wrapper flex flex-col gap-[40px] md:gap-12 js-scroll-fade-in"
+        >
+          <div class="flex justify-between items-center flex-wrap gap-6">
+            <h2 class="h3-antonio text-[var(--color-heading-text-color-dark)]">
+              Similar Packages
+            </h2>
+            <a href="">
+              <button class="secondary-btn">Explore more</button>
+            </a>
+          </div>
+          <div
+            class="flex items-center gap-4 md:gap-6 scrollbar-hidden overflow-x-auto js-card-container"
+          >
+            <a href="" class="js-card-stagger">
+              <div
+                class="relative cursor-none w-[234px] h-[324px] md:w-[302px] md:h-[418px] rounded-2xl overflow-hidden flex-shrink-0 group js-image-card-container"
+              >
+                <img
+                  src="/public/images/common/location/langtang-gosaikunda.png"
+                  alt="Langtang gosaikunda"
+                  class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div
+                  class="absolute top-3.5 md:top-6 left-3.5 md:left-6 flex items-center gap-2 md:gap-3"
+                >
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/subscription-tick-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">Best seller</p>
+                  </div>
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/mountain-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">5,080 m</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-3.5 left-3.5 md:bottom-6 md:left-6 z-10"
+                >
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 l2-sans text-white">
+                      <p>Starts from $1500</p>
+                      <span>
+                        <img
+                          src="/public/images/icons/dot-icon.svg"
+                          alt="Dot icon"
+                        />
+                      </span>
+                      <p>13 days</p>
+                    </div>
+                    <p class="p1-sans-strong text-white">
+                      Langtang Gosaikunda trek
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="h-[120px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+                ></div>
+              </div>
+            </a>
+            <a href="" class="js-card-stagger">
+              <div
+                class="relative cursor-none w-[234px] h-[324px] md:w-[302px] md:h-[418px] rounded-2xl overflow-hidden flex-shrink-0 group js-image-card-container"
+              >
+                <img
+                  src="/public/images/common/location/langtang-gosaikunda.png"
+                  alt="Langtang gosaikunda"
+                  class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div
+                  class="absolute top-3.5 md:top-6 left-3.5 md:left-6 flex items-center gap-2 md:gap-3"
+                >
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/subscription-tick-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">Best seller</p>
+                  </div>
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/mountain-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">5,080 m</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-3.5 left-3.5 md:bottom-6 md:left-6 z-10"
+                >
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 l2-sans text-white">
+                      <p>Starts from $1500</p>
+                      <span>
+                        <img
+                          src="/public/images/icons/dot-icon.svg"
+                          alt="Dot icon"
+                        />
+                      </span>
+                      <p>13 days</p>
+                    </div>
+                    <p class="p1-sans-strong text-white">
+                      Langtang Gosaikunda trek
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="h-[120px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+                ></div>
+              </div>
+            </a>
+            <a href="" class="js-card-stagger">
+              <div
+                class="relative cursor-none w-[234px] h-[324px] md:w-[302px] md:h-[418px] rounded-2xl overflow-hidden flex-shrink-0 group js-image-card-container"
+              >
+                <img
+                  src="/public/images/common/location/langtang-gosaikunda.png"
+                  alt="Langtang gosaikunda"
+                  class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div
+                  class="absolute top-3.5 md:top-6 left-3.5 md:left-6 flex items-center gap-2 md:gap-3"
+                >
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/subscription-tick-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">Best seller</p>
+                  </div>
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/mountain-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">5,080 m</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-3.5 left-3.5 md:bottom-6 md:left-6 z-10"
+                >
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 l2-sans text-white">
+                      <p>Starts from $1500</p>
+                      <span>
+                        <img
+                          src="/public/images/icons/dot-icon.svg"
+                          alt="Dot icon"
+                        />
+                      </span>
+                      <p>13 days</p>
+                    </div>
+                    <p class="p1-sans-strong text-white">
+                      Langtang Gosaikunda trek
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="h-[120px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+                ></div>
+              </div>
+            </a>
+            <a href="" class="js-card-stagger">
+              <div
+                class="relative cursor-none w-[234px] h-[324px] md:w-[302px] md:h-[418px] rounded-2xl overflow-hidden flex-shrink-0 group js-image-card-container"
+              >
+                <img
+                  src="/public/images/common/location/langtang-gosaikunda.png"
+                  alt="Langtang gosaikunda"
+                  class="h-full w-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div
+                  class="absolute top-3.5 md:top-6 left-3.5 md:left-6 flex items-center gap-2 md:gap-3"
+                >
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/subscription-tick-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">Best seller</p>
+                  </div>
+                  <div
+                    class="bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                  >
+                    <img
+                      src="/public/images/icons/mountain-icon.svg"
+                      alt="Subscription tick icon"
+                    />
+                    <p class="text-white l3-sans-strong">5,080 m</p>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-3.5 left-3.5 md:bottom-6 md:left-6 z-10"
+                >
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-center gap-2 l2-sans text-white">
+                      <p>Starts from $1500</p>
+                      <span>
+                        <img
+                          src="/public/images/icons/dot-icon.svg"
+                          alt="Dot icon"
+                        />
+                      </span>
+                      <p>13 days</p>
+                    </div>
+                    <p class="p1-sans-strong text-white">
+                      Langtang Gosaikunda trek
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="h-[120px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+                ></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
       <section
-        class="relative overflow-hidden pt-10 h-[705px] md:h-[1081px] bg-[url('/public/images/common/footer/footer-banner.png')] bg-cover bg-center flex flex-col justify-between"
+        class="relative overflow-hidden pt-10 h-[705px] md:h-[1081px] bg-[var(--color-blue-100)] bg-[url('/public/images/common/footer/footer-banner.png')] bg-cover bg-center flex flex-col justify-between"
       >
         <div class="layout-wrapper js-scroll-fade-in">
           <div
@@ -911,17 +1780,40 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="../../scripts/common/lenis.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"
+      integrity="sha512-kz526itdNcpyMs18TLPOhsnIeOIO1JywWKbbF77zR+ZKpZ4gwubXhwaURHpt5Se9AAqSK2j8ID0LnfXsB2Jkjg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/scripts/common/lenis.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script
-      src="../../scripts/common/navbar/animation/dekstop-navbar.js"
+      src="/scripts/common/navbar/animation/dekstop-navbar.js"
       defer
     ></script>
     <script
-      src="../../scripts/common/navbar/navbar-dropdown-panel.js"
+      src="/scripts/common/navbar/navbar-dropdown-panel.js"
       defer
     ></script>
-    <script src="../../scripts/common/animation/scroll-fade-in.js"></script>
-    <script type="module" src="../../scripts/common/faq/faq.js"></script>
+    <script src="/scripts/common/animation/fade-in.js"></script>
+    <script src="/scripts/common/animation/scroll-fade-in.js"></script>
+    <script src="/scripts/common/animation/stagger.js"></script>
+    <script type="module" src="/scripts/common/custom-cursor.js"></script>
+    <script type="module" src="/scripts/common/lightbox.js"></script>
+    <script
+      type="module"
+      src="/scripts/package-details/discount-details.js"
+    ></script>
+    <script type="module" src="/scripts/package-details/tabs.js"></script>
+    <script
+      type="module"
+      src="/scripts/package-details/standard-itinerary.js"
+    ></script>
+    <script
+      type="module"
+      src="/scripts/package-details/packing-list.js"
+    ></script>
+    <script type="module" src="/scripts/common/faq/faq.js"></script>
   </body>
 </html>
