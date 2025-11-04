@@ -250,7 +250,9 @@
     <nav aria-label="breadcrumb" class="pt-20 pb-4">
       <div class="layout-wrapper">
         <ul class="px-4 py-[14px] flex items-center gap-[6px]">
-          <li class="l2-sans text-[var(--color-heading-text-color-dark)]/40">
+          <li
+            class="l2-sans text-[var(--color-heading-text-color-dark)]/40 max-md:hidden"
+          >
             <a href="../landing-page.html" class="flex items-center">
               Home
               <div class="text-[var(--color-heading-text-color-dark)]">
@@ -272,7 +274,31 @@
               </div>
             </a>
           </li>
-          <li class="l2-sans text-[var(--color-heading-text-color-dark)]/40">
+          <li
+            class="l2-sans text-[var(--color-heading-text-color-dark)]/40 flex items-center md:hidden"
+          >
+            ...
+            <div class="text-[var(--color-heading-text-color-dark)]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5469 9.99958L8.32966 5.78236L7.44577 6.66625L10.7791 9.99958L7.44577 13.3329L8.32966 14.2168L12.5469 9.99958Z"
+                  fill="currentColor"
+                  fill-opacity="0.4"
+                />
+              </svg>
+            </div>
+          </li>
+          <li
+            class="l2-sans text-[var(--color-heading-text-color-dark)]/40 max-md:hidden"
+          >
             <a href="" class="flex items-center">
               Trekking in Nepal
               <div class="text-[var(--color-heading-text-color-dark)]">
@@ -325,12 +351,12 @@
 
     <main>
       <!-- Hero section -->
-      <section class="pb-[54px] js-fade-in">
+      <section class="pb-4 md:pb-[54px] js-fade-in">
         <div
-          class="layout-wrapper flex flex-col gap-8 text-[var(--color-darkgreen-500)]"
+          class="layout-wrapper flex flex-col gap-4 md:gap-8 text-[var(--color-darkgreen-500)]"
         >
           <div
-            class="flex flex-col max-xl:gap-12 xl:flex-row items-start justify-between"
+            class="flex flex-col gap-4 md:gap-12 xl:gap-0 xl:flex-row items-start justify-between"
           >
             <h1
               class="h2-antonio max-w-[286px] md:max-w-[400px] lg:max-w-[600px] w-full"
@@ -340,7 +366,9 @@
             <div
               class="flex flex-col md:flex-row xl:flex-col gap-8 xl:max-w-[435px] w-full"
             >
-              <div class="w-[300px] lg:w-[255px] flex flex-col gap-2">
+              <div
+                class="w-[300px] lg:w-[255px] flex flex-col gap-2 max-md:hidden"
+              >
                 <span class="p2-serif text-[var(--color-darkgreen-300)]">
                   Starting from
                 </span>
@@ -352,7 +380,7 @@
                 </p>
               </div>
               <div class="flex justify-between items-center w-full">
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-row md:flex-col gap-1">
                   <div class="flex items-center gap-1">
                     <p class="p1-sans">4.5</p>
                     <img
@@ -364,7 +392,7 @@
                     >(2891 Reviews)</span
                   >
                 </div>
-                <div class="flex gap-4">
+                <div class="flex gap-4 max-md:hidden">
                   <a href="">
                     <button class="tertiary-btn">Enquire Now</button>
                   </a>
@@ -632,7 +660,7 @@
 
                   <!-- Day 01 -->
                   <div
-                    class="flex flex-col gap-2 relative z-10 cursor-pointer js-itinerary-day-list-item"
+                    class="flex flex-col gap-2 relative z-10 cursor-pointer js-itinerary-day-list-item before:content-[''] before:absolute before:left-[24px] md:before:left-[50px] before:top-8 before:-bottom-8 before:w-[2px] before:bg-[var(--color-green-800)] h-full last:before:hidden"
                   >
                     <div class="flex items-center justify-between">
                       <div class="flex items-center gap-4">
@@ -716,7 +744,107 @@
                         </div>
                         <div class="flex gap-6 flex-wrap">
                           <div
-                            class="w-[130px] md:w-[157px] xl:w-[191px] h-[130px] md:h-[159px] xl:h-[193px] rounded-2xl group overflow-hidden cursor-none"
+                            class="w-[130px] md:w-[157px] xl:w-[191px] h-[130px] md:h-[159px] xl:h-[193px] rounded-2xl group overflow-hidden"
+                          >
+                            <img
+                              src="/public/images/common/location/cultural-tours.png"
+                              alt=""
+                              class="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Day 02 -->
+                  <div
+                    class="flex flex-col gap-2 relative z-10 cursor-pointer js-itinerary-day-list-item before:content-[''] before:absolute before:left-[24px] md:before:left-[50px] before:top-8 before:-bottom-8 before:w-[2px] before:bg-[var(--color-green-800)] h-full last:before:hidden"
+                  >
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-4">
+                        <span
+                          class="hidden md:inline-block l1-sans-strong text-white py-[10px] px-6 bg-[var(--color-green-800)] rounded-full"
+                        >
+                          Day 02
+                        </span>
+                        <span
+                          class="md:hidden l1-sans-strong text-white py-[10px] w-[48px] h-[48px] inline-flex items-center justify-center px-6 bg-[var(--color-green-800)] rounded-full"
+                        >
+                          02
+                        </span>
+                        <p class="p1-sans-strong">
+                          Preparation Day in Kathmandu
+                        </p>
+                      </div>
+                      <div>
+                        <img
+                          src="/public/images/icons/chevron-down.svg"
+                          alt="Chevron down icon"
+                          class="js-chevron-down-icon"
+                        />
+                        <img
+                          src="/public/images/icons/chevron-top.svg"
+                          alt="Chevron top icon"
+                          class="hidden js-chevron-up-icon"
+                        />
+                      </div>
+                    </div>
+                    <div class="hidden opacity-0 js-itinerary-day-details">
+                      <div
+                        class="flex flex-col gap-6 pl-[65px] md:pl-[115px] max-w-[761px]"
+                      >
+                        <p class="text-[var(--color-darkgreen-300)]">
+                          Lorem ipsum dolor sit amet consectetur. Venenatis sit
+                          feugiat pellentesque maecenas lectus sed at. Nunc
+                          condimentum sed scelerisque fermentum rhoncus.
+                        </p>
+                        <div class="flex flex-col md:flex-row gap-6">
+                          <div
+                            class="md:min-h-[108px] p-4 bg-[#F6F6F6] rounded-[8px] flex flex-col gap-3 text-[var(--color-darkgreen-300)] md:max-w-[194px] w-full"
+                          >
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="/public/images/icons/packages/picture-shot-icon.svg"
+                                alt=""
+                              />
+                              <p class="l1-sans">Elevation</p>
+                            </div>
+                            <p class="p3-sans-strong max-w-[150px]">
+                              15 Days 14 Nights
+                            </p>
+                          </div>
+                          <div
+                            class="md:min-h-[108px] p-4 bg-[#F6F6F6] rounded-[8px] flex flex-col gap-3 text-[var(--color-darkgreen-300)] md:max-w-[194px] w-full"
+                          >
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="/public/images/icons/fork-spoon-icon.svg"
+                                alt=""
+                              />
+                              <p class="l1-sans">Meal</p>
+                            </div>
+                            <p class="p3-sans-strong max-w-[150px]">
+                              Breakfast, Lunch, Dinner
+                            </p>
+                          </div>
+                          <div
+                            class="md:min-h-[108px] p-4 bg-[#F6F6F6] rounded-[8px] flex flex-col gap-3 text-[var(--color-darkgreen-300)] md:max-w-[194px] w-full"
+                          >
+                            <div class="flex items-center gap-2">
+                              <img
+                                src="/public/images/icons/home-icon.svg"
+                                alt=""
+                              />
+                              <p class="l1-sans">Accommodation</p>
+                            </div>
+                            <p class="p3-sans-strong max-w-[150px]">
+                              3-5 star hotel
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex gap-6 flex-wrap">
+                          <div
+                            class="w-[130px] md:w-[157px] xl:w-[191px] h-[130px] md:h-[159px] xl:h-[193px] rounded-2xl group overflow-hidden"
                           >
                             <img
                               src="/public/images/common/location/cultural-tours.png"
@@ -767,21 +895,47 @@
               <div class="flex flex-col gap-6">
                 <h2 class="p1-antonio">Choose from Available Date</h2>
                 <div
-                  class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center"
+                  class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center flex-wrap gap-4 md:gap-0"
                 >
                   <div class="flex flex-col gap-4">
                     <p class="p2-sans-strong">
                       Saturday, Oct 12 - Saturday Oct 26
                     </p>
                     <div class="flex items-center gap-8">
-                      <p class="p2-sans-strong">
+                      <p
+                        class="p2-sans-strong max-md:flex max-md:flex-col max-md:gap-1"
+                      >
                         from USD 2300
                         <span class="l2-sans text-[#557571]">/person</span>
                       </p>
                       <img
                         src="/public/images/icons/dot-icon-gray.svg"
                         alt="Dot icon"
-                        class="w-[6px] h-[6px]"
+                        class="w-[6px] h-[6px] max-md:hidden"
+                      />
+                      <p class="p3-sans text-[#557571]">Join 12 other guests</p>
+                    </div>
+                  </div>
+                  <button class="tertiary-btn">Choose Date</button>
+                </div>
+                <div
+                  class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center flex-wrap gap-4 md:gap-0"
+                >
+                  <div class="flex flex-col gap-4">
+                    <p class="p2-sans-strong">
+                      Saturday, Oct 12 - Saturday Oct 26
+                    </p>
+                    <div class="flex items-center gap-8">
+                      <p
+                        class="p2-sans-strong max-md:flex max-md:flex-col max-md:gap-1"
+                      >
+                        from USD 2300
+                        <span class="l2-sans text-[#557571]">/person</span>
+                      </p>
+                      <img
+                        src="/public/images/icons/dot-icon-gray.svg"
+                        alt="Dot icon"
+                        class="w-[6px] h-[6px] max-md:hidden"
                       />
                       <p class="p3-sans text-[#557571]">Join 12 other guests</p>
                     </div>
@@ -798,7 +952,9 @@
             >
               <div class="flex flex-col gap-6">
                 <h2 class="p1-antonio">Trekking Route</h2>
-                <div class="max-w-[845px] w-full h-[972px] xl:h-[1167px]">
+                <div
+                  class="max-w-[845px] w-full h-[472] md:h-[972px] xl:h-[1167px]"
+                >
                   <img
                     src="/public/images/packages/everest-base-camp-route.png"
                     alt=""
@@ -844,6 +1000,35 @@
                       4, Item number 5, Item number 6, etc as per your need.
                     </p>
                   </div>
+                  <div class="flex flex-col gap-4 py-4 js-packing-list-item">
+                    <div class="flex items-center gap-6 cursor-pointer">
+                      <div>
+                        <img
+                          src="/public/images/icons/vision-pro-icon.svg"
+                          alt="T-shirt icon"
+                        />
+                      </div>
+                      <div class="flex items-center justify-between w-full">
+                        <p class="p1-sans-strong">Gears</p>
+                        <img
+                          src="/public/images/icons/chevron-down.svg"
+                          alt="Chevron down icon"
+                          class="chevron-down-icon"
+                        />
+                        <img
+                          src="/public/images/icons/chevron-top.svg"
+                          alt="Chevron up icon"
+                          class="hidden chevron-top-icon"
+                        />
+                      </div>
+                    </div>
+                    <p
+                      class="p3-sans-strong max-w-[656px] text-[#4D6F6B] pl-[70px] hidden opacity-0 js-packing-list-item-detail"
+                    >
+                      Item number 1, Item number 2, Item number 3, Item number
+                      4, Item number 5, Item number 6, etc as per your need.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -854,7 +1039,7 @@
                 <h2 class="p1-antonio">Cost Details</h2>
                 <div class="bg-[#FAFAFA] rounded-2xl p-6 flex flex-col gap-12">
                   <!-- Inclusion -->
-                  <div class="flex flex-col gap-6">
+                  <div class="flex flex-col gap-4 md:gap-6">
                     <h3 class="p1-sans-strong">Inclusion</h3>
                     <div class="flex flex-col gap-4">
                       <div class="flex items-start gap-3">
@@ -898,7 +1083,7 @@
                 <h2 class="p1-antonio">Frequently Asked Questions</h2>
                 <div class="flex flex-col gap-4 w-full select-none">
                   <div
-                    class="px-6 py-5 rounded-2xl flex items-start justify-between bg-white hover:bg-[var(--color-blue-100)] border border-[var(--color-darkgreen-500)]/30 hover:border-[var(--color-blue-100)] cursor-pointer transition-all duration-300 ease-in-out js-faq"
+                    class="p-4 md:p-6 rounded-2xl flex items-start justify-between bg-white hover:bg-[var(--color-blue-100)] border border-[var(--color-darkgreen-500)]/30 hover:border-[var(--color-blue-100)] cursor-pointer transition-all duration-300 ease-in-out js-faq"
                   >
                     <div class="flex flex-col gap-[18px] max-w-[600px] w-full">
                       <p
@@ -937,7 +1122,7 @@
               <div class="flex flex-col gap-6">
                 <h2 class="p1-antonio">Video</h2>
                 <div
-                  class="w-full h-[390px] lg:h-[475px] rounded-2xl overflow-hidden"
+                  class="w-full h-[200px] md:h-[390px] lg:h-[475px] rounded-2xl overflow-hidden"
                 >
                   <iframe
                     src="https://www.youtube.com/embed/8efveLZ3E24"
@@ -1165,9 +1350,9 @@
             </div>
           </section>
 
-          <!-- Discount card For tablet and mobile -->
+          <!-- Discount card For tablet -->
           <section
-            class="xl:hidden fixed bottom-0 inset-x-0 z-[1001] opacity-0 js-discount-card"
+            class="hidden md:block xl:hidden fixed bottom-0 inset-x-0 z-[1001] opacity-0 js-discount-card"
           >
             <div
               class="bg-[var(--color-blue-100)] p-6 flex flex-col gap-6 rounded-[8px]"
@@ -1246,6 +1431,40 @@
               </div>
             </div>
           </section>
+
+          <!-- Discount card for mobile -->
+          <section class="md:hidden fixed bottom-0 inset-x-0 z-[1001]">
+            <div
+              class="flex items-center justify-between bg-[var(--color-blue-100)] p-6"
+            >
+              <div class="flex flex-col gap-2 rounded-t-2xl">
+                <p class="p1-antonio">USD 10,080</p>
+                <span class="p4-serif text-[var(--color-darkgreen-300)]"
+                  >/ person</span
+                >
+              </div>
+              <div class="flex gap-3 md:hidden">
+                <a href="">
+                  <button class="tertiary-btn">Book Trip Now</button>
+                </a>
+                <button class="secondary-btn hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.5 0.5C14.0647 0.5 15.3328 1.76835 15.333 3.33301C15.333 4.89781 14.0648 6.16699 12.5 6.16699C11.6066 6.16699 10.8102 5.75373 10.29 5.10645L10.0225 4.77344L9.65234 4.98535L6.27148 6.91699L5.92383 7.11621L6.04199 7.49805C6.12302 7.76126 6.16696 8.04176 6.16699 8.33301C6.16699 8.62427 6.12299 8.90474 6.04199 9.16797L5.92383 9.55078L6.27148 9.74902L9.65234 11.6807L10.0225 11.8926L10.29 11.5605C10.8102 10.9133 11.6067 10.5 12.5 10.5C14.0647 10.5 15.3328 11.7684 15.333 13.333C15.333 14.8978 14.0648 16.167 12.5 16.167C10.9352 16.167 9.66699 14.8978 9.66699 13.333C9.66702 13.0418 9.71097 12.7613 9.79199 12.498L9.90918 12.1162L9.56152 11.917L6.18164 9.98535L5.81055 9.77344L5.54297 10.1064C5.02285 10.7536 4.22629 11.167 3.33301 11.167C1.76835 11.1668 0.5 9.89771 0.5 8.33301C0.500176 6.76846 1.76846 5.50018 3.33301 5.5C4.22632 5.5 5.02285 5.91331 5.54297 6.56055L5.81055 6.89258L6.18066 6.68066L9.56152 4.74902L9.90918 4.55078L9.79102 4.16797C9.71003 3.90476 9.66699 3.62423 9.66699 3.33301C9.66717 1.76835 10.9353 0.5 12.5 0.5Z"
+                      fill="currentColor"
+                      stroke="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -1256,7 +1475,9 @@
         <div
           class="layout-wrapper flex flex-col gap-[40px] md:gap-12 js-scroll-fade-in"
         >
-          <div class="flex justify-between items-center flex-wrap gap-6">
+          <div
+            class="flex flex-col items-start md:flex-row justify-between md:items-center gap-6"
+          >
             <h2 class="h3-antonio text-[var(--color-heading-text-color-dark)]">
               Similar Packages
             </h2>
