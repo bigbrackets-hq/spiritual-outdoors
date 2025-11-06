@@ -222,6 +222,17 @@ button {
   color: var(--color-passage-text-color-light);
 }
 
+.white-btn {
+  background: rgba(142, 142, 142, 0.4);
+  backdrop-filter: blur(5px);
+  color: white;
+}
+
+.white-btn:hover {
+  background-color: white;
+  color: var(--color-darkgreen-500);
+}
+
 /* Filter type-1 */
 
 .filter-type-1 {
