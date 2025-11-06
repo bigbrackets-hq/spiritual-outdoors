@@ -1,4 +1,6 @@
-const cardContainerElement = document.querySelector('.js-card-container');
+const cardContainerElement = document.querySelector(
+  '.js-auto-scroll-card-container'
+);
 
 cardContainerElement.innerHTML += cardContainerElement.innerHTML;
 
