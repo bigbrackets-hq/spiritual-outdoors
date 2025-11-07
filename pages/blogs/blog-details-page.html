@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spiritual Outdoors</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../public/images/icons/favicon.svg"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link rel="stylesheet" href="/styles/common/global.css" />
+    <link rel="stylesheet" href="/styles/common/navbar.css" />
+    <link rel="stylesheet" href="/styles/blogs/pagination.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      class="py-4 h-[84px] overflow-hidden fixed backdrop-blur-[10px] flex flex-col gap-8 inset-x-0 top-0 z-[1000] transition-all duration-300 ease-in-out js-header"
+    >
+      <nav
+        class="layout-wrapper js-nav flex justify-between items-center relative"
+      >
+        <div>
+          <a href="../landing-page.html" class="js-main-logo">
+            <img
+              src="/public/images/icons/main-logo-dark.svg"
+              alt="Spiritual outdoors logo"
+            />
+          </a>
+        </div>
+        <ul
+          class="l1-sans-strong js-nav-menu max-xl:hidden text-[var(--color-darkgreen-500)] flex items-center gap-6"
+        >
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Destinations
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Trekking in Nepal
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Travel guides
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            About
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li>
+            <a href="">
+              <button class="primary-btn js-whatsapp-btn">
+                <img
+                  src="/public/images/icons/social-media/whatsapp-icon.svg"
+                  alt="Whatsapp"
+                />
+                +977 9851202196
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div
+          class="js-hamburger-menu cursor-pointer xl:hidden js-hamburger-icon-container"
+        >
+          <img
+            src="/public/images/icons/hamburger-icon-dark.svg"
+            alt="Hamburger menu icon"
+          />
+        </div>
+      </nav>
+
+      <!-- Navigation panel -->
+      <aside class="layout-wrapper h-full js-dropdown-panel">
+        <!-- Destinations dropdown -->
+        <div class="hidden h-full js-destinations-dropdown-panel">
+          <div class="flex gap-[77px] h-full pb-16">
+            <div class="flex flex-col gap-10 max-w-[863px] w-full">
+              <div class="flex gap-[124px]">
+                <h2
+                  class="h2-antonio dropdown-panel active text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Nepal
+                </h2>
+                <h2
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Tibet
+                </h2>
+                <h2
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Bhutan
+                </h2>
+              </div>
+              <div
+                class="flex gap-24 dropdown-content active js-destinations-nepal-dropdown-content"
+              >
+                <div class="flex-1">
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Trekking in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      <a href=""> Everest Trekking </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1">
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Tours in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      <a href=""> Helicopter Tour </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col gap-[40px] flex-2">
+                  <div>
+                    <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                      Adventures in Nepal
+                    </p>
+                    <ul class="flex flex-col gap-[14px]">
+                      <li
+                        class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        <a href=""> Bungee Jumping </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                      Peak Climbing
+                    </p>
+                    <ul class="flex flex-col gap-[14px]">
+                      <li
+                        class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        <a href="">
+                          Everest Base Camp Trek with Lobuche Peak Expedition -
+                          18 days
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-[340px] h-[309px] self-end relative rounded-2xl overflow-hidden"
+            >
+              <img
+                src="/public/images/common/location/langtang-gosaikunda.png"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div
+                class="h-[70px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+              ></div>
+              <div
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
+              >
+                <p class="p1-sans-strong text-white">Explore more in Nepal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-4">
+      <div
+        class="layout-wrapper flex flex-col lg:flex-row lg:items-center justify-between"
+      >
+        <nav aria-label="breadcrumb">
+          <ul class="px-4 py-[14px] flex items-center gap-[6px]">
+            <li class="l2-sans text-[var(--color-heading-text-color-dark)]/40">
+              <a href="../landing-page.html" class="flex items-center">
+                Home
+                <div class="text-[var(--color-heading-text-color-dark)]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5469 9.99958L8.32966 5.78236L7.44577 6.66625L10.7791 9.99958L7.44577 13.3329L8.32966 14.2168L12.5469 9.99958Z"
+                      fill="currentColor"
+                      fill-opacity="0.4"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="l2-sans text-[var(--color-heading-text-color-dark)]/40">
+              <a href="../landing-page.html" class="flex items-center">
+                Blogs
+                <div class="text-[var(--color-heading-text-color-dark)]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5469 9.99958L8.32966 5.78236L7.44577 6.66625L10.7791 9.99958L7.44577 13.3329L8.32966 14.2168L12.5469 9.99958Z"
+                      fill="currentColor"
+                      fill-opacity="0.4"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="l2-sans text-[var(--color-heading-text-color-dark)]">
+              <a href="" class="flex items-center">Nepal Travel Guid...</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <main>
+      <article
+        class="px-6 md:px-8 xl:px-0 max-w-[1060px] w-full mx-auto pt-8 pb-12 flex flex-col gap-8 md:gap-[72px] js-fade-in"
+      >
+        <!-- Hero section -->
+        <section>
+          <div class="flex flex-col gap-6">
+            <h1 class="p1-antonio text-[#101010]">
+              Nepal Travel Guide: Essential Tips for First-Timers
+            </h1>
+            <div class="flex items-center gap-4">
+              <span class="l3-sans text-[#505050]">25 July, 2025</span>
+              <img
+                src="/public/images/icons/dot-icon-gray.svg"
+                alt="Dot icon gray"
+              />
+              <span class="l3-sans text-[#505050]">By: Steve Jobs</span>
+            </div>
+            <figure
+              class="w-full h-[228px] md:h-[260px] lg:h-[392px] flex flex-col gap-4"
+            >
+              <img
+                src="/public/images/packages/everest-base-camp-1.png"
+                alt=""
+                class="w-full h-full object-cover rounded-2xl"
+              />
+              <figcaption
+                class="l3-sans-strong text-[#101010] flex flex-col md:flex-row gap-3 md:justify-between md:items-center w-full"
+              >
+                <p>
+                  <strong class="l3-sans text-[#707070]">Caption:</strong>
+                  Beautiful panchpokhari photo
+                </p>
+                <p>
+                  <strong class="l3-sans text-[#707070]">Photo source:</strong>
+                  Everest
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Body section -->
+        <div class="flex items-start justify-between">
+          <div class="max-w-[616px] w-full">
+            <section class="flex flex-col gap-8 md:gap-[54px] mb-12">
+              <!-- First section -->
+              <p class="p2-sans text-[#505050]">
+                Nestled between the towering Himalayas and the lush plains of
+                India, Nepal is a land of breathtaking beauty, spiritual depth,
+                and warm-hearted people. Whether you’re coming to trek the
+                iconic trails of Everest, seek peace in ancient monasteries, or
+                explore vibrant cities like Kathmandu and Pokhara, this guide
+                will help you make the most of your first trip to Nepal.
+              </p>
+              <div class="flex gap-6">
+                <div class="w-[300px] h-[200px]">
+                  <img
+                    src="/public/images/packages/everest-base-camp-2.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+                <div class="w-[300px] h-[200px]">
+                  <img
+                    src="/public/images/packages/everest-base-camp-3.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
+              <!-- Second section -->
+              <div class="flex flex-col gap-4">
+                <h2 class="p1-sans-strong text-[#101010]">
+                  1. Best Time to Visit Nepal
+                </h2>
+                <p class="p2-sans text-[#505050]">
+                  The best time to visit Nepal largely depends on what you want
+                  to experience.
+                </p>
+                <ul class="p2-sans text-[#505050] list-disc pl-6">
+                  <li>
+                    Spring (March to May): Perfect for trekking — blooming
+                    rhododendrons and clear skies.
+                  </li>
+                  <li>
+                    Autumn (September to November): The most popular season,
+                    with pleasant weather and stunning mountain views.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Third section -->
+              <div class="flex flex-col gap-4">
+                <h2 class="p1-sans-strong text-[#101010]">
+                  2. Entry Requirements and Visas
+                </h2>
+                <p class="p2-sans text-[#505050]">
+                  Most travelers can easily get a visa on arrival at Kathmandu’s
+                  Tribhuvan International Airport or border checkpoints.
+                </p>
+              </div>
+
+              <!-- Fourth section -->
+              <div class="flex flex-col gap-4">
+                <h2 class="p1-sans-strong text-[#101010]">Final Thoughts</h2>
+                <p class="p2-sans text-[#505050]">
+                  Nepal offers an experience unlike any other - a perfect blend
+                  of adventure, spirituality, and natural beauty. Whether you’re
+                  gazing at Mount Everest, meditating in a monastery, or sharing
+                  a cup of tea with locals, you’ll find yourself falling in love
+                  with this magical land.
+                </p>
+              </div>
+            </section>
+
+            <!-- Author section -->
+            <section
+              class="p-[18px] bg-[var(--color-green-50)] rounded-2xl flex flex-col gap-[18px]"
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-[38px]">
+                    <img
+                      src="https://mockmind-api.uifaces.co/content/abstract/46.jpg"
+                      alt=""
+                      class="w-full h-full aspect-square rounded-full object-cover"
+                    />
+                  </div>
+                  <p class="p2-sans-strong text-[#101010]">Steve Jobs</p>
+                </div>
+                <p class="p3-sans text-[#505050]">About Author</p>
+              </div>
+              <p class="p3-sans text-[#505050]">
+                Meet Rajan, an avid trekker and nature enthusiast who finds
+                peace in the great outdoors. With a passion for bird watching,
+                he combines his love for hiking with mindfulness
+              </p>
+
+              <div class="flex items-center gap-[18px]">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M18 9.055C18 4.05406 13.9706 0 9 0C4.02943 0 0 4.05406 0 9.055C0 13.5745 3.29115 17.3207 7.59375 18V11.6725H5.30859V9.055H7.59375V7.06007C7.59375 4.79066 8.93742 3.53711 10.9932 3.53711C11.9776 3.53711 13.0078 3.71397 13.0078 3.71397V5.94234H11.873C10.755 5.94234 10.4062 6.64039 10.4062 7.35719V9.055H12.9023L12.5033 11.6725H10.4062V18C14.7088 17.3207 18 13.5745 18 9.055Z"
+                      fill="#505050"
+                    />
+                  </svg>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.75 16.75L7.45969 10.0403M7.45969 10.0403L0.75 0.75H5.19444L10.0403 7.45969M7.45969 10.0403L12.3056 16.75H16.75L10.0403 7.45969M16.75 0.75L10.0403 7.45969"
+                      stroke="#505050"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M9.00528 1.62102C11.4114 1.62102 11.6963 1.63157 12.6426 1.67376C13.522 1.71244 13.9969 1.86013 14.3135 1.9832C14.7321 2.14495 15.0346 2.34186 15.3477 2.65482C15.6643 2.97128 15.8577 3.27017 16.0195 3.68861C16.1427 4.00508 16.2904 4.4833 16.3291 5.35886C16.3713 6.30826 16.3819 6.59308 16.3819 8.99473C16.3819 11.3999 16.3713 11.6847 16.3291 12.6306C16.2904 13.5097 16.1427 13.9844 16.0195 14.3008C15.8577 14.7193 15.6607 15.0217 15.3477 15.3346C15.0311 15.6511 14.7321 15.8445 14.3135 16.0063C13.9969 16.1293 13.5185 16.277 12.6426 16.3157C11.6928 16.3579 11.4079 16.3684 9.00528 16.3684C6.59918 16.3684 6.31425 16.3579 5.36799 16.3157C4.48857 16.277 4.01368 16.1293 3.69709 16.0063C3.27848 15.8445 2.97596 15.6476 2.66289 15.3346C2.3463 15.0182 2.15282 14.7193 1.99101 14.3008C1.86789 13.9844 1.72015 13.5062 1.68145 12.6306C1.63924 11.6812 1.62869 11.3964 1.62869 8.99473C1.62869 6.58957 1.63924 6.30475 1.68145 5.35886C1.72015 4.47978 1.86789 4.00508 1.99101 3.68861C2.15282 3.27017 2.34981 2.96777 2.66289 2.65482C2.97948 2.33835 3.27848 2.14495 3.69709 1.9832C4.01368 1.86013 4.49209 1.71244 5.36799 1.67376C6.31425 1.63157 6.59918 1.62102 9.00528 1.62102ZM9.00528 0C6.56048 0 6.25445 0.0105489 5.29412 0.0527447C4.33731 0.0949404 3.6795 0.249658 3.10963 0.471186C2.51515 0.703262 2.01212 1.00918 1.51261 1.51201C1.00958 2.01133 0.703537 2.51416 0.47137 3.1049C0.249756 3.67806 0.0949775 4.3321 0.0527653 5.28853C0.0105531 6.252 0 6.55792 0 9.00176C0 11.4456 0.0105531 11.7515 0.0527653 12.7115C0.0949775 13.6679 0.249756 14.3255 0.47137 14.8951C0.703537 15.4894 1.00958 15.9922 1.51261 16.4915C2.01212 16.9908 2.51515 17.3003 3.10612 17.5288C3.6795 17.7503 4.33379 17.9051 5.2906 17.9473C6.25093 17.9895 6.55697 18 9.00176 18C11.4466 18 11.7526 17.9895 12.7129 17.9473C13.6697 17.9051 14.3275 17.7503 14.8974 17.5288C15.4884 17.3003 15.9914 16.9908 16.4909 16.4915C16.9904 15.9922 17.3 15.4894 17.5286 14.8986C17.7502 14.3255 17.905 13.6714 17.9472 12.715C17.9894 11.755 18 11.4491 18 9.00527C18 6.56144 17.9894 6.25552 17.9472 5.29557C17.905 4.33913 17.7502 3.68158 17.5286 3.11194C17.307 2.51416 17.001 2.01133 16.4979 1.51201C15.9984 1.0127 15.4954 0.703262 14.9044 0.474702C14.3311 0.253174 13.6768 0.0984567 12.72 0.056261C11.7561 0.0105489 11.4501 0 9.00528 0Z"
+                      fill="#505050"
+                    />
+                    <path
+                      d="M9.00466 4.37695C6.45082 4.37695 4.37891 6.44806 4.37891 9.0009C4.37891 11.5537 6.45082 13.6249 9.00466 13.6249C11.5585 13.6249 13.6304 11.5537 13.6304 9.0009C13.6304 6.44806 11.5585 4.37695 9.00466 4.37695ZM9.00466 12.0003C7.34783 12.0003 6.00408 10.6571 6.00408 9.0009C6.00408 7.34472 7.34783 6.00149 9.00466 6.00149C10.6615 6.00149 12.0052 7.34472 12.0052 9.0009C12.0052 10.6571 10.6615 12.0003 9.00466 12.0003Z"
+                      fill="#505050"
+                    />
+                    <path
+                      d="M14.8942 4.19474C14.8942 4.79252 14.4088 5.27425 13.8143 5.27425C13.2163 5.27425 12.7344 4.789 12.7344 4.19474C12.7344 3.59697 13.2198 3.11523 13.8143 3.11523C14.4088 3.11523 14.8942 3.60049 14.8942 4.19474Z"
+                      fill="#505050"
+                    />
+                  </svg>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.6676 0H1.32891C0.594141 0 0 0.580078 0 1.29727V16.6992C0 17.4164 0.594141 18 1.32891 18H16.6676C17.4023 18 18 17.4164 18 16.7027V1.29727C18 0.580078 17.4023 0 16.6676 0ZM5.34023 15.3387H2.66836V6.74648H5.34023V15.3387ZM4.0043 5.57578C3.14648 5.57578 2.45391 4.8832 2.45391 4.02891C2.45391 3.17461 3.14648 2.48203 4.0043 2.48203C4.85859 2.48203 5.55117 3.17461 5.55117 4.02891C5.55117 4.87969 4.85859 5.57578 4.0043 5.57578ZM15.3387 15.3387H12.6703V11.1621C12.6703 10.1672 12.6527 8.88398 11.2816 8.88398C9.89297 8.88398 9.68203 9.97031 9.68203 11.0918V15.3387H7.01719V6.74648H9.57656V7.9207H9.61172C9.9668 7.2457 10.8387 6.53203 12.1359 6.53203C14.8395 6.53203 15.3387 8.31094 15.3387 10.6242V15.3387Z"
+                      fill="#505050"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <!-- Table of contents section -->
+          <section
+            class="flex flex-col gap-8 h-full sticky top-5 max-xl:hidden"
+          >
+            <div class="h-[315px] flex flex-col gap-4">
+              <p class="p2-sans-strong text-[#101010]">Table of contents</p>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- Related blogs  -->
+      <section
+        class="py-[56px] md:py-16 xl:py-[120px] bg-[var(--color-blue-100)]"
+      >
+        <div class="layout-wrapper js-scroll-fade-in">
+          <div
+            class="flex items-center justify-between flex-wrap max-md:gap-6 mb-[40px] md:mb-12"
+          >
+            <div class="max-w-[500px] xl:max-w-[704px] w-full">
+              <h2
+                class="h3-antonio text-[var(--color-heading-text-color-dark)] mb-4"
+              >
+                Related Blogs
+              </h2>
+            </div>
+            <button class="secondary-btn p5-sans-strong">More Blogs</button>
+          </div>
+          <div
+            class="flex gap-6 overflow-x-auto scrollbar-hidden js-card-container"
+          >
+            <a href="" class="js-card-stagger">
+              <div
+                class="flex flex-col gap-3 md:gap-6 w-[300px] md:w-[411px] flex-shrink-0 relative"
+              >
+                <div
+                  class="relative rounded-2xl group cursor-none overflow-hidden h-[200px] w-full md:h-[274px] js-image-card-container"
+                >
+                  <img
+                    src="/public/images/common/location/location-1.png"
+                    alt="Travel location 1"
+                    class="object-cover w-full h-full group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                  />
+                  <!-- An overlay to fix custom cursor disappearing -->
+                  <div class="absolute inset-0 z-10 bg-transparent"></div>
+                </div>
+                <div class="flex flex-col gap-3 md:gap-4">
+                  <h3
+                    class="p1-sans-strong max-w-[379px] text-[var(--color-heading-text-color-dark)]"
+                  >
+                    Nepal Travel Guide: Essential Tips for First-Timers
+                  </h3>
+                  <div
+                    class="flex items-center gap-2 text-[var(--color-passage-text-color-dark)] l2-sans"
+                  >
+                    <span>Jan 12, 2025</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="3"
+                      height="4"
+                      viewBox="0 0 3 4"
+                      fill="none"
+                    >
+                      <circle cx="1.5" cy="2" r="1.5" fill="#557571" />
+                    </svg>
+                    <span>By: Prabin Timilaisina</span>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-6 left-6 bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                >
+                  <p class="text-white l3-sans-strong">Travel tips</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="js-card-stagger">
+              <div
+                class="flex flex-col gap-3 md:gap-6 w-[300px] md:w-[411px] flex-shrink-0 relative"
+              >
+                <div
+                  class="relative rounded-2xl group cursor-none overflow-hidden h-[200px] w-full md:h-[274px] js-image-card-container"
+                >
+                  <img
+                    src="/public/images/common/location/location-1.png"
+                    alt="Travel location 1"
+                    class="object-cover w-full h-full group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                  />
+                  <!-- An overlay to fix custom cursor disappearing -->
+                  <div class="absolute inset-0 z-10 bg-transparent"></div>
+                </div>
+                <div class="flex flex-col gap-3 md:gap-4">
+                  <h3
+                    class="p1-sans-strong max-w-[379px] text-[var(--color-heading-text-color-dark)]"
+                  >
+                    Nepal Travel Guide: Essential Tips for First-Timers
+                  </h3>
+                  <div
+                    class="flex items-center gap-2 text-[var(--color-passage-text-color-dark)] l2-sans"
+                  >
+                    <span>Jan 12, 2025</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="3"
+                      height="4"
+                      viewBox="0 0 3 4"
+                      fill="none"
+                    >
+                      <circle cx="1.5" cy="2" r="1.5" fill="#557571" />
+                    </svg>
+                    <span>By: Prabin Timilaisina</span>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-6 left-6 bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                >
+                  <p class="text-white l3-sans-strong">Travel tips</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="js-card-stagger">
+              <div
+                class="flex flex-col gap-3 md:gap-6 w-[300px] md:w-[411px] flex-shrink-0 relative"
+              >
+                <div
+                  class="relative rounded-2xl group cursor-none overflow-hidden h-[200px] w-full md:h-[274px] js-image-card-container"
+                >
+                  <img
+                    src="/public/images/common/location/location-1.png"
+                    alt="Travel location 1"
+                    class="object-cover w-full h-full group-hover:scale-125 transition-transform duration-500 ease-in-out"
+                  />
+                  <!-- An overlay to fix custom cursor disappearing -->
+                  <div class="absolute inset-0 z-10 bg-transparent"></div>
+                </div>
+                <div class="flex flex-col gap-3 md:gap-4">
+                  <h3
+                    class="p1-sans-strong max-w-[379px] text-[var(--color-heading-text-color-dark)]"
+                  >
+                    Nepal Travel Guide: Essential Tips for First-Timers
+                  </h3>
+                  <div
+                    class="flex items-center gap-2 text-[var(--color-passage-text-color-dark)] l2-sans"
+                  >
+                    <span>Jan 12, 2025</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="3"
+                      height="4"
+                      viewBox="0 0 3 4"
+                      fill="none"
+                    >
+                      <circle cx="1.5" cy="2" r="1.5" fill="#557571" />
+                    </svg>
+                    <span>By: Prabin Timilaisina</span>
+                  </div>
+                </div>
+                <div
+                  class="absolute top-6 left-6 bg-black/20 border border-white/30 backdrop-blur-[10px] h-8 px-3 rounded-full flex items-center gap-1"
+                >
+                  <p class="text-white l3-sans-strong">Travel tips</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <section class="bg-white pt-24 pb-[60px]">
+        <div
+          class="layout-wrapper flex flex-col gap-[56px] md:gap-[80px] xl:gap-0 xl:flex-row xl:justify-between"
+        >
+          <div
+            class="flex flex-col md:flex-row xl:flex-col gap-[56px] md:gap-[109px] items-start md:items-center xl:items-start"
+          >
+            <img
+              src="/public/images/common/footer/footer-main-logo.svg"
+              alt="Spiritual outdoors"
+              class="max-md:w-[172px]"
+            />
+            <div class="flex flex-col gap-4">
+              <span class="h1-sans">Follow us on:</span>
+              <div class="flex items-center gap-6">
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/facebook-icon.svg"
+                    alt="Facebook icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/instagram-icon.svg"
+                    alt="Instagram icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/youtube-icon.svg"
+                    alt="YouTube icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/x-icon.svg"
+                    alt="X icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/linkedin-icon.svg"
+                    alt="LinkedIn icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[737px] w-full flex flex-col gap-12">
+            <div
+              class="flex justify-between gap-[40px] flex-wrap js-footer-links-container"
+            >
+              <div class="flex flex-col gap-4 js-footer-link">
+                <p class="h1-sans">Explore</p>
+                <ul class="flex flex-col gap-3">
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Destinations</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Gallery</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Reviews</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-4 js-footer-link">
+                <p class="h1-sans">Company</p>
+                <ul class="flex flex-col gap-3">
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">About</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Legal documents</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Terms & Conditions</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-4">
+                <p class="h1-sans">Spiritual Outdoors Pvt. Ltd.</p>
+                <ul class="flex flex-col gap-3">
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="" class="inline-flex items-center gap-2"
+                      ><img
+                        src="/public/images/common/footer/location-icon.svg"
+                        alt="Location icon"
+                      />
+                      Amrit Marg, Thamel, Nepal</a
+                    >
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="" class="inline-flex items-center gap-2">
+                      <img
+                        src="/public/images/common/footer/email-icon.svg"
+                        alt="Mail icon"
+                      />
+                      info@spiritualexcursion.com
+                    </a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img
+                      src="/public/images/common/footer/phone-icon.svg"
+                      alt="Phone icon"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <a
+                        href=""
+                        class="inline-flex items-center gap-2 text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        +977 14418817 (Office)
+                      </a>
+                      <a
+                        href=""
+                        class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        +977 9851202196 (Kabin)
+                      </a>
+                      <a
+                        href=""
+                        class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        +977 9851231090 (Badri)
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="max-w-[737px] w-full flex flex-col gap-3 md:gap-4">
+              <p class="h1-sans">We accept</p>
+              <div
+                class="flex items-center max-md:gap-4 md:justify-between flex-wrap max-w-[512px] w-full"
+              >
+                <img
+                  src="/public/images/icons/payment-gateway/esewa-icon.svg"
+                  alt="esewa icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/mastercard-icon.svg"
+                  alt="mastercard icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/american-express-icon.svg"
+                  alt="American express icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/connect-ips-icon.svg"
+                  alt="Connect ips icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/khalti-icon.svg"
+                  alt="Khalti icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/visa-icon.svg"
+                  alt="Visa icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/union-pay-icon.svg"
+                  alt="Union pay icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[var(--color-darkgreen-500)] py-2">
+        <div
+          class="layout-wrapper l3-sans text-[#FFF] flex items-center justify-between flex-wrap gap-4"
+        >
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <p>Privacy Policy | Terms and Conditions</p>
+          </a>
+          <p class="js-copyright-text"></p>
+          <p>
+            Website by
+            <a
+              href="https://www.bigbracketshq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bigbrackets
+            </a>
+          </p>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Custom arrow cursor -->
+    <div id="custom-arrow-cursor"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"
+      integrity="sha512-kz526itdNcpyMs18TLPOhsnIeOIO1JywWKbbF77zR+ZKpZ4gwubXhwaURHpt5Se9AAqSK2j8ID0LnfXsB2Jkjg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/scripts/common/lenis.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script
+      src="/scripts/common/navbar/animation/dekstop-navbar.js"
+      defer
+    ></script>
+    <script
+      src="/scripts/common/navbar/navbar-dropdown-panel.js"
+      defer
+    ></script>
+    <script type="module" src="/scripts/common/custom-cursor.js"></script>
+    <script src="/scripts/common/animation/fade-in.js"></script>
+    <script src="/scripts/common/animation/scroll-fade-in.js"></script>
+    <script src="/scripts/common/animation/stagger.js"></script>
+  </body>
+</html>
