@@ -98,6 +98,10 @@
   --color-heading-text-color-light: #ffffff;
   --color-passage-text-color-dark: #557571;
   --color-passage-text-color-light: #ffffff;
+
+  /* Semantic colors */
+  --color-semantic-info-50: #ecf4fe;
+  --color-semantic-info-900: #1c3d66;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
@@ -299,6 +303,10 @@ button {
 
 .filter-btn.active {
   background: rgba(1, 49, 43, 0.1);
+}
+
+.filter-btn.selected {
+  background-color: var(--color-semantic-info-50);
 }
 
 #custom-arrow-cursor {
