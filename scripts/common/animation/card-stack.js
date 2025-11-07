@@ -1,18 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const stackContainer = document.querySelector('.js-stack-card-container');
 const cards = document.querySelectorAll('.js-stack-card');
 
 cards.forEach((card) => {
   gsap.to(card, {
-    scale: 1,
     scrollTrigger: {
-      trigger: card,
-      start: 'top 10%',
-      end: 'bottom 12%',
+      trigger: stackContainer,
+      start: 'top top',
+      end: 'bottom bottom',
       scrub: true,
       pin: true,
       pinSpacing: false,
-      invalidateOnRefresh: true,
+      // invalidateOnRefresh: true,
       markers: true,
     },
   });
