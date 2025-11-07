@@ -1,0 +1,28 @@
+.pagination-btn {
+  color: #01312b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.pagination-btn:hover {
+  background-color: rgba(1, 49, 43, 0.1);
+}
+
+.pagination-btn.active {
+  background-color: #01312b;
+  color: white;
+}
+
+.pagination-btn.disabled {
+  cursor: default;
+  color: rgba(1, 49, 43, 0.3);
+}
+
+.pagination-btn.disabled:hover {
+  background-color: transparent;
+}
