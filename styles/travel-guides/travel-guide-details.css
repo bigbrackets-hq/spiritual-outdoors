@@ -1,0 +1,85 @@
+.travel-guide-details h2 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #00312b;
+}
+
+.travel-guide-details h3 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  letter-spacing: 0;
+  color: #00312b;
+}
+
+.travel-guide-details p,
+.travel-guide-details li {
+  color: #707070;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .travel-guide-details h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  .travel-guide-details h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  .travel-guide-details p,
+  .travel-guide-details li {
+    color: #707070;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .travel-guide-details h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+
+  .travel-guide-details h3 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0;
+    letter-spacing: 0;
+  }
+
+  .travel-guide-details p,
+  .travel-guide-details li {
+    color: #707070;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0;
+  }
+}
