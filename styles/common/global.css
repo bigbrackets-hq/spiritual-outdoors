@@ -358,6 +358,49 @@ input[type='checkbox']:checked {
   background-position: center;
 }
 
+/* Table */
+
+.table-wrapper {
+  border: 1px solid #cfd0d4;
+  border-top: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #82858f;
+  color: white;
+  text-align: left;
+}
+
+tbody {
+  border-top: none;
+}
+
+thead th,
+tbody td {
+  border-right: 1px solid #cfd0d4;
+}
+
+thead th:last-child,
+tbody td:last-child {
+  border-right: none;
+}
+
+th,
+td {
+  padding: 16px 14px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eff0f1;
+}
+
 /* Instrument Sans Label */
 
 .h1-sans {
