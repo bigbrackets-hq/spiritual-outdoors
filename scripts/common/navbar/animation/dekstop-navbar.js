@@ -101,13 +101,23 @@ ScrollTrigger.create({
   },
 });
 
+let currentDropdown = null;
+
 //* Expand navbar on item hover
 navItemElements.forEach((item) => {
   const dropdownPanelElement = document.querySelector(
-    `.js-${item.textContent.trim().toLowerCase()}-dropdown-panel`
+    `.js-${item.textContent
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '')}-dropdown-panel`
   );
 
   item.addEventListener('mouseenter', () => {
+    if (currentDropdown && currentDropdown !== dropdownPanelElement) {
+      currentDropdown.style.display = 'none';
+    }
+
     overlayElement.style.opacity = '1';
 
     scrollPosition = window.scrollY;
@@ -129,6 +139,7 @@ navItemElements.forEach((item) => {
           ease: 'power2.inOut',
           onComplete: () => {
             isNavbarPanelOpen = true;
+            currentDropdown = dropdownPanelElement;
           },
         });
       },
