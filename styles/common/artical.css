@@ -1,4 +1,4 @@
-.travel-guide-details h2 {
+.article-section h2 {
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -7,7 +7,7 @@
   color: #00312b;
 }
 
-.travel-guide-details h3 {
+.article-section h3 {
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -17,8 +17,8 @@
   color: #00312b;
 }
 
-.travel-guide-details p,
-.travel-guide-details li {
+.article-section p,
+.article-section li {
   color: #707070;
   font-family: 'Instrument Sans', sans-serif;
   font-weight: 400;
@@ -32,7 +32,7 @@ img {
 }
 
 @media (min-width: 768px) {
-  .travel-guide-details h2 {
+  .article-section h2 {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -40,7 +40,7 @@ img {
     letter-spacing: 0;
   }
 
-  .travel-guide-details h3 {
+  .article-section h3 {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -48,8 +48,8 @@ img {
     letter-spacing: 0;
   }
 
-  .travel-guide-details p,
-  .travel-guide-details li {
+  .article-section p,
+  .article-section li {
     color: #707070;
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
@@ -60,7 +60,7 @@ img {
 }
 
 @media (min-width: 1440px) {
-  .travel-guide-details h2 {
+  .article-section h2 {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -68,7 +68,7 @@ img {
     letter-spacing: 0;
   }
 
-  .travel-guide-details h3 {
+  .article-section h3 {
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -77,8 +77,8 @@ img {
     letter-spacing: 0;
   }
 
-  .travel-guide-details p,
-  .travel-guide-details li {
+  .article-section p,
+  .article-section li {
     color: #707070;
     font-family: 'Instrument Sans', sans-serif;
     font-weight: 400;
