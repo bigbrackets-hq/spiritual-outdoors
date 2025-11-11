@@ -27,6 +27,10 @@
   letter-spacing: 0;
 }
 
+img {
+  border-radius: 16px;
+}
+
 @media (min-width: 768px) {
   .travel-guide-details h2 {
     font-family: 'Instrument Sans', sans-serif;
