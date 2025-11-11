@@ -18,6 +18,11 @@ ScrollTrigger.create({
 
 sidebarMenuElement.forEach((menu, index) => {
   menu.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+
     sidebarMenuElement.forEach((item) => item.classList.remove('active'));
 
     menu.classList.toggle('active');
