@@ -1,5 +1,6 @@
 .sidebar-menu {
   background-color: var(--color-blue-50);
+  max-width: 300px;
   color: #01312b;
   padding: 12px 16px;
   border-radius: 8px;

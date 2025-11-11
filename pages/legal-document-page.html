@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spiritual Outdoors</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../public/images/icons/favicon.svg"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link rel="stylesheet" href="/styles/common/global.css" />
+    <link rel="stylesheet" href="/styles/common/navbar.css" />
+    <link rel="stylesheet" href="/styles/common/sidebar.css" />
+    <link rel="stylesheet" href="/styles/common/artical.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      class="py-4 h-[84px] overflow-hidden fixed backdrop-blur-[10px] flex flex-col gap-8 inset-x-0 top-0 z-[1000] transition-all duration-300 ease-in-out js-header"
+    >
+      <nav
+        class="layout-wrapper js-nav flex justify-between items-center relative"
+      >
+        <div>
+          <a href="landing-page.html" class="js-main-logo">
+            <img
+              src="/public/images/icons/main-logo-dark.svg"
+              alt="Spiritual outdoors logo"
+            />
+          </a>
+        </div>
+        <ul
+          class="l1-sans-strong js-nav-menu max-xl:hidden text-[var(--color-darkgreen-500)] flex items-center gap-6"
+        >
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Destinations
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Trekking in Nepal
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Travel guides
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            About
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#01312b"
+              />
+            </svg>
+          </li>
+          <li>
+            <a href="">
+              <button class="primary-btn js-whatsapp-btn">
+                <img
+                  src="/public/images/icons/social-media/whatsapp-icon.svg"
+                  alt="Whatsapp"
+                />
+                +977 9851202196
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div
+          class="js-hamburger-menu cursor-pointer xl:hidden js-hamburger-icon-container"
+        >
+          <img
+            src="/public/images/icons/hamburger-icon-dark.svg"
+            alt="Hamburger menu icon"
+          />
+        </div>
+      </nav>
+
+      <!-- Navigation panel -->
+      <aside class="layout-wrapper h-full js-dropdown-panel">
+        <!-- Destinations dropdown -->
+        <div class="hidden h-full js-destinations-dropdown-panel">
+          <div class="flex gap-[77px] h-full pb-16">
+            <div class="flex flex-col gap-10 max-w-[863px] w-full">
+              <div class="flex gap-[124px]">
+                <h2
+                  class="h2-antonio dropdown-panel active text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Nepal
+                </h2>
+                <h2
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Tibet
+                </h2>
+                <h2
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Bhutan
+                </h2>
+              </div>
+              <div
+                class="flex gap-24 dropdown-content active js-destinations-nepal-dropdown-content"
+              >
+                <div class="flex-1">
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Trekking in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      <a href=""> Everest Trekking </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1">
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Tours in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      <a href=""> Helicopter Tour </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col gap-[40px] flex-2">
+                  <div>
+                    <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                      Adventures in Nepal
+                    </p>
+                    <ul class="flex flex-col gap-[14px]">
+                      <li
+                        class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        <a href=""> Bungee Jumping </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                      Peak Climbing
+                    </p>
+                    <ul class="flex flex-col gap-[14px]">
+                      <li
+                        class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        <a href="">
+                          Everest Base Camp Trek with Lobuche Peak Expedition -
+                          18 days
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-[340px] h-[309px] self-end relative rounded-2xl overflow-hidden"
+            >
+              <img
+                src="/public/images/common/location/langtang-gosaikunda.png"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div
+                class="h-[70px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+              ></div>
+              <div
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
+              >
+                <p class="p1-sans-strong text-white">Explore more in Nepal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-4">
+      <div
+        class="layout-wrapper flex flex-col lg:flex-row lg:items-center justify-between"
+      >
+        <nav aria-label="breadcrumb">
+          <ul class="px-4 py-[14px] flex items-center gap-[6px]">
+            <li class="l2-sans text-[var(--color-heading-text-color-dark)]/40">
+              <a href="#" class="flex items-center">
+                Home
+                <div class="text-[var(--color-heading-text-color-dark)]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5469 9.99958L8.32966 5.78236L7.44577 6.66625L10.7791 9.99958L7.44577 13.3329L8.32966 14.2168L12.5469 9.99958Z"
+                      fill="currentColor"
+                      fill-opacity="0.4"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="l2-sans text-[var(--color-heading-text-color-dark)]/40">
+              <a href="#" class="flex items-center">
+                About
+                <div class="text-[var(--color-heading-text-color-dark)]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5469 9.99958L8.32966 5.78236L7.44577 6.66625L10.7791 9.99958L7.44577 13.3329L8.32966 14.2168L12.5469 9.99958Z"
+                      fill="currentColor"
+                      fill-opacity="0.4"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="l2-sans text-[var(--color-heading-text-color-dark)]">
+              <a href="#" class="flex items-center"
+                >Legal Terms and Documents</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <main>
+      <div class="layout-wrapper js-fade-in">
+        <h1 class="h3-antonio mb-4 md:mb-8 xl:mb-16">
+          Legal Terms and Documents
+        </h1>
+        <div class="flex flex-col lg:flex-row gap-8 w-full h-full">
+          <!-- Sidebar -->
+          <aside
+            class="flex flex-row flex-1 lg:flex-col gap-6 w-full h-full lg:sticky bg-white overflow-x-scroll scrollbar-hidden js-sidebar"
+          >
+            <p class="l1-sans sidebar-menu active js-sidebar-menu">
+              Privacy Policy
+            </p>
+            <p class="l1-sans sidebar-menu js-sidebar-menu">Legal Documents</p>
+            <p class="l1-sans sidebar-menu js-sidebar-menu">
+              Terms and Conditions
+            </p>
+          </aside>
+
+          <!-- Privacy Policy -->
+          <article
+            class="article-section flex flex-col flex-2 gap-12 max-w-[954px] js-article-content"
+          >
+            <div class="flex flex-col gap-4">
+              <h2>Privacy Policy</h2>
+              <p>
+                At Spiritual Excursion Pvt. Ltd., we use cookies to enhance your
+                browsing experience and provide personalized services on our
+                website. This cookie policy explains the types of cookies we use
+                and your choices regarding them when you visit the website,
+                inquire about them, or book your trip and get services from us.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>What Are Cookies?</h2>
+              <p>
+                Cookies are small text files stored on your device (computer,
+                tablet, or smartphone) when you visit our website and are
+                essential for a smooth and efficient experience, we use them to
+                enhance user experience, optimize website performance,
+                personalize services, and simplify booking. They help the site
+                remember your preferences for future visits.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Types of Cookies We Use</h2>
+              <ul>
+                <li>
+                  Essential Cookies: It is essential for the site to work and
+                  allow basic navigation, booking, and access to secure the
+                  site. It includes login authentication and session management.
+                </li>
+                <li>
+                  Performance Cookies: These are to help us collect data and
+                  analyze website usage to improve user functionality.
+                </li>
+                <li>
+                  Functionality Cookies: This is to remember your choices (like
+                  language, region, and saved itineraries) for a personalized
+                  experience.
+                </li>
+                <li>
+                  Targeting Cookies: These are used to display relevant ads and
+                  personalized offers based on your interests.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Third-Party Cookies</h2>
+              <p>We may use third-party cookies for:</p>
+              <ul>
+                <li>
+                  Advertising: Partnering with ad networks to show relevant ads.
+                </li>
+                <li>
+                  Analytics: Identifying the use by utilizing third-party
+                  applications.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Managing Cookies</h2>
+              <p>
+                You can manage, control, or disable cookies via your browser
+                settings to view, block, or delete them, but some features may
+                not function properly when blocking or deleting cookies and may
+                impact your experience on the site.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Changes to This Policy</h2>
+              <p>
+                We may update this policy occasionally. Please review it
+                periodically.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Contact Spiritual Excursion</h2>
+              <p>
+                For any questions, email us at spiritualexcursion15@gmail.com.
+                This policy is informational and not legal advice.
+              </p>
+              <a href="#">
+                <button class="secondary-btn">Contact us</button>
+              </a>
+            </div>
+          </article>
+
+          <!-- Legal Documents -->
+          <article
+            class="article-section flex-col gap-12 max-w-[954px] flex-2 js-article-content hidden"
+          >
+            <div class="flex flex-col gap-4">
+              <h2>Legal Documents</h2>
+              <p>
+                To ensure the highest standards of safety and professionalism,
+                Spiritual Excursion is registered with several esteemed
+                organizations in Nepal. We are proud members of the Trekking
+                Agencies' Association of Nepal (TAAN) and the Nepal
+                Mountaineering Association (NMA). Our registration with these
+                associations reflects our commitment to upholding industry best
+                practices and prioritizing safety. <br />
+                In addition, Spiritual Excursion is also a proud member of the
+                Nepalese Tourism Board, which further solidifies our dedication
+                to ethical and sustainable tourism practices. We work hand in
+                hand with the government of Nepal to ensure that your Himalayan
+                adventure is not just memorable but also compliant with all
+                local regulations.
+              </p>
+            </div>
+            <div class="max-w-[630px] w-full columns-1 md:columns-2 space-y-6">
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-1.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-1.png"
+                    alt="Certificate 1"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-2.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-2.png"
+                    alt="Certificate 2"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-3.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-3.png"
+                    alt="Certificate 3"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-4.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-4.png"
+                    alt="Certificate 4"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-5.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-5.png"
+                    alt="Certificate 5"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-6.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-6.png"
+                    alt="Certificate 6"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-7.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-7.png"
+                    alt="Certificate 7"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-8.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-8.png"
+                    alt="Certificate 8"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+              <div class="w-full relative cursor-pointer">
+                <a
+                  href="/public/docs/certificate-9.png"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="/public/docs/certificate-9.png"
+                    alt="Certificate 9"
+                    class="w-full object-cover rounded-[8px]"
+                  />
+                </a>
+
+                <div
+                  class="absolute inset-0 bg-black/60 rounded-[8px] flex items-center justify-center js-gallery-images"
+                >
+                  <span class="text-white p2-sans">See the image</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Terms & Conditions -->
+          <article
+            class="article-section flex-col gap-12 max-w-[954px] flex-2 js-article-content hidden"
+          >
+            <div class="flex flex-col gap-4">
+              <h2>Terms and Conditions</h2>
+              <p>
+                Spiritual Excursion is an established and trademarked company
+                registered with the government of Nepal. Spiritual Excursion is
+                a government authorized travel agency (Govt. Regd. No.:
+                13717210721073) and is accredited by different regulatory
+                bodies. Please read the following terms & conditions that govern
+                the relationship between you (the client) and Spiritual
+                Excursion. Please note that by booking a trip you are agreeing
+                to be bound by the Terms and Conditions. Both parties agree to
+                the Terms and Conditions to resolve any legal or other disputes
+                that may occur during the trip.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Booking and Payments:</h2>
+              <p>
+                To book any type of trip you must send us a filled in booking
+                form with 25% of the total amount of your package cost as a
+                deposit. The remainder of your trip payment is due upon your
+                arrival in Kathmandu, Nepal.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Payment Methods:</h2>
+              <p>
+                Booking deposit can be made by bank transfer, Paypal or money
+                courier service. Banking details: - <br />
+                Spiritual Excursion Pvt. Ltd. <br />
+                Account Number: 01905862880012 <br />
+                Paying Bank: Himalayan Bank Ltd, <br />
+                Kathmandu, Nepal Swift Code: HIMANPKA <br />
+                Note: bank service charge is to be paid by client.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Final Payment:</h2>
+              <p>
+                Final payment of your package can be made upon your arrival in
+                Nepal. Final payment can be made by cash, bank transfer or by
+                credit card (visa or mastercard), note: surcharge is payable on
+                all credit card payments.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Cancellation Policy:</h2>
+              <ul>
+                <li>
+                  A written notice of cancellation must be submitted by the
+                  client and acknowledged by the company.
+                </li>
+                <li>
+                  Spiritual Excursion will fully refund all deposits if the
+                  cancellation letter is received no later than one month prior
+                  to the arranged trip start date.
+                </li>
+                <li>
+                  Cancellation charges are expressed hereafter as a percentage
+                  of the total tour price.
+                </li>
+                <li>
+                  If the cancellation is made before 30 days from the start of
+                  the trip the processing charge of Nepal Rastra Bank will be
+                  deducted but the remainder of the balance will be refunded.
+                </li>
+                <li>
+                  If the cancellation is made before 15 days prior to the trip
+                  start date 30% of the total trip charge and Nepal Rastra Bank
+                  processing charge will be held and the remainder will be
+                  refunded.
+                </li>
+                <li>
+                  If cancellation is made before 7 days prior to the trip start
+                  date 40% of the total trip charge and Nepal Rastra Bank
+                  processing charge will be held and the remainder will be
+                  refunded.
+                </li>
+                <li>
+                  If cancellation is made within the week of your departure from
+                  Kathmandu no refund will be provided.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Cancellation of a tour by the company:</h2>
+              <ul>
+                <li>
+                  The company reserves the right to cancel any trip or to make
+                  changes in it's regular itineraries due to differing
+                  conditions that are beyond the company's control. Sometimes
+                  due to natural disaster, consequences of strikes, wars, riots
+                  or changes due to political or social conditions of the
+                  country Spiritual Excursion reserves the right to cancel the
+                  trip. If the company cancels a trip which has been guaranteed
+                  we will refund the price of the trip and we will endeavor to
+                  offer an alternative trip of a similar nature and cost.
+                </li>
+                <li>
+                  The company is not responsible for those incidents beyond our
+                  control and any incidental expenses or consequential losses
+                  that the client may have incurred as a result of the booking
+                  such as visa's, non-refundable flights or any other kinds of
+                  fees etc.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Medical conditions, responsibility & personal belongings:</h2>
+              <ul>
+                <li>
+                  Some trips may be unsuitable for clients due to age, mobility,
+                  pregnancy or physical or mental conditions. It is the
+                  responsibility of the client to check prior to booking. The
+                  company is not required to provide any special facilities
+                  unless it has agreed to do so in writing.
+                </li>
+                <li>
+                  The company does not take responsibility for any possible
+                  injury or death while travellers are engaged in activities
+                  facilitated by the company. So travellers are strongly advised
+                  to purchase an adequate travel insurance policy which contains
+                  full medical insurance and helicopter rescue. It is also
+                  imperative that travellers follow the advice and instructions
+                  of guides and tour leaders during their trip.
+                </li>
+                <li>
+                  The company does not accept any responsibility for loss or
+                  damage of luggage or any other personal belongings on your
+                  trip. So it is important for travellers to ensure the care of
+                  their personal property.
+                </li>
+              </ul>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Travel Insurance:</h2>
+              <p>
+                Adequate and valid travel insurance is compulsory for all
+                travellers. So make sure that your travel insurance must cover:
+                accidental injury, illness, death, medical expenses, emergency
+                evacuation, helicopter rescue, trip cancellation, flight
+                cancellation, loss or theft of valuables, luggage and personal
+                effects.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Trip Amendment:</h2>
+              <p>
+                Spiritual Excursion reserve the right to amend the tour cost at
+                an point if required. The cost of the amendment depends upon the
+                company's arrangements with other parties such as hotels / guest
+                houses, flight tickets and so on. The reason for amendment may
+                be due to things such as weather conditions, sudden changes to
+                the rules and regulations, entry fees, political reasons and so
+                on.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Incomplete or Unused Tour:</h2>
+              <p>
+                We are not bound to refund or to give a discount for missed,
+                incomplete or unused services, in the instance where the
+                customer has to cancel the trip before the services end or due
+                to late arrival on the tour.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Abiding by the Law:</h2>
+              <p>
+                If any of our clients violate any national law, rules &
+                regulations or if they are found to be involved in any criminal
+                activities the company reserves the right to end their services
+                at any point during the tour and no refund will be issued.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h2>Required Documents / Passport & Visa:</h2>
+              <p>
+                All clients must carry a valid passport with a current Nepal
+                visa during their tour. Nepal visa can be obtained on arrival in
+                Nepal.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <section class="bg-white pt-24 pb-[60px]">
+        <div
+          class="layout-wrapper flex flex-col gap-[56px] md:gap-[80px] xl:gap-0 xl:flex-row xl:justify-between"
+        >
+          <div
+            class="flex flex-col md:flex-row xl:flex-col gap-[56px] md:gap-[109px] items-start md:items-center xl:items-start"
+          >
+            <img
+              src="/public/images/common/footer/footer-main-logo.svg"
+              alt="Spiritual outdoors"
+              class="max-md:w-[172px]"
+            />
+            <div class="flex flex-col gap-4">
+              <span class="h1-sans">Follow us on:</span>
+              <div class="flex items-center gap-6">
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/facebook-icon.svg"
+                    alt="Facebook icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/instagram-icon.svg"
+                    alt="Instagram icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/youtube-icon.svg"
+                    alt="YouTube icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/x-icon.svg"
+                    alt="X icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src="/public/images/icons/social-media/linkedin-icon.svg"
+                    alt="LinkedIn icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[737px] w-full flex flex-col gap-12">
+            <div
+              class="flex justify-between gap-[40px] flex-wrap js-footer-links-container"
+            >
+              <div class="flex flex-col gap-4 js-footer-link">
+                <p class="h1-sans">Explore</p>
+                <ul class="flex flex-col gap-3">
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Destinations</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Gallery</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Reviews</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-4 js-footer-link">
+                <p class="h1-sans">Company</p>
+                <ul class="flex flex-col gap-3">
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">About</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Legal documents</a>
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Terms & Conditions</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-4">
+                <p class="h1-sans">Spiritual Outdoors Pvt. Ltd.</p>
+                <ul class="flex flex-col gap-3">
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="" class="inline-flex items-center gap-2"
+                      ><img
+                        src="/public/images/common/footer/location-icon.svg"
+                        alt="Location icon"
+                      />
+                      Amrit Marg, Thamel, Nepal</a
+                    >
+                  </li>
+                  <li
+                    class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="" class="inline-flex items-center gap-2">
+                      <img
+                        src="/public/images/common/footer/email-icon.svg"
+                        alt="Mail icon"
+                      />
+                      info@spiritualexcursion.com
+                    </a>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <img
+                      src="/public/images/common/footer/phone-icon.svg"
+                      alt="Phone icon"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <a
+                        href=""
+                        class="inline-flex items-center gap-2 text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        +977 14418817 (Office)
+                      </a>
+                      <a
+                        href=""
+                        class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        +977 9851202196 (Kabin)
+                      </a>
+                      <a
+                        href=""
+                        class="text-[var(--color-passage-text-color-dark)] hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        +977 9851231090 (Badri)
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="max-w-[737px] w-full flex flex-col gap-3 md:gap-4">
+              <p class="h1-sans">We accept</p>
+              <div
+                class="flex items-center max-md:gap-4 md:justify-between flex-wrap max-w-[512px] w-full"
+              >
+                <img
+                  src="/public/images/icons/payment-gateway/esewa-icon.svg"
+                  alt="esewa icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/mastercard-icon.svg"
+                  alt="mastercard icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/american-express-icon.svg"
+                  alt="American express icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/connect-ips-icon.svg"
+                  alt="Connect ips icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/khalti-icon.svg"
+                  alt="Khalti icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/visa-icon.svg"
+                  alt="Visa icon"
+                />
+                <img
+                  src="/public/images/icons/payment-gateway/union-pay-icon.svg"
+                  alt="Union pay icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[var(--color-darkgreen-500)] py-2">
+        <div
+          class="layout-wrapper l3-sans text-[#FFF] flex items-center justify-between flex-wrap gap-4"
+        >
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <p>Privacy Policy | Terms and Conditions</p>
+          </a>
+          <p class="js-copyright-text"></p>
+          <p>
+            Website by
+            <a
+              href="https://www.bigbracketshq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bigbrackets
+            </a>
+          </p>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"
+      integrity="sha512-kz526itdNcpyMs18TLPOhsnIeOIO1JywWKbbF77zR+ZKpZ4gwubXhwaURHpt5Se9AAqSK2j8ID0LnfXsB2Jkjg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/scripts/common/lenis.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script
+      src="/scripts/common/navbar/animation/dekstop-navbar.js"
+      defer
+    ></script>
+    <script
+      src="/scripts/common/navbar/navbar-dropdown-panel.js"
+      defer
+    ></script>
+    <script src="/scripts/common/animation/fade-in.js"></script>
+    <script src="/scripts/travel-guides/table.js"></script>
+    <script src="/scripts/common/lightbox.js"></script>
+    <script src="/scripts/common/article-sidebar.js"></script>
+  </body>
+</html>
