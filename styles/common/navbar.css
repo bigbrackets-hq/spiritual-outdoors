@@ -1,5 +1,6 @@
 .dropdown-panel {
   opacity: 10%;
+  transition: opacity 0.3s ease;
 }
 
 .dropdown-panel.active {
@@ -12,4 +13,8 @@
 
 .dropdown-content.active {
   opacity: 100%;
+}
+
+.dropdown-panel:not(.active):hover {
+  opacity: 30%;
 }
