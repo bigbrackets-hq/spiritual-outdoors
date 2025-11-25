@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spiritual Outdoors</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/public/images/icons/favicon.svg"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="../styles/common/global.css" />
+    <link rel="stylesheet" href="../styles/common/navbar.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header
+      class="py-4 h-[84px] overflow-hidden fixed backdrop-blur-[10px] flex flex-col gap-8 inset-x-0 top-0 z-[1000] transition-all duration-300 ease-in-out js-header"
+    >
+      <nav
+        class="layout-wrapper js-nav flex justify-between items-center relative"
+      >
+        <div>
+          <a href="landing-page.html" class="js-main-logo">
+            <img
+              src="/public/images/icons/main-logo.svg"
+              alt="Spiritual outdoors logo"
+            />
+          </a>
+        </div>
+        <ul
+          class="l1-sans-strong js-nav-menu max-xl:hidden text-[var(--color-blue-500)] flex items-center gap-6"
+        >
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Destinations
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#C9F3FF"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Trekking in Nepal
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#C9F3FF"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            Travel guides
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#C9F3FF"
+              />
+            </svg>
+          </li>
+          <li
+            class="js-nav-item cursor-pointer flex items-center gap-3 py-[14px] px-4 hover:bg-[var(--color-darkgreen-500)]/10 rounded-[8px] transition-colors duration-300 ease-in-out"
+          >
+            About
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              class="js-dropdown-icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.99999 12.5506L14.2172 8.33334L13.3333 7.44945L9.99999 10.7828L6.66666 7.44945L5.78278 8.33334L9.99999 12.5506Z"
+                fill="#C9F3FF"
+              />
+            </svg>
+          </li>
+          <li>
+            <a href="">
+              <button class="whatsapp-btn js-whatsapp-btn">
+                <img
+                  src="/public/images/icons/social-media/whatsapp-icon.svg"
+                  alt="Whatsapp"
+                />
+                +977 9851202196
+              </button>
+            </a>
+          </li>
+        </ul>
+        <div
+          class="js-hamburger-menu cursor-pointer xl:hidden js-hamburger-icon-container"
+        >
+          <img
+            src="/public/images/icons/hamburger-icon.svg"
+            alt="Hamburger menu icon"
+          />
+        </div>
+      </nav>
+
+      <!-- Navigation panel -->
+      <aside class="layout-wrapper h-full js-dropdown-panel">
+        <!-- Destinations dropdown -->
+        <div class="hidden h-full js-destinations-dropdown-panel">
+          <div class="flex gap-[77px] h-full pb-16">
+            <div class="flex flex-col gap-10 max-w-[863px] w-full">
+              <div class="flex gap-[124px]">
+                <h2
+                  class="h2-antonio dropdown-panel active text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Nepal
+                </h2>
+                <h2
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Tibet
+                </h2>
+                <h2
+                  class="h2-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-destinations-dropdown-tab"
+                >
+                  Bhutan
+                </h2>
+              </div>
+              <div
+                class="flex gap-24 dropdown-content active js-destinations-nepal-dropdown-content"
+              >
+                <div class="flex-1">
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Trekking in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      <a href=""> Everest Trekking </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex-1">
+                  <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                    Tours in Nepal
+                  </p>
+                  <ul class="flex flex-col gap-[14px]">
+                    <li
+                      class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                    >
+                      <a href=""> Helicopter Tour </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col gap-[40px] flex-2">
+                  <div>
+                    <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                      Adventures in Nepal
+                    </p>
+                    <ul class="flex flex-col gap-[14px]">
+                      <li
+                        class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        <a href=""> Bungee Jumping </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p class="p3-sans text-[var(--color-darkgreen-500)] mb-4">
+                      Peak Climbing
+                    </p>
+                    <ul class="flex flex-col gap-[14px]">
+                      <li
+                        class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                      >
+                        <a href="">
+                          Everest Base Camp Trek with Lobuche Peak Expedition -
+                          18 days
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="self-end">
+              <div
+                class="w-[340px] h-[309px] relative rounded-2xl overflow-hidden js-image-card-container"
+              >
+                <img
+                  src="/public/images/common/location/langtang-gosaikunda.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div
+                  class="h-[70px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+                ></div>
+                <div
+                  class="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
+                >
+                  <p class="p1-sans-strong text-white">Explore more in Nepal</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Trekking dropdown -->
+        <div class="hidden h-full js-trekking-in-nepal-dropdown-panel">
+          <div class="h-full flex flex-col gap-[40px] pb-16">
+            <div class="flex gap-x-20 gap-y-8 flex-wrap">
+              <h2
+                class="p1-antonio dropdown-panel active text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Everest
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Lantang
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Annapurna
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Manaslu
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Makalu
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Dhaulagiri
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Kanchenjunga
+              </h2>
+              <h2
+                class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-trekking-dropdown-tab"
+              >
+                Mustang
+              </h2>
+            </div>
+            <!-- Everest -->
+            <div
+              class="flex justify-between w-full dropdown-content active js-trekking-everest-dropdown-content"
+            >
+              <div class="flex gap-[60px] max-w-[750px] w-full">
+                <ul class="flex flex-col gap-[14px]">
+                  <li
+                    class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">Everest Base Camp Trek - 15 Days</a>
+                  </li>
+                  <li
+                    class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#">
+                      Everest Base Camp & Gokyo Lake Trek - 18 Days</a
+                    >
+                  </li>
+                </ul>
+                <ul class="flex flex-col gap-[14px]">
+                  <li
+                    class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#"
+                      >Everest Base Camp with Helicopter Return to Lukla - 12
+                      Days</a
+                    >
+                  </li>
+                  <li
+                    class="l1-sans text-[var(--color-passage-text-color-dark)] cursor-pointer hover:text-[var(--color-heading-text-color-dark)] transition-colors duration-300 ease-in-out"
+                  >
+                    <a href="#"> Everest Panorama Trek - 11 Days</a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#">
+                <div
+                  class="w-[340px] h-[166px] relative rounded-2xl overflow-hidden js-image-card-container"
+                >
+                  <img
+                    src="/public/images/common/location/langtang-gosaikunda.png"
+                    alt=""
+                    class="w-full h-full object-cover"
+                  />
+                  <div class="absolute inset-0 bg-black/20"></div>
+                  <div
+                    class="h-[70px] absolute bottom-0 inset-x-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)] backdrop-blur-[1.5px]"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 max-w-[200px]">
+                    <p class="p1-sans-strong text-white">
+                      More about Trekking in Nepal
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Travel guides dropdown -->
+        <div class="hidden h-full js-travel-guides-dropdown-panel">
+          <div class="flex gap-[88px]">
+            <div class="flex flex-col gap-8">
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Factors to Consider
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Recommended Packages
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Climate
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Culture & Language
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  What to Bring
+                </h2>
+              </a>
+            </div>
+            <div class="flex flex-col gap-8">
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Currency Exchange
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Do's & Dont's
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Embassies & Consulates
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  How to Get There
+                </h2>
+              </a>
+            </div>
+            <div class="flex flex-col gap-8">
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Important Travel Tips
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Insurance
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Nepal Visa Information
+                </h2>
+              </a>
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer js-travel-guides-dropdown-tab"
+                >
+                  Best Time to Visit
+                </h2>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- About dropdown -->
+        <div class="hidden h-full js-about-dropdown-panel">
+          <div class="pb-16">
+            <div class="flex gap-x-[88px] gap-y-8 flex-wrap">
+              <a href="#">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer"
+                >
+                  About Company
+                </h2>
+              </a>
+              <a href="">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer"
+                >
+                  Meet Our Team
+                </h2>
+              </a>
+              <a href="">
+                <h2
+                  class="p1-antonio dropdown-panel text-[var(--color-darkgreen-500)] cursor-pointer"
+                >
+                  Legal Terms and Documents
+                </h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <main
+      class="relative min-h-dvh pt-52 bg-[linear-gradient(180deg,#2262A7_0%,#7BAFE0_100%)]"
+    >
+      <section class="flex flex-col items-center gap-8 xl:gap-12">
+        <div class="flex flex-col items-center justify-center">
+          <p class="p1-sans-strong -mb-4 md:-mb-8">Oops Page Not Found.</p>
+          <h1
+            class="font-[Antonio] leading-[100%] text-white text-[200px] md:text-[347px]!"
+          >
+            404
+          </h1>
+          <div
+            class="absolute inset-x-0 bottom-0 z-10 h-full md:h-[560px] lg:h-[800px]"
+          >
+            <img
+              src="/public/images/404-bg-img.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <a href="#" class="relative z-20">
+          <button class="primary-btn">Return to Home Page</button>
+        </a>
+      </section>
+    </main>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/scripts/common/lenis.js" defer></script>
+    <script
+      src="/scripts/common/navbar/animation/dekstop-navbar.js"
+      defer
+    ></script>
+    <script
+      src="/scripts/common/navbar/navbar-dropdown-panel.js"
+      defer
+    ></script>
+  </body>
+</html>
