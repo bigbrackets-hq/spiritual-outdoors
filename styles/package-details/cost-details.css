@@ -1,0 +1,25 @@
+.inclusion-bullet-container ul li,
+.exclusion-bullet-container ul li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+}
+
+.inclusion-bullet-container ul li::before,
+.exclusion-bullet-container ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.inclusion-bullet-container ul li::before {
+  background: url('/public/images/icons/circle-tick-icon.svg') no-repeat center;
+  background-size: contain;
+}
+
+.exclusion-bullet-container ul li::before {
+  background: url('/public/images/icons/circle-close-icon.svg') no-repeat center;
+  background-size: contain;
+}
