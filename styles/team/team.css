@@ -1,0 +1,33 @@
+.team-img-container {
+  width: 317px;
+  height: 398px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .team-img-container {
+    width: 370px;
+    height: 490px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-img-container {
+    width: 302px;
+    height: 470px;
+    cursor: pointer;
+  }
+
+  .team-img-container.active {
+    width: 628px;
+  }
+
+  .team-member-info {
+    display: none;
+  }
+
+  .team-member-info.active {
+    display: flex;
+  }
+}
