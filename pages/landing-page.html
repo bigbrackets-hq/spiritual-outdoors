@@ -23,7 +23,7 @@
   <body>
     <!-- Navbar -->
     <header
-      class="py-4 h-[84px] overflow-hidden fixed backdrop-blur-[10px] flex flex-col gap-8 inset-x-0 top-0 z-[1000] transition-all duration-300 ease-in-out js-header"
+      class="py-4 h-[84px] max-xl:bg-[var(--color-blue-100)] overflow-hidden fixed backdrop-blur-[10px] flex flex-col gap-8 inset-x-0 top-0 z-[1000] transition-all duration-300 ease-in-out js-header"
     >
       <nav
         class="layout-wrapper js-nav flex justify-between items-center relative"
@@ -33,6 +33,12 @@
             <img
               src="/public/images/icons/main-logo.svg"
               alt="Spiritual outdoors logo"
+              class="max-xl:hidden"
+            />
+            <img
+              src="/public/images/icons/main-logo-dark.svg"
+              alt="Spiritual outdoors logo"
+              class="xl:hidden"
             />
           </a>
         </div>
@@ -131,18 +137,18 @@
             </a>
           </li>
         </ul>
-        <div
-          class="js-hamburger-menu cursor-pointer xl:hidden js-hamburger-icon-container"
-        >
+        <!-- Hamburger menu -->
+        <div class="cursor-pointer xl:hidden js-hamburger-icon-container">
           <img
-            src="/public/images/icons/hamburger-icon.svg"
+            src="/public/images/icons/hamburger-icon-dark.svg"
             alt="Hamburger menu icon"
+            class="js-hamburger-menu"
           />
         </div>
       </nav>
 
       <!-- Navigation panel -->
-      <aside class="layout-wrapper h-full js-dropdown-panel">
+      <aside class="layout-wrapper h-full js-dropdown-panel max-xl:hidden">
         <!-- Destinations dropdown -->
         <div class="hidden h-full js-destinations-dropdown-panel">
           <div class="flex gap-[77px] h-full pb-16">
@@ -480,7 +486,335 @@
           </div>
         </div>
       </aside>
+
+      <!-- Tablet Navigation panel -->
+      <!-- <aside
+        class="layout-wrapper hidden md:block xl:hidden bg-[var(--color-blue-100)] absolute inset-0 z-50"
+      ></aside> -->
     </header>
+
+    <!-- Mobile Navigation panel -->
+    <aside
+      class="layout-wrapper xl:hidden bg-[var(--color-blue-100)] fixed inset-0 z-50 hidden js-mobile-nav-panel overflow-y-scroll"
+    >
+      <div class="mt-32 flex flex-col gap-6 w-full">
+        <!-- Destinations -->
+        <div class="flex flex-col gap-2 mobile-menu">
+          <div class="w-full flex justify-between items-center js-menu-toggle">
+            <p class="l1-sans-strong">Destinations</p>
+            <img
+              src="/public/images/icons/chevron-down.svg"
+              alt="Chevron down"
+              class="w-[20px] h-[20px] chevron-icon"
+            />
+          </div>
+          <!-- Nepal -->
+          <div class="flex-col gap-8 p-4 rounded-2xl mobile-sub-menu">
+            <div
+              class="w-full flex justify-between items-center js-sub-menu-toggle"
+            >
+              <h2 class="h2-antonio">Nepal</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="big-plus-icon"
+              >
+                <path
+                  d="M12 4V12M12 12V20M12 12H4M12 12H20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="big-minus-icon"
+              >
+                <path
+                  d="M4 12H20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </div>
+            <ul class="flex-col gap-4 mobile-sub-menu-list">
+              <li class="p4-sans-strong">
+                <a href="" target=""> Trekking in Nepal </a>
+              </li>
+            </ul>
+            <a
+              href=""
+              target=""
+              class="w-full h-[144px] md:h-[250px] relative overflow-hidden rounded-2xl mobile-sub-menu-img"
+            >
+              <img
+                src="/public/images/packages/everest-base-camp-1.png"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0)_100%)]"
+              ></div>
+              <span
+                class="absolute bottom-3.5 left-3.5 p1-sans-strong text-white"
+                >Explore more in Nepal</span
+              >
+              <div
+                class="absolute bottom-3.5 right-3.5 w-[35px] h-[35px] rounded-full bg-black/20 border border-white/30 backdrop-blur-[10px] p-2"
+              >
+                <img
+                  src="/public/images/icons/arrow-up-right.svg"
+                  alt=""
+                  class="w-auto h-[18px]"
+                />
+              </div>
+            </a>
+          </div>
+
+          <div class="flex-col gap-8 p-4 rounded-2xl mobile-sub-menu">
+            <div
+              class="w-full flex justify-between items-center js-sub-menu-toggle"
+            >
+              <h2 class="h2-antonio">Tibet</h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="big-plus-icon"
+              >
+                <path
+                  d="M12 4V12M12 12V20M12 12H4M12 12H20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                class="big-minus-icon"
+              >
+                <path
+                  d="M4 12H20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- <hr class="text-[#E6EAEA] line-separator" /> -->
+        </div>
+
+        <!-- Trekking in Nepal -->
+        <div class="flex flex-col gap-2 mobile-menu">
+          <div class="w-full flex justify-between items-center js-menu-toggle">
+            <p class="l1-sans-strong">Trekking in Nepal</p>
+            <img
+              src="/public/images/icons/chevron-down.svg"
+              alt="Chevron down"
+              class="w-[20px] h-[20px] chevron-icon"
+            />
+          </div>
+
+          <ul
+            class="js-sub-menu-toggle divide-y divide-[#E6EAEA] bg-transparent! mobile-sub-menu flex flex-col gap-3"
+          >
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                Everest
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                Langtang
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Travel Guides -->
+        <div class="flex flex-col gap-2 mobile-menu">
+          <div class="w-full flex justify-between items-center js-menu-toggle">
+            <p class="l1-sans-strong">Travel Guides</p>
+            <img
+              src="/public/images/icons/chevron-down.svg"
+              alt="Chevron down"
+              class="w-[20px] h-[20px] chevron-icon"
+            />
+          </div>
+
+          <ul
+            class="js-sub-menu-toggle divide-y divide-[#E6EAEA] bg-transparent! mobile-sub-menu flex flex-col gap-3"
+          >
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                Factor to Consider
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                Currency Exchange
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- About Us -->
+        <div class="flex flex-col gap-2 mobile-menu">
+          <div class="w-full flex justify-between items-center js-menu-toggle">
+            <p class="l1-sans-strong">About Us</p>
+            <img
+              src="/public/images/icons/chevron-down.svg"
+              alt="Chevron down"
+              class="w-[20px] h-[20px] chevron-icon"
+            />
+          </div>
+
+          <ul
+            class="js-sub-menu-toggle divide-y divide-[#E6EAEA] bg-transparent! mobile-sub-menu flex flex-col gap-3"
+          >
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                About Company
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                Meet Our Team
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="h2-antonio py-4">
+              <a href="" target="" class="flex justify-between items-center">
+                Legal Terms and Documents
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M18 15V6H9M6.25 17.75L17 7"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="">
+          <button class="whatsapp-btn js-whatsapp-btn active w-full">
+            <img
+              src="/public/images/icons/social-media/whatsapp-icon.svg"
+              alt="Whatsapp"
+            />
+            +977 9851202196
+          </button>
+        </a>
+      </div>
+    </aside>
 
     <main>
       <!-- Hero section -->
@@ -856,9 +1190,9 @@
                 the rest.
               </p>
             </div>
-           <a href="" target="">
-             <button class="secondary-btn">Browse All</button>
-           </a>
+            <a href="" target="">
+              <button class="secondary-btn">Browse All</button>
+            </a>
           </div>
           <div class="flex flex-col gap-6">
             <div
@@ -1226,76 +1560,78 @@
               </div>
               <button class="secondary-btn">Browse All</button>
             </div>
-              <div class="flex w-full justify-center gap-[16px] flex-wrap js-card-container">
-                <a href="" class="js-card-stagger">
-                  <div
-                    class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+            <div
+              class="flex w-full justify-center gap-[16px] flex-wrap js-card-container"
+            >
+              <a href="" class="js-card-stagger">
+                <div
+                  class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                >
+                  <img
+                    src="../public/images/common/location/trekking.png"
+                    class="w-full h-full object-cover"
+                    alt=""
+                  />
+                  <p
+                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
                   >
-                    <img
-                      src="../public/images/common/location/trekking.png"
-                      class="w-full h-full object-cover"
-                      alt=""
-                    />
-                    <p
-                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
-                    >
-                      <span>Trekking</span>
-                    </p>
-                    <div class="bg-black/50 absolute inset-0"></div>
-                  </div>
-                </a>
-                <a href="" class="js-card-stagger">
-                  <div
-                    class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                    <span>Trekking</span>
+                  </p>
+                  <div class="bg-black/50 absolute inset-0"></div>
+                </div>
+              </a>
+              <a href="" class="js-card-stagger">
+                <div
+                  class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                >
+                  <img
+                    src="../public/images/common/location/cultural-tours.png"
+                    class="w-full h-full object-cover"
+                    alt=""
+                  />
+                  <p
+                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
                   >
-                    <img
-                      src="../public/images/common/location/cultural-tours.png"
-                      class="w-full h-full object-cover"
-                      alt=""
-                    />
-                    <p
-                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
-                    >
-                      <span>Cultural tours</span>
-                    </p>
-                    <div class="bg-black/50 absolute inset-0"></div>
-                  </div>
-                </a>
-                 <a href="" class="js-card-stagger">
-                  <div
-                    class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                    <span>Cultural tours</span>
+                  </p>
+                  <div class="bg-black/50 absolute inset-0"></div>
+                </div>
+              </a>
+              <a href="" class="js-card-stagger">
+                <div
+                  class="img1 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                >
+                  <img
+                    src="../public/images/common/location/expedition.png"
+                    class="w-full h-full object-cover"
+                    alt=""
+                  />
+                  <p
+                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
                   >
-                    <img
-                      src="../public/images/common/location/expedition.png"
-                      class="w-full h-full object-cover"
-                      alt=""
-                    />
-                    <p
-                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
-                    >
-                      <span>Expedition</span>
-                    </p>
-                    <div class="bg-black/50 absolute inset-0"></div>
-                  </div>
-                </a>
-                <a href="" class="js-card-stagger">
-                  <div
-                    class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                    <span>Expedition</span>
+                  </p>
+                  <div class="bg-black/50 absolute inset-0"></div>
+                </div>
+              </a>
+              <a href="" class="js-card-stagger">
+                <div
+                  class="img2 rounded-[8px] w-[170px] h-[114px] overflow-hidden flex items-center justify-center relative"
+                >
+                  <img
+                    src="../public/images/common/location/cultural-tours.png"
+                    class="w-full h-full object-cover"
+                    alt=""
+                  />
+                  <p
+                    class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
                   >
-                    <img
-                      src="../public/images/common/location/cultural-tours.png"
-                      class="w-full h-full object-cover"
-                      alt=""
-                    />
-                    <p
-                      class="p1-serif absolute mobileTextAnim text-[#fff] text-nowrap z-10"
-                    >
-                      <span>Cultural tours</span>
-                    </p>
-                    <div class="bg-black/50 absolute inset-0"></div>
-                  </div>
-                </a>
-              </div>
+                    <span>Cultural tours</span>
+                  </p>
+                  <div class="bg-black/50 absolute inset-0"></div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1832,9 +2168,9 @@
                 the rest.
               </p>
             </div>
-           <a href="" target="">
-             <button class="secondary-btn p5-sans-strong">More Blogs</button>
-           </a>
+            <a href="" target="">
+              <button class="secondary-btn p5-sans-strong">More Blogs</button>
+            </a>
           </div>
           <div
             class="flex gap-6 overflow-x-auto scrollbar-hidden js-card-container"
@@ -2276,6 +2612,11 @@
     <script type="module" src="/scripts/landing-page/img-slider.js"></script>
     <script
       src="/scripts/common/navbar/animation/dekstop-navbar.js"
+      defer
+    ></script>
+    <script
+      type="module"
+      src="/scripts/common/navbar/animation/mobile-navbar.js"
       defer
     ></script>
     <script

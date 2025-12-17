@@ -1,174 +1,172 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let scrollPosition = 0;
+ScrollTrigger.matchMedia({
+  // Desktop only
+  '(min-width: 1280px)': function () {
+    let scrollPosition = 0;
 
-const headerElement = document.querySelector('.js-header');
-const mainLogoElement = document.querySelector('.js-main-logo');
-const navItemElements = document.querySelectorAll('.js-nav-item');
-const buttonElement = document.querySelector('.js-whatsapp-btn');
-const dropDownIcons = document.querySelectorAll('.js-dropdown-icon');
-const overlayElement = document.getElementById('overlay');
-const hamburgerIconContainer = document.querySelector(
-  '.js-hamburger-icon-container'
-);
+    const headerElement = document.querySelector('.js-header');
+    const mainLogoElement = document.querySelector('.js-main-logo');
+    const navItemElements = document.querySelectorAll('.js-nav-item');
+    const buttonElement = document.querySelector('.js-whatsapp-btn');
+    const dropDownIcons = document.querySelectorAll('.js-dropdown-icon');
+    const overlayElement = document.getElementById('overlay');
 
-let isNavbarActive = false;
-let isNavbarPanelOpen = false;
+    let isNavbarActive = false;
+    let isNavbarPanelOpen = false;
 
-const originalLogoHTML = mainLogoElement.innerHTML;
-const originalHamburgerHTML = hamburgerIconContainer.innerHTML;
+    const originalLogoHTML = mainLogoElement.innerHTML;
 
-function toggleActiveNavbar() {
-  headerElement.style.backgroundColor = 'var(--color-blue-100)';
+    function toggleActiveNavbar() {
+      headerElement.style.backgroundColor = 'var(--color-blue-100)';
 
-  mainLogoElement.innerHTML =
-    '<img src="/public/images/icons/main-logo-dark.svg" alt="Spiritual outdoors logo"/>';
+      mainLogoElement.innerHTML =
+        '<img src="/public/images/icons/main-logo-dark.svg" alt="Spiritual outdoors logo"/>';
 
-  navItemElements.forEach((item) => {
-    item.style.color = 'var(--color-darkgreen-500)';
-  });
+      navItemElements.forEach((item) => {
+        item.style.color = 'var(--color-darkgreen-500)';
+      });
 
-  dropDownIcons.forEach((icon) => {
-    icon.querySelector('path').style.fill = 'var(--color-darkgreen-500)';
-  });
+      dropDownIcons.forEach((icon) => {
+        icon.querySelector('path').style.fill = 'var(--color-darkgreen-500)';
+      });
 
-  buttonElement.style.backgroundColor = 'var(--color-darkgreen-500)';
-
-  buttonElement.style.color = '#FFF';
-
-  hamburgerIconContainer.innerHTML =
-    '<img src="/public/images/icons/hamburger-icon-dark.svg" alt="Hamburger menu icon" />';
-
-  toggleButton();
-}
-
-function toggleInactiveNavbar() {
-  headerElement.removeAttribute('style');
-  mainLogoElement.innerHTML = originalLogoHTML;
-
-  navItemElements.forEach((item) => item.removeAttribute('style'));
-  dropDownIcons.forEach((icon) =>
-    icon.querySelector('path')?.removeAttribute('style')
-  );
-  buttonElement.removeAttribute('style');
-
-  hamburgerIconContainer.innerHTML = originalHamburgerHTML;
-}
-
-headerElement.addEventListener('mouseenter', () => {
-  toggleActiveNavbar();
-});
-
-headerElement.addEventListener('mouseleave', () => {
-  if (!isNavbarActive) toggleInactiveNavbar();
-});
-
-function toggleButton() {
-  if (buttonElement.style.backgroundColor === 'var(--color-darkgreen-500)') {
-    buttonElement.addEventListener('mouseenter', () => {
-      buttonElement.style.backgroundColor = 'var(--color-darkgreen-700)';
-    });
-
-    buttonElement.addEventListener('mouseleave', () => {
       buttonElement.style.backgroundColor = 'var(--color-darkgreen-500)';
+
+      buttonElement.style.color = '#FFF';
+
+      toggleButton();
+    }
+
+    function toggleInactiveNavbar() {
+      headerElement.removeAttribute('style');
+      mainLogoElement.innerHTML = originalLogoHTML;
+
+      navItemElements.forEach((item) => item.removeAttribute('style'));
+      dropDownIcons.forEach((icon) =>
+        icon.querySelector('path')?.removeAttribute('style')
+      );
+      buttonElement.removeAttribute('style');
+    }
+
+    headerElement.addEventListener('mouseenter', () => {
+      toggleActiveNavbar();
     });
-  }
-}
 
-ScrollTrigger.create({
-  start: 100,
-  end: 'max',
-  onEnter: () => {
-    isNavbarActive = true;
-    toggleActiveNavbar();
-  },
-  onLeaveBack: () => {
-    isNavbarActive = false;
-    if (!isNavbarPanelOpen) toggleInactiveNavbar();
-  },
-});
+    headerElement.addEventListener('mouseleave', () => {
+      if (!isNavbarActive) toggleInactiveNavbar();
+    });
 
-//* Show and hide navbar on scroll
-ScrollTrigger.create({
-  start: 0,
-  end: 'max',
-  onUpdate: (self) => {
-    if (self.direction === 1) {
-      gsap.to(headerElement, { y: -100, duration: 0 });
-    } else {
-      gsap.to(headerElement, { y: 0, duration: 0 });
-    }
-  },
-});
+    function toggleButton() {
+      if (
+        buttonElement.style.backgroundColor === 'var(--color-darkgreen-500)'
+      ) {
+        buttonElement.addEventListener('mouseenter', () => {
+          buttonElement.style.backgroundColor = 'var(--color-darkgreen-700)';
+        });
 
-let currentDropdown = null;
-
-//* Expand navbar on item hover
-navItemElements.forEach((item) => {
-  const dropdownPanelElement = document.querySelector(
-    `.js-${item.textContent
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[^a-z0-9-]/g, '')}-dropdown-panel`
-  );
-
-  item.addEventListener('mouseenter', () => {
-    if (currentDropdown && currentDropdown !== dropdownPanelElement) {
-      currentDropdown.style.display = 'none';
+        buttonElement.addEventListener('mouseleave', () => {
+          buttonElement.style.backgroundColor = 'var(--color-darkgreen-500)';
+        });
+      }
     }
 
-    overlayElement.style.opacity = '1';
+    ScrollTrigger.create({
+      start: 100,
+      end: 'max',
+      onEnter: () => {
+        isNavbarActive = true;
+        toggleActiveNavbar();
+      },
+      onLeaveBack: () => {
+        isNavbarActive = false;
+        if (!isNavbarPanelOpen) toggleInactiveNavbar();
+      },
+    });
 
-    scrollPosition = window.scrollY;
+    //* Show and hide navbar on scroll
+    ScrollTrigger.create({
+      start: 0,
+      end: 'max',
+      onUpdate: (self) => {
+        if (self.direction === 1) {
+          gsap.to(headerElement, { y: -100, duration: 0 });
+        } else {
+          gsap.to(headerElement, { y: 0, duration: 0 });
+        }
+      },
+    });
 
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.overflow = 'hidden';
+    let currentDropdown = null;
 
-    gsap.to(headerElement, {
-      height: 614,
-      duration: 0,
-      ease: 'power2.inOut',
-      onComplete: () => {
-        gsap.to(dropdownPanelElement, {
-          display: 'block',
+    //* Expand navbar on item hover
+    navItemElements.forEach((item) => {
+      const dropdownPanelElement = document.querySelector(
+        `.js-${item.textContent
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^a-z0-9-]/g, '')}-dropdown-panel`
+      );
+
+      item.addEventListener('mouseenter', () => {
+        if (currentDropdown && currentDropdown !== dropdownPanelElement) {
+          currentDropdown.style.display = 'none';
+        }
+
+        overlayElement.style.opacity = '1';
+
+        scrollPosition = window.scrollY;
+
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.overflow = 'hidden';
+
+        gsap.to(headerElement, {
+          height: 614,
           duration: 0,
           ease: 'power2.inOut',
           onComplete: () => {
-            isNavbarPanelOpen = true;
-            currentDropdown = dropdownPanelElement;
+            gsap.to(dropdownPanelElement, {
+              display: 'block',
+              duration: 0,
+              ease: 'power2.inOut',
+              onComplete: () => {
+                isNavbarPanelOpen = true;
+                currentDropdown = dropdownPanelElement;
+              },
+            });
           },
         });
-      },
+      });
+
+      headerElement.addEventListener('mouseleave', () => {
+        overlayElement.style.opacity = '0';
+
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflow = '';
+
+        window.scrollTo(0, scrollPosition);
+
+        gsap.to(headerElement, {
+          height: 84,
+          duration: 0,
+          ease: 'power2.inOut',
+        });
+
+        gsap.to(dropdownPanelElement, {
+          display: 'none',
+          duration: 0,
+          ease: 'power2.inOut',
+        });
+
+        isNavbarPanelOpen = false;
+      });
     });
-  });
-
-  headerElement.addEventListener('mouseleave', () => {
-    overlayElement.style.opacity = '0';
-
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.overflow = '';
-
-    window.scrollTo(0, scrollPosition);
-
-    gsap.to(headerElement, {
-      height: 84,
-      duration: 0,
-      ease: 'power2.inOut',
-    });
-
-    gsap.to(dropdownPanelElement, {
-      display: 'none',
-      duration: 0,
-      ease: 'power2.inOut',
-    });
-
-    isNavbarPanelOpen = false;
-  });
+  },
 });

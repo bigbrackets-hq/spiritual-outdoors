@@ -18,3 +18,66 @@
 .dropdown-panel:not(.active):hover {
   opacity: 30%;
 }
+
+/* Mobile navbar */
+
+.mobile-menu {
+  color: var(--color-darkgreen-200);
+}
+
+.mobile-menu.active {
+  color: var(--color-darkgreen-500);
+}
+
+.mobile-menu.active .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.line-separator {
+  display: none;
+}
+
+.mobile-menu.active .line-separator {
+  display: block;
+}
+
+.mobile-sub-menu {
+  display: none;
+}
+
+.mobile-menu.active .mobile-sub-menu {
+  display: flex;
+}
+
+.big-minus-icon {
+  display: none;
+}
+
+.mobile-sub-menu-img {
+  display: none;
+}
+
+.mobile-menu.active .mobile-sub-menu.active {
+  display: flex;
+  background-color: var(--color-blue-50);
+}
+
+.mobile-menu.active .mobile-sub-menu.active .big-plus-icon {
+  display: none;
+}
+
+.mobile-menu.active .mobile-sub-menu.active .big-minus-icon {
+  display: block;
+}
+
+.mobile-sub-menu-list {
+  display: none;
+}
+
+.mobile-menu.active .mobile-sub-menu.active .mobile-sub-menu-list {
+  display: flex;
+}
+
+.mobile-menu.active .mobile-sub-menu.active .mobile-sub-menu-img {
+  display: block;
+}

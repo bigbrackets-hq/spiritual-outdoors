@@ -221,6 +221,11 @@ button {
   gap: 4px;
 }
 
+.whatsapp-btn.active {
+  background-color: var(--color-darkgreen-500);
+  color: var(--color-passage-text-color-light);
+}
+
 .whatsapp-btn:hover {
   background-color: var(--color-darkgreen-500);
   color: var(--color-passage-text-color-light);
